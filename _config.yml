@@ -1,0 +1,12 @@
+# Site settings
+title: Gerben Jacobs
+description: My personal blog, really.
+
+url: "http://blog.gerbenjacobs.nl"
+twitter_username: gerbenjacobs
+github_username:  gerbenjacobs
+excerpt_separator: <!--more-->
+
+# Build settings
+markdown: kramdown
+permalink: none
