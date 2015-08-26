@@ -4,6 +4,7 @@ title:  "Move to Jekyll"
 date:   2015-08-19 10:36:00
 categories: personal
 tags: ["jekyll", "github pages"]
+header-img: img/post-bg-03.jpg
 ---
 So I moved my site to Jekyll and Github Pages.  
 The reason was that I wanted to get rid of my hosted VPS solution which I didn't use at all.
@@ -14,4 +15,4 @@ All I need for my blog is a static website. I plan to do comments with Disqus.
 
 I looked briefly at other static site generators, but the fact that Jekyll comes free with 
 Github (`git push`-ing your entire folder is lovely) and that for your personal site you don't 
-require the `gh-pages` branch all made it relatively easy to pick as the candidate.
+require the `gh-pages` branch all made it a relative easy candidate to pick.
