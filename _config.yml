@@ -1,13 +1,12 @@
 # Site settings
 title: Gerben Jacobs
 header-img: img/flickr-theonewithout-fencers.jpg
-email: info@gerbenjacobs.nl
-description: "A personal blog"
-baseurl: ""
-url: "http://blog.gerbenjacobs.nl"
+description: A personal blog
+url: http://blog.gerbenjacobs.nl
 twitter_username: gerbenjacobs
 github_username:  gerbenjacobs
 facebook_username:  gerbenjacobs
+linkedin_username: gerbenjacobs
 
 # Build settings
 markdown: kramdown
