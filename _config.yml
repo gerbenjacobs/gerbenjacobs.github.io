@@ -1,12 +1,17 @@
 # Site settings
 title: Gerben Jacobs
-description: My personal blog, really.
-
+header-img: img/home-bg.jpg
+email: info@gerbenjacobs.nl
+description: "A personal blog"
+baseurl: ""
 url: "http://blog.gerbenjacobs.nl"
 twitter_username: gerbenjacobs
 github_username:  gerbenjacobs
-excerpt_separator: <!--more-->
+facebook_username:  gerbenjacobs
 
 # Build settings
 markdown: kramdown
+highlighter: pygments
 permalink: none
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
