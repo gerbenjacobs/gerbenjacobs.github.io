@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Move to Jekyll
+description: I decided to move my blog to Github Pages, fueled by Jekyll.
 date:   2015-08-19 10:36:00
 header-img: img/post-bg-03.jpg
 ---
