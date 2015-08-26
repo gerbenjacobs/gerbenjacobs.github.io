@@ -11,7 +11,7 @@ $(function () {
 
 // make all images responsive
 $(function () {
-    $("img").addClass("img-responsive");
+    $("img").addClass("img-responsive").addClass("center-block");
 });
 
 // responsive tables
