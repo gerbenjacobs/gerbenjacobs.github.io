@@ -1,9 +1,3 @@
-/*!
- * Clean Blog v1.0.0 (http://startbootstrap.com)
- * Copyright 2015 Start Bootstrap
- * Licensed under Apache 2.0 (https://github.com/IronSummitMedia/startbootstrap/blob/gh-pages/LICENSE)
- */
-
 body {
   font-family: 'Lora', 'Times New Roman', serif;
   font-size: 20px;
@@ -404,12 +398,12 @@ figcaption {
   font-size: 80%;
   text-align: center;
 }
-.carousel-inner > .item > img {
-  margin: 0 auto;
-}
 img.pull-left {
   margin: 10px 20px 10px 10px;
 }
 img.pull-right {
   margin: 10px 10px 10px 20px;
+}
+.photos-thumb {
+  margin-bottom: 30px;
 }
