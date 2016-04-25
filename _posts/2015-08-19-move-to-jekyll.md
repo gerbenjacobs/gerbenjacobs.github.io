@@ -4,6 +4,7 @@ title:  Move to Jekyll
 description: I decided to move my blog to Github Pages, fueled by Jekyll.
 date:   2015-08-19 10:36:00
 header-img: img/post-bg-03.jpg
+tags: ["tech"]
 ---
 So I moved my site to Jekyll and Github Pages.  
 The reason was that I wanted to get rid of my hosted VPS solution which I didn't use at all.
