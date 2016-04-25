@@ -21,20 +21,24 @@ tags: ["tech", "php"]
     Let's have a quick look at the code and then analyze it to understand what it's doing.
 </p>
 
-{% highlight php startinline=true %}
+{% highlight php %}
+<?php
 // Config
+
 $username = 'admin';
 $password = 'password';
 $host = 'myshoutcastserver.com';
 $port = 8080;
 
 // Set up URL
+
 $ip = explode('.', $_SERVER['REMOTE_ADDR']);
 $url = sprintf('http://%s:%d/admin.cgi?mode=ripip&ip1=%d&ip2=%d&ip3=%d&ip4=%d',
     $host, $port, $ip[0], $ip[1], $ip[2], $ip[3]
 );
 
 // Create context stream
+
 $context = stream_context_create(array(
     'http' => array(
         'method' => 'GET',
@@ -47,16 +51,18 @@ $context = stream_context_create(array(
 ));
 
 // A poor mans CURL request
+
 file_get_contents($url, false, $context);
+?>
 {% endhighlight %}
 
 <p>
-    First we get the IP address of the visitor, we explode() it on the dots to get 4 seperate numbers, together forming a valid IP address.
+    First we get the IP address of the visitor, we explode() it on the dots to get 4 separate numbers, together forming a valid IP address.
     <br>Then we set up an URL that will look like this: <strong>http://myshoutcastserver.com:8080/admin.cgi?mode=ripip&ip1=127&ip2=0&ip3=0&ip4=1</strong>
 </p>
 
 <p>
-    This URL will submit (GET) a form that adds the IP to the RIP list. See why we had to seperate the IP on the dots?
+    This URL will submit (GET) a form that adds the IP to the RIP list. See why we had to separate the IP on the dots?
     'Why' you ask, well because this is somewhat of a hack. We fill the form through GET parameters.
 </p>
 

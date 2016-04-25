@@ -34,7 +34,8 @@ tags: ["tech", "php"]
     You now have a 'first' and a 'last' array. Then you add your value (<code>$value</code>) to the first array, merge both arrays back together, and you're done!
 </p>
 
-{% highlight php startinline=true %}
+{% highlight php %}
+<?php
 function array_push_insert($array, $index, $value) {
     if (array_key_exists($index, $array)) {
         $firstArray = array_slice($array, 0, ($index + 1));
@@ -44,6 +45,7 @@ function array_push_insert($array, $index, $value) {
     }
     return $array;
 }
+?>
 {% endhighlight %}
 
 
@@ -53,23 +55,30 @@ function array_push_insert($array, $index, $value) {
     So in the next example, we want to add the letter "D" after the "B", and this value's key is 1. So we send in the array ($array), the key (1) and our new value ("D").
 </p>
 
-{% highlight php startinline=true %}
+{% highlight php %}
+<?php
 $array = array(
     "A", // 0
+
     "B", // 1
+
     "C" // 2
+
 );
 
 $finalArray = array_push_insert($array, 1, "D");
+?>
 {% endhighlight %}
 
 <p>So when we print_r() the <code>$finalArray</code>, it looks like this:</p>
 
-{% highlight php startinline=true %}
+{% highlight php %}
+<?php
 Array (
     [0] => A
     [1] => B
     [2] => D
     [3] => C
 )
+?>
 {% endhighlight %}

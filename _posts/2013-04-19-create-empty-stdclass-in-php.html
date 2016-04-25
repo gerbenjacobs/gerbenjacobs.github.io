@@ -15,11 +15,13 @@ tags: ["tech", "php"]
     There's a chance that a person is not known and being lazy I wanted to fill the form anyway with my Person object, so I needed a mockup of that object.
 </p>
 
-{% highlight php startinline=true %}
+{% highlight php %}
+<?php
 $person = (object) array_fill_keys(
     array('firstname', 'lastname', 'email', 'photo'),
     ''
 );
+?>
 {% endhighlight %}
 
 <p>

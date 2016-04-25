@@ -18,7 +18,8 @@ tags: ["tech", "php"]
     To make matters worse, they give 'incomplete' net numbers. The only working "CIDR to IP range" function I could find didn't accept it, so I had to sprinkle some <em>magic</em>.
 </p>
 
-{% highlight php startinline=true %}
+{% highlight php %}
+<?php
 $ipdata = explode('/', ltrim($incomplete_cidr_notation, '0'));
 $dotcount = substr_count($ipdata[0], '.');
 if ($dotcount != 3) {
@@ -26,6 +27,7 @@ if ($dotcount != 3) {
 }
 $finalip = sprintf('%s/%s', $ipdata[0], $ipdata[1]);
 $range = cidr_conv($finalip);
+?>
 {% endhighlight %}
 
 <p>
@@ -33,7 +35,8 @@ $range = cidr_conv($finalip);
     <a title="cidr_conv()" href="http://www.php.net/manual/en/ref.network.php#30910" target="_blank">found in the PHP.net comments of the Network functions page</a>.
 </p>
 
-{% highlight php startinline=true %}
+{% highlight php %}
+<?php
 function cidr_conv($cidr_address) {
     $first = substr($cidr_address, 0, strpos($cidr_address, "/"));
     $netmask = substr(strstr($cidr_address, "/"), 1);
@@ -52,30 +55,33 @@ function cidr_conv($cidr_address) {
 
     return array($first, $last);
 }
+?>
 {% endhighlight %}
 
 <p>
     So you can enter <code>190.151.192/18</code> as <code>$incomplete_cidr_notation</code> and get
 </p>
 
-{% highlight php startinline=true %}
-Array
+{% highlight php %}
+<?php
 (
     [0] => 190.151.192.0
     [1] => 190.151.255.255
 )
+?>
 {% endhighlight %}
 
 <p>
     But even if you enter <code>17/8</code> (or with a leading zero, straight out of IANAs IP allocation file) it will work and you'll get, in this case, Apple's IP range
 </p>
 
-{% highlight php startinline=true %}
-Array
+{% highlight php %}
+<?php
 (
     [0] => 17.0.0.0
     [1] => 17.255.255.255
 )
+?>
 {% endhighlight %}
 
 <hr>

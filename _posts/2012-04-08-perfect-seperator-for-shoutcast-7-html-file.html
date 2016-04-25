@@ -16,12 +16,13 @@ tags: ["tech", "php"]
     but are getting some inconsistencies with parsing the comma-separated input you get, try this:
 </p>
 
-{% highlight php startinline=true %}$data = preg_split("/[,]+/", $string, 7);{% endhighlight %}
+{% highlight php %}<?php $data = preg_split("/[,]+/", $string, 7); ?>{% endhighlight %}
 
 <p>
     A possible outcome would be this:
 </p>
-{% highlight php startinline=true %}
+{% highlight php %}
+<?php
 Array (
     [0] => 1
     [1] => 1
@@ -31,6 +32,7 @@ Array (
     [5] => 192
     [6] => "Woe, Is Me - Hell, or High Water"
 )
+?>
 {% endhighlight %}
 
 <p>
