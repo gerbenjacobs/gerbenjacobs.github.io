@@ -9,8 +9,8 @@ linkedin_username: gerbenjacobs
 
 # Build settings
 markdown: kramdown
-highlighter: rouge
+#highlighter: rouge
 permalink: none
 paginate: 5
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-gems: ["jekyll-paginate"]
+plugins: ["jekyll-paginate"]
