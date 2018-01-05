@@ -2,8 +2,8 @@
 layout: post
 title:  How many points would you give this story?
 description: I decided to move my blog to Github Pages, fueled by Jekyll.
-date: 2018-01-05 19:00:00
-header-img: img/airballoon_b.jpg
+date: 2018-01-05 18:00:00
+header-img: img/flickr-theonewithout-norway-laguna.png
 tags: ["tech"]
 ---
 
