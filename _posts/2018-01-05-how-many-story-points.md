@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  How many points would you give this story?
-description: I decided to move my blog to Github Pages, fueled by Jekyll.
+description: I finished what I thought would be a small story the other day. A blogpost about the dangers of pokering story points.
 date: 2018-01-05 18:00:00
 header-img: img/flickr-theonewithout-norway-laguna.png
 tags: ["tech"]
