@@ -7,14 +7,9 @@ sections:
 - type: directory
   path: css
   label: CSS
-  create: all
-  match: "**/*"
-- type: directory
-  path: js
-  label: JS
   create: documents
-  match: "**/*"
-  new_doc_ext: js
+  match: "*"
+  new_doc_ext: css
 - type: jekyll-pages
   label: Pages
   create: all
