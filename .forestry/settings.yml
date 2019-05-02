@@ -5,11 +5,16 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: directory
+  path: css
+  label: CSS
+  create: all
+  match: "**/*"
+- type: directory
   path: js
   label: JS
   create: documents
   match: "**/*"
-  new_doc_ext: ".js"
+  new_doc_ext: js
 - type: jekyll-pages
   label: Pages
   create: all
