@@ -1,0 +1,25 @@
+---
+label: Default Blog Post
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: title
+  label: title
+- type: textarea
+  name: description
+  label: description
+- type: datetime
+  name: date
+  label: date
+- type: file
+  name: header-img
+  label: header-img
+- type: number
+  name: header-y
+  label: header-y
+- type: list
+  name: tags
+  label: tags
