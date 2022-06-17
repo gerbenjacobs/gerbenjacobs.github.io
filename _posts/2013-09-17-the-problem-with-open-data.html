@@ -8,7 +8,7 @@ tags: ["tech"]
 ---
 <p>
     <em>To put this blog post into context; this is written by a 25-year old developer who uses the Dutch open data
-        (<a title="Dutch Open Data" href="http://data.overheid.nl" target="_blank">http://data.overheid.nl</a>) and doesn't like to read too much.
+        (<a title="Dutch Open Data" href="https://data.overheid.nl">https://data.overheid.nl</a>) and doesn't like to read too much.
         I rather hack tutorials than read specs and I code stuff for the use of the general public, i.e.: data needs to accommodate to the common people.</em>
 </p>
 
@@ -16,7 +16,7 @@ tags: ["tech"]
     With that out of the way and allowing you to see this from my perspective here goes; the biggest problem(s) with Open Data.
 </p>
 
-<a href="http://data.overheid.nl">
+<a href="https://data.overheid.nl">
     <img class="pull-right" alt="data.overheid.nl" src="/img/blog/2013/data.overheid.nl.png" width="300" height="183" />
 </a>
 
@@ -52,10 +52,10 @@ tags: ["tech"]
 </p>
 
 <p>
-    Most of the Open Data sets at <a title="Open Data at Overheid.nl" href="http://data.overheid.nl" target="_blank">Overheid.nl</a> that contain geo-data
+    Most of the Open Data sets at <a title="Open Data at Overheid.nl" href="https://data.overheid.nl" >Overheid.nl</a> that contain geo-data
     (which I find the best kind of data) are using this wonderful X,Y coordinate system called
-    '<a title="RD coordinate system on Wikipedia" href="https://nl.wikipedia.org/wiki/Rijksdriehoeksco%C3%B6rdinaten" target="_blank">Rijksdriehoekscoördinaten</a>',
-    a word that even for Dutch standards is long. This system is based on ancient times where we had to plot stuff from 3 points, preferably high points like churches or hills.
+    '<a title="RD coordinate system on Wikipedia" href="https://nl.wikipedia.org/wiki/Rijksdriehoeksco%C3%B6rdinaten" >Rijksdriehoekscoördinaten</a>',
+    a word that even for Dutch standards is long. This system is based on ancient times when we had to plot stuff from 3 points, preferably high points like churches or hills.
 </p>
 
 <p>
@@ -94,7 +94,7 @@ function rd2wgs ($x, $y)
 <p>
     But then we got satellites and GPS and Europe even has their own Galileo project <small>(what's happening with that?)</small> so coordinates became global.
     Truth be told, a lot of the internet innovations have been led by the United States to a point where GPS coordinates, actually called
-    <a title="WGS 84 at Wikipedia" href="https://en.wikipedia.org/wiki/World_Geodetic_System" target="_blank">WGS 84</a> <small>(oh god no, specs!)</small>,
+    <a title="WGS 84 at Wikipedia" href="https://en.wikipedia.org/wiki/World_Geodetic_System" >WGS 84</a> <small>(oh god no, specs!)</small>,
     are the de-facto digits we use when it comes to geographical data. So why do we still use this RD system? The answer is probably legacy code..
 </p>
 
@@ -109,7 +109,7 @@ function rd2wgs ($x, $y)
     I haven't checked everything out, but I don't think there's any dataset that comes with a RESTful API. But that was to be expected, since most data is static.
 </p>
 
-<a href="https://www.flickr.com/photos/theonewithout/8031260093/" target="_blank">
+<a href="https://www.flickr.com/photos/theonewithout/8031260093/" >
     <img alt="Wiegtotweg.nl (From cradle to road)" src="https://farm9.staticflickr.com/8449/8031260093_81cd87d40f_b.jpg">
 </a>
 
@@ -118,20 +118,20 @@ function rd2wgs ($x, $y)
     sensory data from Rijkswaterstaat (agency for infrastructure and environment) and car registration data from RDW.
 </p>
 <p>
-    For that last one <a title="RDW app, 3rd place submission" href="http://labs.gerbenjacobs.nl/wiegtotweg/" target="_blank">I made "Wieg tot Weg"</a>
+    For that last one <a title="RDW app, 3rd place submission" href="http://labs.gerbenjacobs.nl/wiegtotweg/" >I made "Wieg tot Weg"</a>
     when they first opened their data to the public along with a competition, which I became 3rd in! They actually used Microsoft's Azure cloudplatform
     to have some kind of API, not properly RESTful though.
 </p>
 <p>
     For the first one I wrote what I call an "API", but it's not really,
-    <a title="KNMI Longterm predictions &quot;API&quot;" href="http://api.gerbenjacobs.nl/knmi/longterm/" target="_blank">just see for yourself</a>.
+    <a title="KNMI Longterm predictions &quot;API&quot;" href="http://api.gerbenjacobs.nl/knmi/longterm/" >just see for yourself</a>.
     And at the moment I'm making a library for the sensory data from RWS that combines some of the files (.dat and .adm. Wtf?) that they put in their zip-file.
-    <a title="RWS library on Github" href="https://github.com/gerbenjacobs/rws" target="_blank">The library</a> is at an hacked stage;
+    <a title="RWS library on Github" href="https://github.com/gerbenjacobs/rws" >The library</a> is at an hacked stage;
     yes it works, but no it won't win "Best code ever"-awards.
 </p>
 
 <p>
-    If you look at <a title="RWS.php class on Github" href="https://github.com/gerbenjacobs/rws/blob/master/src/RWS/RWS.php" target="_blank">the class</a> I wrote,
+    If you look at <a title="RWS.php class on Github" href="https://github.com/gerbenjacobs/rws/blob/master/src/RWS/RWS.php" >the class</a> I wrote,
     you can see through what kind of hoops I have to jump to collect and combine the data. First 1) download a .zip, 2) unzip it, 3) collect the .adm and .dat files,
     4) <code>explode()</code> them on newlines, 5) then per line parse them as comma-seperated values, 6) also trim the data values (whitespace everywhere!),
     then when both files are as arrays in memory, 7) combine them on their linenumber (so fragile!) and 8) format them a bit.
@@ -143,7 +143,7 @@ function rd2wgs ($x, $y)
 
 <p>
     But the point here, at least now 'normal' people can use the data, you don't need to have a PhD in
-    <a title="Fluid Mechanics article" href="https://en.wikipedia.org/wiki/Fluid_mechanics" target="_blank">Fluid Mechanics</a>
+    <a title="Fluid Mechanics article" href="https://en.wikipedia.org/wiki/Fluid_mechanics" >Fluid Mechanics</a>
     <small>(yeah, I actually had to look this stuff up to decipher the dataset)</small> and use the tools of the trade, some obscure Visual Basic program
     that only runs on governmental supplied Windows XP machines.
 </p>
@@ -162,7 +162,7 @@ function rd2wgs ($x, $y)
 
 <p>
     Why not JSON or XML with GPS coordinates? Or be totally hip and provide them as
-    <a title="Github enabled GeoJSON" href="https://github.com/blog/1541-geojson-rendering-improvements" target="_blank">GeoJSON so they instantly work in Github</a>.
+    <a title="Github enabled GeoJSON" href="https://github.com/blog/1541-geojson-rendering-improvements" >GeoJSON so they instantly work in Github</a>.
     <br>Ask yourself "Who am I opening up this data for?", if the answer is your colleague in another department or ministry, then carry on.
     If not, hire some adviser and 'youthify' your data.
 </p>

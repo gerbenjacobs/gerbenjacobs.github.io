@@ -8,9 +8,9 @@ tags: ["tech"]
 ---
 So I moved my site to Jekyll and Github Pages.  
 The reason was that I wanted to get rid of my hosted VPS solution which I didn't use at all.
-I had great plans of making lots of small websites, but that never really plannd out.
+I had great plans of making lots of small websites, but that never really planned out.
 
-I also wanted to get rid of the 500ms pageloads of Wordpress (yes, I'm sure you can make that better).
+I also wanted to get rid of the 500ms page loads of Wordpress (yes, I'm sure you can make that better).
 All I need for my blog is a static website. I plan to do comments with Disqus.
 
 I looked briefly at other static site generators, but the fact that Jekyll comes free with 

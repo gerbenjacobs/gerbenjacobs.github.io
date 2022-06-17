@@ -7,15 +7,15 @@ header-img: img/github-social.webp
 tags: ["tech", "personal"]
 ---
 
-It's been a month since I joined GitHub in February of 2022. 
-I'm enjoying myself a lot but I'm also not sure if the reality has set in completely.
+It's been a month since I joined GitHub in February of 2022.
+I'm enjoying myself a lot, but I'm also not sure if the reality has set in completely.
 
 In 2014 I started my first tech job and remember that I went to a conference and got GitHub stickers, 
 they were awesome and all ended up on my MacBook. Eight years later I now work at that exact company. 🚀
 
-## Onboarding sessions
+## Onboard sessions
 
-The first two weeks are oriented towards onboarding sessions, unfortunately they were in Pacific
+The first two weeks are oriented towards onboard sessions, unfortunately they were in Pacific
 standard time, so that meant 8PM CET. The first thing that you'll notice is that a lot of the work
 you do is by using GitHub itself. There's an `onboarding` repository with a project for every
 person that joined during your cohort. Here you can find **issues** with tasks that you can complete
@@ -30,7 +30,7 @@ on your first project. GitHub relies a lot on ChatOps, a way to run commands or 
 by using bots in chat channels, Slack to be precise. [Hubot](https://hubot.github.com/) is his name! 🤖
 
 Some interesting lessons that stood out to me is that at GitHub you deploy before you merge.
-This is different than my previous companies, but it's of course a nice way to deal with rollbacks.
+This is different from my previous companies, but it's of course a nice way to deal with rollbacks.
 
 The other thing that surprised me, is that release trains are back! I didn't think I'd see this after 2010 anymore,
 but for a company the size of GitHub and the fact that a large chunk of _github.com_ is run as a single monolithic repo,
@@ -46,7 +46,7 @@ The team is **awesome**. As you can see we've got a couple of people who were or
 weeks (if not years) have been quite difficult. We had people take time off to rescue family members from war zones,
 while others volunteered at the Berlin train station for translating and bringing food. **Слава Україні!**
 
-Together with my buddy we looked at some issues with labels such as _good first issue_ and I set out to
+Together with my buddy we looked at some issues with labels such as _good first issue,_ and I set out to
 deploy my first changes to the project.  
 I also broke our monitoring by changing the metric names too much.
 Which incidentally was the same issue that I also deployed straight to production instead of staging. Oh well! 😅
@@ -70,7 +70,7 @@ I'll leave you with a quick list of fun or interesting facts that I've also expe
 - GitHub is remote first, always has been, and as such is really good at documenting (for asynchronous workflows)
 - Technically I now work for Microsoft. 🤔
 - Unlimited <abbr title="Paid Time Off">PTO</abbr>, yes even for employees in the States!
-- A great culture of leadership, accountability, professionalism, but also compassion, understanding and great care for each others wellbeing.
+- A great culture of leadership, accountability, professionalism, but also compassion, understanding and great care for each other's well-being.
 
 <figure>
     <img src="/img/blog/2022/mona-heart-hug-facebook.webp" alt="GitHub's Octocat called Mona">

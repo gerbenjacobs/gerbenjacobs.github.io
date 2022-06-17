@@ -8,10 +8,10 @@ tags: ["tech", "php"]
 ---
 <p>
     I wanted to get the IPv4 range of a WHOIS record provided by
-    <a title="Latin America and Caribbean Internet Address Registry" href="http://www.lacnic.net/en/web/lacnic/inicio" target="_blank">LACNIC</a>,
-    because unlike other <a title="Regional Internet Registries" href="http://en.wikipedia.org/wiki/Regional_Internet_registry" target="_blank">RIRs</a>
+    <a title="Latin America and Caribbean Internet Address Registry" href="http://www.lacnic.net/en/web/lacnic/inicio" >LACNIC</a>,
+    because unlike other <a title="Regional Internet Registries" href="https://en.wikipedia.org/wiki/Regional_Internet_registry" >RIRs</a>
     they don't supply you with the range, but with just
-    a <a title="Classless Inter-Domain Routing on Wikipedia" href="http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing" target="_blank">CIDR notation</a>.
+    a <a title="Classless Inter-Domain Routing on Wikipedia" href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing" >CIDR notation</a>.
 </p>
 
 <p>
@@ -32,7 +32,7 @@ $range = cidr_conv($finalip);
 
 <p>
     The final <code>cidr_conv()</code> is written by someone unknown in 2003 and can be
-    <a title="cidr_conv()" href="http://www.php.net/manual/en/ref.network.php#30910" target="_blank">found in the PHP.net comments of the Network functions page</a>.
+    <a title="cidr_conv()" href="https://www.php.net/manual/en/ref.network.php#30910" >found in the PHP.net comments of the Network functions page</a>.
 </p>
 
 {% highlight php %}
@@ -72,7 +72,7 @@ function cidr_conv($cidr_address) {
 {% endhighlight %}
 
 <p>
-    But even if you enter <code>17/8</code> (or with a leading zero, straight out of IANAs IP allocation file) it will work and you'll get, in this case, Apple's IP range
+    But even if you enter <code>17/8</code> (or with a leading zero, straight out of IANAs IP allocation file) it will work, and you'll get in this case Apple's IP range
 </p>
 
 {% highlight php %}

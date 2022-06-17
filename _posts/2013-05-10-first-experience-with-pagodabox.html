@@ -30,19 +30,19 @@ tags: ["tech"]
 
 <p>
     The idea is that you can just launch new components to scale your app. This is so easy that
-    <a href="http://techcrunch.com/2012/09/11/pagoda-box-is-easier-than-amazon-web-services-but-more-customizable-than-heroku/" target="_blank">a non-techy front office person can monitor the app and scale it when needed</a>,
+    <a href="https://techcrunch.com/2012/09/11/pagoda-box-is-easier-than-amazon-web-services-but-more-customizable-than-heroku/" >a non-techy front office person can monitor the app and scale it when needed</a>,
     it is literally just one click of a button.
 </p>
 
 <h2>Up, up and away (with Wordpress)</h2>
 
 <p>
-    I think I ended up at the site because I was looking at Heroku stuff. Anyway, a colleague of mine saw it and he knew it too.
+    I think I ended up at the site because I was looking at Heroku stuff. Anyway, a colleague of mine saw it and he knew it too.
     Said it was <abbr title="Platform as a Service">PaaS</abbr> for PHP, so in the end I decided to test it out.
 </p>
 
 <p>
-    First I ran a simple pre-configured Wordpress app, this worked. But this is not what this service is for.
+    First I ran a simple pre-configured WordPress app, this worked. But this is not what this service is for.
 </p>
 
 <h2>My experience</h2>
@@ -75,19 +75,19 @@ tags: ["tech"]
 <p>
     <strong>Pagoda Tunneling</strong><br>
     Also there's no PHPMyAdmin, the beast we all came to love. To work on your database you have to use their
-    <a title="Pagoda Tunnel system" href="https://pagodabox.io/docs/pagoda_cli#tunnel-into-a-data-service" target="_blank">Pagoda Tunnel</a> system.
+    <a title="Pagoda Tunnel system" href="https://pagodabox.io/docs/pagoda_cli#tunnel-into-a-data-service" >Pagoda Tunnel</a> system.
     This requires you to install Ruby and download their Tunnel gem. After that you can tunnel into your app by opening the command line tool:
     <code>pagoda tunnel -a &lt;app_name&gt; -c &lt;component_name&gt;</code>
 </p>
 
 <p>
-    This will turn your terminal window into a little server/tunnel and you can use a SQL tool (I used HeidiSQL) to connect to
+    This will turn your terminal window into a little server/tunnel, and you can use a SQL tool (I used HeidiSQL) to connect to
     <code>localhost:45000</code> where you will find your Pagoda database.
 </p>
 
 <p>
     <strong>Learning</strong><br>
-    So as you understand it's quite a big endeavour and I personally don't require the need for scaling,
+    So as you understand it's quite a big endeavour, and I personally don't require the need for scaling,
     so I can't really test any of that. But I can say it was quite a nice learning experience.
 </p>
 

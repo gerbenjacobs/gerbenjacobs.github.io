@@ -7,13 +7,13 @@ header-img: img/post-bg-04.jpg
 tags: ["tech", "php"]
 ---
 <p>
-    Pretty semantic title huh? But that's basically what this is all about.
+    Pretty semantic title, huh? But that's basically what this is all about.
 </p>
 
 <img src="/img/blog/2012/shoutcast.gif" alt="Shoutcast logo" title="Shoutcast logo" class="pull-right col-md-6" />
 
 <p>
-    If you have a Shoutcast host that is set to private, only people who's IP address in the RIP list (Reserved IP) can access your stream.
+    If you have a Shoutcast host that is set to private, only people whose IP address in the RIP list (Reserved IP) can access your stream.
     <br>A lot of free Shoutcast server providers do this, to make it a bit less profitable to free ride their services.
 </p>
 
@@ -58,7 +58,7 @@ file_get_contents($url, false, $context);
 
 <p>
     First we get the IP address of the visitor, we explode() it on the dots to get 4 separate numbers, together forming a valid IP address.
-    <br>Then we set up an URL that will look like this: <strong>http://myshoutcastserver.com:8080/admin.cgi?mode=ripip&ip1=127&ip2=0&ip3=0&ip4=1</strong>
+    <br>Then we set up a URL that will look like this: <strong>https://myshoutcastserver.com:8080/admin.cgi?mode=ripip&ip1=127&ip2=0&ip3=0&ip4=1</strong>
 </p>
 
 <p>
@@ -71,7 +71,7 @@ file_get_contents($url, false, $context);
 </p>
 
 <p>
-    Shoutcast Servers arean't completely dumb, only a little. But they're smart enough to notice 'robots'.
+    Shoutcast Servers aren't completely dumb, only a little. But they're smart enough to notice 'robots'.
     So we also add some headers to make it believe we are a real browser and that we would like to accept normal HTML back.
     We don't really need anything back at all, so that's why you don't have to do anything with the data you get back from file_get_contents.
 </p>
