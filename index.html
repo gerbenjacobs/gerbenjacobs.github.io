@@ -1,8 +1,9 @@
 ---
 layout: page
 description: The personal blog of Gerben Jacobs;<br>software engineer, father, husband.
+comments: false
 ---
-
+<script id="dsq-count-scr" src="//gerbenjacobs.disqus.com/count.js" async></script>
 {% for post in paginator.posts %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
@@ -12,6 +13,7 @@ description: The personal blog of Gerben Jacobs;<br>software engineer, father, h
         Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %}
         on {{ post.date | date: "%B %-d, %Y" }}
         in {% include taxonomy.html %}
+        &mdash; <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread">Comments</a>
     </p>
 </div>
 <hr>
