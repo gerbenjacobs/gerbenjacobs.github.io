@@ -2,7 +2,7 @@
 layout: post
 title:  svc; an opinionated Go service framework
 description: I wrote a Go service framework that I use for my personal projects.
-date: 2022-06-16 00:00:00
+date: 2022-06-17 00:00:00
 header-img: img/flickr-theonewithout-fencers.jpg
 tags: ["tech"]
 ---
@@ -29,6 +29,8 @@ The idea is that requests only flow down the stack and answers flow up. These la
 
 Communication between the layers is done via interfaces. These are located in the file with the same name as the layer.
 So in order to learn more about what kind of storages we have, for example, you can visit `/storages/storage.go`.
+
+![The layers and directions of svc](img/blog/2022/layers.png)
 
 ### Handlers
 
