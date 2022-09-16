@@ -2,7 +2,7 @@
 layout: post
 title:  My ROI stock portfolio experiment
 description: An experimental stock portfolio that's based on stocks that have 25% or higher Return On Investment metrics. 
-date: 2022-08-26 00:00:00
+date: 2022-09-17 00:00:00
 header-img: img/blog/2022/yiorgos-ntrahas-mcAUHlGirVs-unsplash.jpg
 tags: ["stocks", "personal"]
 ---
@@ -61,6 +61,28 @@ Although you can also argue that Qualcomm and Southern Copper should have been t
 
 Now that we're a month in, here are the current results.
 
+- Microsoft (MSFT) - ❌(3.40%)
+- Apple (AAPL) - ❌(2.20%)
+- Mastercard (M) - ❌(2.00%)
+- Qualcomm (QCOM) - ❌(3.93%)
+- McDonald's (MCD) - ✔️(0.72%)
+- S&P Global (SPGI) - ❌(1.36%)
+- Novo Nordisk (NVO) - ✔️(1.36%)
+- Southern Copper (SCCO) - ✔️(2.07%)
+- Blackstone Inc (BX) - ❌(1.43%)
+- Paychex (PAYX) - ❌(1.65%)
+- Lousiana Pacific (LPX) - ❌(2.72%)
+- Rio Tinto (RIO) - ❌(2.32%)
+- Vale (VALE) - ❌(1.36%)
+- Applied Materials (AMAT) - ❌(1.42%)
+- KLA Corporation (KLAC) - ❌(0.27%)
+- Vermillion Energy (VRX) - ✔️(2.79%)
+- Crescent Point Energy (CRP) - ✔️(0.55%)
+
+The portfolio was up quite nicely for a week before the market started to drop. 
+I'm posting this a week after the 10th and since then we've had 2 days of heavy losses as well.
+
+However this is fine, means that I can buy more shares at a lower price when it's October.
 
 
 [f]: https://finviz.com/screener.ashx?v=111&f=cap_midover,fa_div_pos,fa_netmargin_o25,fa_roi_verypos,sh_avgvol_o1000&ft=4
