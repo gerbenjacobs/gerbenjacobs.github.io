@@ -1,6 +1,7 @@
 body {
     background: rgb(218, 209, 219);
     background: linear-gradient(69deg, rgba(218, 209, 219, 1) 0%, rgba(238, 240, 242, 1) 100%);
+    background-attachment: fixed;
     color: #333333;
 }
 
@@ -14,10 +15,11 @@ body {
     background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-decoration: none;
 }
 
 #content {
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 #footer {

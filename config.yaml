@@ -3,20 +3,13 @@ languageCode: 'en-us'
 title: Gerben Jacobs
 #description: The personal blog of Gerben Jacobs; software engineer, father, husband.
 theme: bootspoon
+paginate: 6
 enableRobotsTXT: true
 enableEmoji: true
 enableInlineShortcodes: true
 permalinks:
   posts: '/:slug'
 disqusShortname: 'gerbenjacobs'
-googleAnalytics: G-MEASUREMENT_ID
+googleAnalytics: G-KKSLTF3X24
 taxonomies:
   tags: tags
-menu:
-  main:
-    - name: About me
-      url: /about/
-      weight: -110
-    - name: Tags
-      url: /tags/
-      weight: -100
