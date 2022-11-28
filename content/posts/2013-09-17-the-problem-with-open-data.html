@@ -3,22 +3,20 @@ layout: post
 title: The problem(s) with Open Data
 description: But the open data ecosystem in the Netherlands is just like a retirement home, where one zealous intern occasionally organizes bingo events and turns the place buzzing before it's time for pudding.
 date:   2013-09-17 12:00:00
-header_img: img/flickr-theonewithout-scottish-highlander.jpeg
+headerImage: img/flickr-theonewithout-scottish-highlander.jpeg
 tags: ["tech"]
 ---
 <p>
-    <em>To put this blog post into context; this is written by a 25-year old developer who uses the Dutch open data
+    <em>To put this blog post into context; this is written by a 25-year-old developer who uses the Dutch open data
         (<a title="Dutch Open Data" href="https://data.overheid.nl">https://data.overheid.nl</a>) and doesn't like to read too much.
-        I rather hack tutorials than read specs and I code stuff for the use of the general public, i.e.: data needs to accommodate to the common people.</em>
+        I rather hack tutorials than read specs and I code stuff for the use of the public, i.e.: data needs to accommodate to the common people.</em>
 </p>
 
 <p>
     With that out of the way and allowing you to see this from my perspective here goes; the biggest problem(s) with Open Data.
 </p>
 
-<a href="https://data.overheid.nl">
-    <img class="pull-right" alt="data.overheid.nl" src="/img/blog/2013/data.overheid.nl.png" width="300" height="183" />
-</a>
+{{< img src="/img/blog/2013/data.overheid.nl.png" desc="data.overheid.nl" url="https://data.overheid.nl" >}}
 
 <p>
     <strong>I love Open Data</strong>, I love all kinds of data really, I can easily browse my phpMyAdmin page for an entire day and not get bored.
@@ -109,9 +107,7 @@ function rd2wgs ($x, $y)
     I haven't checked everything out, but I don't think there's any dataset that comes with a RESTful API. But that was to be expected, since most data is static.
 </p>
 
-<a href="https://www.flickr.com/photos/theonewithout/8031260093/" >
-    <img alt="Wiegtotweg.nl (From cradle to road)" src="https://farm9.staticflickr.com/8449/8031260093_81cd87d40f_b.jpg">
-</a>
+{{< img src="https://farm9.staticflickr.com/8449/8031260093_81cd87d40f_b.jpg" desc="Wiegtotweg.nl (From cradle to road)" url="https://www.flickr.com/photos/theonewithout/8031260093/" >}}
 
 <p>
     I do have actively used 3 datasets though; meteorological data by the KNMI (weather service),
@@ -119,21 +115,21 @@ function rd2wgs ($x, $y)
 </p>
 <p>
     For that last one <a title="RDW app, 3rd place submission" href="http://labs.gerbenjacobs.nl/wiegtotweg/" >I made "Wieg tot Weg"</a>
-    when they first opened their data to the public along with a competition, which I became 3rd in! They actually used Microsoft's Azure cloudplatform
+    when they first opened their data to the public along with a competition, which I became 3rd in! They actually used Microsoft's Azure cloud-platform
     to have some kind of API, not properly RESTful though.
 </p>
 <p>
     For the first one I wrote what I call an "API", but it's not really,
     <a title="KNMI Longterm predictions &quot;API&quot;" href="http://api.gerbenjacobs.nl/knmi/longterm/" >just see for yourself</a>.
     And at the moment I'm making a library for the sensory data from RWS that combines some of the files (.dat and .adm. Wtf?) that they put in their zip-file.
-    <a title="RWS library on Github" href="https://github.com/gerbenjacobs/rws" >The library</a> is at an hacked stage;
+    <a title="RWS library on Github" href="https://github.com/gerbenjacobs/rws" >The library</a> is at a hacked stage;
     yes it works, but no it won't win "Best code ever"-awards.
 </p>
 
 <p>
     If you look at <a title="RWS.php class on Github" href="https://github.com/gerbenjacobs/rws/blob/master/src/RWS/RWS.php" >the class</a> I wrote,
     you can see through what kind of hoops I have to jump to collect and combine the data. First 1) download a .zip, 2) unzip it, 3) collect the .adm and .dat files,
-    4) <code>explode()</code> them on newlines, 5) then per line parse them as comma-seperated values, 6) also trim the data values (whitespace everywhere!),
+    4) <code>explode()</code> them on newlines, 5) then per line parse them as comma-seperated values, 6) also trim the data values (whitespace everywhere!),
     then when both files are as arrays in memory, 7) combine them on their linenumber (so fragile!) and 8) format them a bit.
 </p>
 
@@ -169,7 +165,7 @@ function rd2wgs ($x, $y)
 
 <h1>How to fix Open Data</h1>
 
-<img class="pull-right" title="Fixing open data" alt="Fixing open data" src="/img/blog/2013/fix_open_data.png">
+{{< img src="/img/blog/2013/fix_open_data.png" desc="Fixing open data" >}}
 
 <p>
     This surely isn't a checklist, just merely some of my ideas and I hope some discussion material for whoever (that damn bureacracy!) is in charge.

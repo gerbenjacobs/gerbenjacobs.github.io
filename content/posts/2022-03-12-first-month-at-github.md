@@ -3,7 +3,7 @@ layout: post
 title:  First month at GitHub
 description: These are my experiences after completing my first month at GitHub as a Software Engineer!
 date: 2022-03-12 00:00:00
-header_img: img/github-social.webp
+headerImage: img/github-social.webp
 tags: ["tech", "personal"]
 ---
 

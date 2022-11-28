@@ -3,21 +3,24 @@ layout: post
 title:  How many points would you give this story?
 description: I finished what I thought would be a small story the other day. A blogpost about the dangers of pokering story points.
 date: 2018-01-05 18:00:00
-header_img: img/flickr-theonewithout-norway-laguna.png
+headerImage: img/flickr-theonewithout-norway-laguna.png
 tags: ["tech"]
+toc: true
 ---
 
 It’s time for a mental exercise. You are going to give story points to a user story, that I actually completed. 
 Then I’m going to tell you what I had to do and which issues I ran into.
 
-**Background**  
+## Background
+
 We have a page that lists birthdays for people on the current day, but excluding the current year. In the descending order it then shows their age.
 
 This is nice, but if you want to find out whose birthday is on a specific date, you might have to wait a year for it to come around.
 
 _The site is  multilingual and we are using PHP._
 
-**The story**  
+## The story
+
 Add a form to the page that lets you select another (full) date or a specific day by adding "All years" to the year field. 
 Have the form post to a different route than the actual birthday page.
 
@@ -26,7 +29,7 @@ Try to think of the things you have to do.
 
 Good, now let’s find out what I had to do..
 
-**What I needed to do..**  
+## What I needed to do..
 - Add a new route for the form handling
 - Create the HTML for the form
     - Fill 3 `<select>` dropdowns with day, month and year
@@ -66,7 +69,7 @@ but then moved to my Windows PC and also had to check the Linux server that the 
 Turns out there’s no simple OS-agnostic way to get the correct locale if you only have a country code -- 
 in the end I just created a small custom array to map codes to locales
 
-**No small task**  
+## No small task  
 Did you pick a low amount of story points? So did I!
 
 If you read the story you think all you have to do is add a form and change the query for fetching birthdays a bit. 

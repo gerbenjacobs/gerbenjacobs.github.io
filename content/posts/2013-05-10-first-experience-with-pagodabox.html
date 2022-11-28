@@ -3,17 +3,15 @@ layout: post
 title: My first experience with PagodaBox
 description: For when you need the scaffolding of an empty PHP class object
 date:   2013-05-10 12:00:00
-header_img: img/home-bg.jpg
+headerImage: img/home-bg.jpg
 tags: ["tech"]
 ---
 <h2>What is PagodaBox</h2>
 
-<div class="alert alert-info alert-dismissible" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <small>This blog post is written about what would now be known as <em>Pagoda v1</em> and might not be representative</small>
+<div class="alert alert-primary" role="alert">
+    <small>This blog post is written about what would now be known as <em>Pagoda v1</em> and might not be representative.</small>
 </div>
-
-<img class="pull-right" alt="Pagoda Box" src="/img/blog/2013/pagoda.png" width="121" height="54">
+{{< img src="/img/blog/2013/pagoda.png" desc="Pagoda Box" >}}
 <p>
     <a href="https://pagodabox.io">PagodaBox.com</a> is a Platform as a Service (PaaS) for PHP.
     <br>They have plans for Ruby and Python, but they're not here yet as of this writing.
@@ -46,7 +44,7 @@ tags: ["tech"]
 </p>
 
 <h2>My experience</h2>
-<img class="pull-right" alt="Pagoda Sad Database component" src="/img/blog/2013/sad_database.png" width="129" height="83">
+{{< img src="/img/blog/2013/sad_database.png" desc="Sad Database component" >}}
 
 <p>
     So my next attempt was making it all by myself. First a PHP web component, yep, worked and <code>phpinfo()</code> gave me a bunch of nice stats.
@@ -61,7 +59,7 @@ tags: ["tech"]
 
 <p>
     <strong>Redeploying from git commits.</strong><br>
-    <img class="pull-left" alt="Pagoda Happy Web component" src="/img/blog/2013/happy_web.png" width="127" height="65">
+    {{< img src="/img/blog/2013/happy_web.png" desc="Happy Web component" >}}<br>
     When you push your local changes to the PagodaBox git server <small>(you can also choose the not-recommended SFTP option when signing up)</small> they totally rebuild,
     redeploy and relocate your components. This last part is nice because when you add changes, your 'old' site still works until the new one is up and running
     after which some magic happens and your URL gets redirected to the new machine.

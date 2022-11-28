@@ -3,7 +3,7 @@ layout: post
 title:  My first open source project
 description:
 date:   2015-11-20 12:00:00
-header_img: img/airballoon_b.jpg
+headerImage: img/airballoon_b.jpg
 tags: ["tech"]
 ---
 <p>
@@ -23,12 +23,9 @@ tags: ["tech"]
     I feel like I'm on the so called <em>'slope of enlightenment'</em> when you look at
     <a href="http://www.gartner.com/it/products/research/media_products/book/about_hypecycle.jsp" >Gartners Hype Cycle graph</a>.
 </p>
-<p>
-    <figure>
-        <img src="/img/blog/2015/hypecycle.gif" alt="Hype Cycle">
-        <figcaption>While meant for technologies, also good analogy for learning (programming) languages</figcaption>
-    </figure>
-</p>
+
+{{< img src="/img/blog/2015/hypecycle.gif" desc="While meant for technologies, also good analogy for learning (programming) languages" >}}
+
 <p>
     I spent a lot of time in the 'trough of disillusionment'. First after I learned about security, forcefully so, because my applications and sites were
     targeted by scriptkiddies. I had to learn about cookie hijacking, XSS and SQL injection. After that I spend more time on defensive programming than actually
@@ -60,7 +57,7 @@ tags: ["tech"]
 <h4>Example.php</h4>
 <p>
     I created an <code>example.php</code> file to test and showcase the usage of my library and I also used this to test my changes visually, next to the unit tests.
-    In October I started to have a real use for this library and started to implement it in my new project. I quickly discovered that both my unit tests and example.php
+    In October, I started to have a real use for this library and started to implement it in my new project. I quickly discovered that both my unit tests and example.php
     didn't catch all the situations. For example the most basic sad path <i>(as opposed to happy path)</i> caused errors, so instead I had to have it
     throw exceptions and then catch it in my project code and that of the example.php page.
     <br>I'm not sure what the lesson is, but sometimes you can only find things out during real use, so maybe instead of an example.php, you could
@@ -80,10 +77,9 @@ tags: ["tech"]
     (in this case) PHP, is a wonderful thing and allows you to easily detect what your minimal version should be set to.
     <br>Don't be afraid for your git log to look like this, while you're figuring things out.
 </p>
-<figure>
-    <img src="/img/blog/2015/getting-travis-to-work.png" alt="Getting Travis to work for you!">
-    <figcaption>Getting Travis to do what you want is not always easy and straight forward.</figcaption>
-</figure>
+
+{{< img src="/img/blog/2015/getting-travis-to-work.png" url="/img/blog/2015/getting-travis-to-work.png" desc="Getting Travis to do what you want is not always easy and straight forward." >}}
+
 <p class="text-success small">
     <strong>Tip:</strong> If you're using Composer and Travis-ci.org, use <code>composer update</code> in the 'install' phase because
     that will take care of the correct dependencies based on the PHP version you're running it from instead of taking it from your Composer.lock file

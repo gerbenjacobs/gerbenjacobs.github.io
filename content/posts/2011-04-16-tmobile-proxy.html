@@ -4,7 +4,7 @@ title:  T-Mobile traffic through http://1.2.3.12
 description: T-Mobile Edge makes all your mobile connections go through a proxy with rather peculiar IP addresses such as 1.2.3.12. Find out why!
 slug: t-mobile-traffic-through-1-2-3-12
 date:   2011-04-16 12:00:00
-header_img: img/post-bg-02.jpg
+headerImage: img/post-bg-02.jpg
 tags: ["tech"]
 ---
 <p>
@@ -37,15 +37,11 @@ tags: ["tech"]
 <h2>Advantages</h2>
 <p>So how is this <em>enhanced</em>, you may ask. Well, just look at the following image (click to enlarge):</p>
 
-<figure>
-    <a href="/img/blog/2011/tmobile_edge.png">
-        <img src="/img/blog/2011/tmobile_edge.png" alt="Parallel downloads with T-Mobile Edge">
-    </a>
-    <figcaption>Parallel downloads with T-Mobile Edge</figcaption>
-</figure>
+
+{{< img src="/img/blog/2011/tmobile_edge.png" desc="Parallel downloads with T-Mobile Edge" url="/img/blog/2011/tmobile_edge.png" >}}
 
 <p>
-    It's hard to see, because it's not the entire page load, but all of the images (they were
+    It's hard to see, because it's not the entire page load, but all the images (they were
     avatars on a forum) were loaded simultaneously. I was using Firefox 4 which can handle up to 5 (or was it 8?)
     parallel downloads at the same time. Then the 'loadbalancing' (for lack of a better word) comes to play, using the
     multiple servers 1.2.3.9 to 1.2.3.13 (great IP address by the way!) it loaded them all. So that's 5 x 5 (or 8),
@@ -53,7 +49,7 @@ tags: ["tech"]
 </p>
 
 <p>
-    That's the only advantage I can spot of this so called EDGE service, which came unannounced.
+    That's the only advantage I can spot of this so-called EDGE service, which came unannounced.
 </p>
 
 <h2>Disadvantages</h2>

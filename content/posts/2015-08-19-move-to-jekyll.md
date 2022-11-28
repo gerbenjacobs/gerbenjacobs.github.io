@@ -3,7 +3,7 @@ layout: post
 title:  Move to Jekyll
 description: I decided to move my blog to Github Pages, fueled by Jekyll.
 date:   2015-08-19 10:36:00
-header_img: img/post-bg-03.jpg
+headerImage: img/post-bg-03.jpg
 tags: ["tech"]
 ---
 So I moved my site to Jekyll and Github Pages.  

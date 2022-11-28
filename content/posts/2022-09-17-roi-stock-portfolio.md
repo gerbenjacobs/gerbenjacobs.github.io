@@ -3,7 +3,7 @@ layout: post
 title:  My ROI stock portfolio experiment
 description: An experimental stock portfolio that's based on stocks that have 25% or higher Return On Investment metrics. 
 date: 2022-09-17 00:00:00
-header_img: img/blog/2022/yiorgos-ntrahas-mcAUHlGirVs-unsplash.jpg
+headerImage: img/blog/2022/yiorgos-ntrahas-mcAUHlGirVs-unsplash.jpg
 tags: ["stocks", "personal"]
 ---
 
