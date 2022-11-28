@@ -1,0 +1,20 @@
+{{ define "main" }}
+<div class="row">
+    <div class="col-md-9">
+        {{ range .Pages.ByPublishDate.Reverse }}
+        <div class="card">
+            <img src="{{ absURL .Params.header_img }}" class="card-img-top card-img-height" alt="{{ .Title }}">
+            <div class="card-body">
+                <h2 class="card-title"><a href="{{ .RelPermalink }}" class="post-link">{{ .Title }}</a></h2>
+                <h6 class="card-subtitle my-2 text-muted">{{ partial "metadata.html" . }}</h6>
+                <p class="card-text">{{ .Summary }}</p>
+                <a href="{{ .RelPermalink }}" class="btn btn-primary read-more">🗨️ Read more</a>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+    <div class="col-md-3">
+        {{- partial "sidebar.html" . -}}
+    </div>
+</div>
+{{ end }}

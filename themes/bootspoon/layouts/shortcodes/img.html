@@ -1,0 +1,7 @@
+<figure class="figure">
+    {{ with .Get "url" }}<a href={{ . }}>{{ end }}
+        <img class="figure-img img-fluid rounded" src={{ .Get "src" }} alt={{ .Get "desc" }}>
+    {{ with .Get "url" }}</a>{{ end }}
+
+    <figcaption class="figure-caption">{{ .Get "desc" }}</figcaption>
+</figure>

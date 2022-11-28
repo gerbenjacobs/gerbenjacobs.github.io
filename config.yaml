@@ -1,0 +1,22 @@
+baseURL: 'https://blog.gerbenjacobs.nl'
+languageCode: 'en-us'
+title: Gerben Jacobs
+#description: The personal blog of Gerben Jacobs; software engineer, father, husband.
+theme: bootspoon
+enableRobotsTXT: true
+enableEmoji: true
+enableInlineShortcodes: true
+permalinks:
+  posts: '/:slug'
+disqusShortname: 'gerbenjacobs'
+googleAnalytics: G-MEASUREMENT_ID
+taxonomies:
+  tags: tags
+menu:
+  main:
+    - name: About me
+      url: /about/
+      weight: -110
+    - name: Tags
+      url: /tags/
+      weight: -100

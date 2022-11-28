@@ -1,0 +1,34 @@
+---
+layout: post
+title: Quickly create an empty stdClass object in PHP
+description: For when you need the scaffolding of an empty PHP class object
+date:   2013-04-19 12:00:00
+header_img: img/flickr-theonewithout-norway-shoes.png
+tags: ["tech", "php"]
+---
+<p>
+    I was working on a Laravel project and had to work with a <a title="Eloquent ORM docs" href="https://laravel.com/docs/database/eloquent" >Eloquent ORM</a> object;
+    I then needed to create an empty stdClass object.
+</p>
+
+<p>
+    There's a chance that a person is not known and being lazy I wanted to fill the form anyway with my Person object, so I needed a mockup of that object.
+</p>
+
+{{< highlight php >}}
+<?php
+$person = (object) array_fill_keys(
+    array('firstname', 'lastname', 'email', 'photo'),
+    ''
+);
+?>
+{{< /highlight >}}
+
+<p>
+    I'd say <a href="https://gist.github.com/gerbenjacobs/5525165" title="Create an empty stdClass object Gist" >this solution</a> is quick and dirty.. but frankly,
+    it's not that dirty at all!
+</p>
+
+<p>
+    In short, this one-liner, creates an array with the 4 keys provided and gives them an empty value (<code>''</code>) then we just typecast it into an object. Done!
+</p>
