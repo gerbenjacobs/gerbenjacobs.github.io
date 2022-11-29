@@ -7,15 +7,17 @@
                 <h1>{{ .Title }}</h1>
             </header>
             {{ partial "metadata.html" . }}
-            <br>
             {{ if and (gt .WordCount 400 ) (.Params.toc) }}
+            <hr class="rainbow">
+            <strong>Table of contents</strong>
             {{ .TableOfContents }}
             {{ end }}
-            <br>
+            <hr class="rainbow">
             {{ .Content }}
         </article>
 
         {{ if not .Params.hide_comments }}
+        <hr class="rainbow">
         {{ template "_internal/disqus.html" . }}
         {{ end }}
     </div>
