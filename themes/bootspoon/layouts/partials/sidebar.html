@@ -12,7 +12,7 @@
     More about me, including links to other online services, can be found at <a href="https://gerben.dev">gerben.dev</a>
 </p>
 
-<h3>Tags</h3>
+<h3 class="mt-4">Tags</h3>
 {{ range $name, $taxonomy := .Site.Taxonomies.tags }} {{ $cnt := .Count }}
     {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
     <a href={{ .RelPermalink }} class="btn btn-primary m-1">
@@ -21,11 +21,8 @@
     {{end}}
 {{end}}
 
-<h3>Socials</h3>
+<h3 class="mt-4">Socials</h3>
 <div class="list-group">
-    <a href="/index.xml" class="list-group-item list-group-item-action" style="color: #FFA500;">
-        <img src="/img/social/rss.svg" alt="RSS" style="width: 1rem;"> <b>RSS</b>
-    </a>
     <a href="https://twitter.com/gerbenjacobs" class="list-group-item list-group-item-action" style="color: #1DA1F2;">
         <img src="/img/social/twitter.svg" alt="Twitter" style="width: 1rem;"> <b>Twitter</b>
     </a>
@@ -37,5 +34,18 @@
     </a>
     <a href="https://linkedin.com/in/gerbenjacobs" class="list-group-item list-group-item-action" style="color: #0A66C2;">
         <img src="/img/social/linkedin.svg" alt="LinkedIn" style="width: 1rem;"> <b>LinkedIn</b>
+    </a>
+</div>
+
+<h3 class="mt-4">Meta</h3>
+<div class="list-group">
+    <a href="/index.xml" class="list-group-item list-group-item-action" style="color: #FFA500;">
+        <img src="/img/social/rss.svg" alt="RSS" style="width: 1rem;"> <b>RSS</b>
+    </a>
+    <a href="/sitemap.xml" class="list-group-item list-group-item-action" style="color: #07075d;">
+        <img src="/img/social/sitemap.png" alt="Sitemap" style="width: 1rem;"> <b>Sitemap</b>
+    </a>
+    <a href="/posts/archive/" class="list-group-item list-group-item-action" style="color: #fc466b;">
+        <img src="/img/social/archive.png" alt="Posts archive" style="width: 1rem;"> <b>Posts archive</b>
     </a>
 </div>
