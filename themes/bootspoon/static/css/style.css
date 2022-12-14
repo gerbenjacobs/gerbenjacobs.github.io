@@ -7,7 +7,7 @@ body {
 
 body.dark-theme {
     background: rgb(0, 0, 0);
-    background: linear-gradient(69deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 1) 100%);
+    background: linear-gradient(69deg, rgba(0, 0, 0, 0.7) 0%, rgba(25, 25, 25, 1) 100%);
     background-attachment: fixed;
     color: #ffffff;
 }
