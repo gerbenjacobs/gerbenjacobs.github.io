@@ -1,7 +1,6 @@
 baseURL: 'https://blog.gerbenjacobs.nl'
 languageCode: 'en-us'
 title: Gerben Jacobs
-#description: The personal blog of Gerben Jacobs; software engineer, father, husband.
 theme: bootspoon
 paginate: 6
 enableRobotsTXT: true

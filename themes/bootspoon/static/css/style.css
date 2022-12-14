@@ -5,6 +5,22 @@ body {
     color: #333333;
 }
 
+body.dark-theme {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(69deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 1) 100%);
+    background-attachment: fixed;
+    color: #ffffff;
+}
+body.dark-theme a:not(.btn, .page-link) {
+    color: #CCC;
+}
+body.dark-theme a:hover:not(.btn, .page-link) {
+    color: #FFF;
+}
+body.dark-theme #TableOfContents a {
+    color: #CCC;
+}
+
 #nav {
     background: rgb(2, 0, 36);
     background: linear-gradient(10deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 100%);
@@ -78,4 +94,11 @@ h1, h2, h3, h4 {
 
 .navbar-brand, header > h1, .post-link {
     font-family: "Nunito", sans-serif;
+}
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
 }
