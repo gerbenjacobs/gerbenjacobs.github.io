@@ -1,22 +1,49 @@
-let cards = document.querySelectorAll('.card');
-let buttons = document.querySelectorAll('.btn-primary');
-let listgroups = document.querySelectorAll('.list-group-item');
-let darkmode = null;
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+let upButton;
 
 // add listeners
 document.addEventListener("DOMContentLoaded", function (event) {
-    darkmode = document.querySelector('#darkmode');
-    toggleDarkMode(prefersDarkScheme.matches);
-    darkmode.addEventListener("click", function (event) {
+    upButton = document.getElementById("btn-back-to-top");
+    upButton.addEventListener("click", backToTop);
+
+    // add listener for dark mode button
+    document.querySelector('#darkmode').addEventListener("click", function (event) {
         event.preventDefault();
         let isDarkMode = document.body.classList.contains("dark-theme");
-        toggleDarkMode(!isDarkMode);
+        if (isDarkMode) {
+            localStorage.setItem("darkmode", "false");
+        } else {
+            localStorage.setItem("darkmode", "true");
+        }
+        toggleDarkMode();
     });
+
+    // set dark mode or not
+    toggleDarkMode();
 });
 
+function determineDarkMode() {
+    // fetch dark mode settings
+    let darknessSystem = prefersDarkScheme.matches;
+    let darknessStored = localStorage.getItem("darkmode");
+
+    // determine dark mode
+    if (darknessStored === "true") {
+       return true;
+    } else if (darknessStored === "false") {
+        return false;
+    } else {
+        return darknessSystem;
+    }
+}
+
 // toggle dark mode
-function toggleDarkMode(on) {
+function toggleDarkMode() {
+    let on = determineDarkMode();
+    let cards = document.querySelectorAll('.card');
+    let buttons = document.querySelectorAll('.btn');
+    let listgroups = document.querySelectorAll('.list-group-item');
+
     if (on) {
         document.body.classList.add("dark-theme");
         for (let card of cards) {
@@ -42,4 +69,24 @@ function toggleDarkMode(on) {
             listgroup.classList.remove("list-group-item-dark");
         }
     }
+}
+
+window.onscroll = function () {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    if (
+        document.body.scrollTop > 400 ||
+        document.documentElement.scrollTop > 400
+    ) {
+        upButton.style.display = "block";
+    } else {
+        upButton.style.display = "none";
+    }
+}
+
+function backToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
