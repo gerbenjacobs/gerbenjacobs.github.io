@@ -6,9 +6,7 @@ body {
 }
 
 body.dark-theme {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(69deg, rgba(0, 0, 0, 0.7) 0%, rgba(25, 25, 25, 1) 100%);
-    background-attachment: fixed;
+    background: rgb(51, 51, 51);
     color: #ffffff;
 }
 body.dark-theme a:not(.btn, .page-link) {
@@ -19,6 +17,11 @@ body.dark-theme a:hover:not(.btn, .page-link) {
 }
 body.dark-theme #TableOfContents a {
     color: #CCC;
+}
+
+body.dark-theme #nav {
+    background: rgb(53, 4, 56);
+    background: linear-gradient(190deg, rgb(168, 79, 218) 0%, rgb(53, 4, 56) 100%);
 }
 
 #nav {
