@@ -4,7 +4,7 @@ date: 2023-01-18T19:59:15+01:00
 layout: post
 description: My 1-year experiment, where I buy every month for 10 months, has crossed the halfway mark. How's it going?
 headerImage: img/blog/2023/scott-graham-5fNmWej4tAA-unsplash.jpg
-tags: ["stocks", "personal"]
+tags: ["stocks", "personal", "roi-stock-portfolio"]
 toc: false
 comment: true
 ---
