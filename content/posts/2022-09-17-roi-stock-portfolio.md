@@ -63,7 +63,7 @@ Now that we're a month in, here are the current results.
 
 - Microsoft (MSFT) - ❌(3.40%)
 - Apple (AAPL) - ❌(2.20%)
-- Mastercard (M) - ❌(2.00%)
+- Mastercard (MA) - ❌(2.00%)
 - Qualcomm (QCOM) - ❌(3.93%)
 - McDonald's (MCD) - ✔️(0.72%)
 - S&P Global (SPGI) - ❌(1.36%)
@@ -76,8 +76,8 @@ Now that we're a month in, here are the current results.
 - Vale (VALE) - ❌(1.36%)
 - Applied Materials (AMAT) - ❌(1.42%)
 - KLA Corporation (KLAC) - ❌(0.27%)
-- Vermillion Energy (VRX) - ✔️(2.79%)
-- Crescent Point Energy (CRP) - ✔️(0.55%)
+- Vermillion Energy (VET) - ✔️(2.79%)
+- Crescent Point Energy (CPG) - ✔️(0.55%)
 
 The portfolio was up quite nicely for a week before the market started to drop. 
 I'm posting this a week after the 10th and since then we've had 2 days of heavy losses as well.

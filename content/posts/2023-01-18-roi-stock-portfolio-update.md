@@ -19,7 +19,7 @@ As of 10th of January 2023, just before I deposited another €100, the portfoli
 
 - ❌(-3.40%) Microsoft (MSFT) - ❌(-14.07%)
 - ❌(-2.20%) Apple (AAPL) - ❌(-17.41%)
-- ❌(-2.00%) Mastercard (M) - ✔️(+5.32%)
+- ❌(-2.00%) Mastercard (MA) - ✔️(+5.32%)
 - ❌(-3.93%) Qualcomm (QCOM) - ❌(-13.68%)
 - ✔️(+0.72%) McDonald's (MCD) - ❌(-3.06%)
 - ❌(-1.36%) S&P Global (SPGI) - ❌(-5.01%)
@@ -32,8 +32,8 @@ As of 10th of January 2023, just before I deposited another €100, the portfoli
 - ❌(-1.36%) Vale (VALE) - ✔️(+17.29%)
 - ❌(-1.42%) Applied Materials (AMAT) - ✔️(+4.07%)
 - ❌(-0.27%) KLA Corporation (KLAC) - ✔️(+8.67%)
-- ✔️(+2.79%) Vermillion Energy (VRX) - ❌(-33.76%)
-- ✔️(+0.55%) Crescent Point Energy (CRP) - ❌(-10.19%)
+- ✔️(+2.79%) Vermillion Energy (VET) - ❌(-33.76%)
+- ✔️(+0.55%) Crescent Point Energy (CPG) - ❌(-10.19%)
 
 Volatile, that's how it's going. Just like the rest of the 2022 market. In fact, now with a couple of months
 of hindsight we can also see that my starting point, August 2022, was one of the 'worst' months to start.
