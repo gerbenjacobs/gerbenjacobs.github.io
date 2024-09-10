@@ -2,7 +2,8 @@ baseURL: 'https://blog.gerbenjacobs.nl'
 languageCode: 'en-us'
 title: Gerben Jacobs
 theme: bootspoon
-paginate: 6
+pagination:
+  pagerSize: 6
 enableRobotsTXT: true
 enableEmoji: true
 enableInlineShortcodes: true
