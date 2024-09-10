@@ -1,5 +1,134 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>roi-stock-portfolio on Gerben Jacobs</title><link>https://blog.gerbenjacobs.nl/tags/roi-stock-portfolio/</link><description>Recent content in roi-stock-portfolio on Gerben Jacobs</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 10 Aug 2023 10:59:15 +0100</lastBuildDate><atom:link href="https://blog.gerbenjacobs.nl/tags/roi-stock-portfolio/index.xml" rel="self" type="application/rss+xml"/><item><title>My ROI stock portfolio experiment; the results</title><link>https://blog.gerbenjacobs.nl/my-roi-stock-portfolio-experiment-the-results/</link><pubDate>Thu, 10 Aug 2023 10:59:15 +0100</pubDate><guid>https://blog.gerbenjacobs.nl/my-roi-stock-portfolio-experiment-the-results/</guid><description>A year has passed since my first post about my ROI stock portfolio and that means it is time to see how it went. The portfolio As of 10th of August 2023, using USD-based percentages, the portfolio looks like this: ROI portfolio stock returns after 1 year Stock Return Novo Nordisk (NVO) ✔️(42.25%) Applied Materials (AMAT) ✔️(37.67%) Southern Copper (SCCO) ✔️(34.97%) KLA Corporation (KLAC) ✔️(33.28%) Microsoft (MSFT) ✔️(24.82%) Apple (AAPL) ✔️(18.</description></item><item><title>My ROI stock portfolio experiment; half way there</title><link>https://blog.gerbenjacobs.nl/my-roi-stock-portfolio-experiment-half-way-there/</link><pubDate>Wed, 18 Jan 2023 19:59:15 +0100</pubDate><guid>https://blog.gerbenjacobs.nl/my-roi-stock-portfolio-experiment-half-way-there/</guid><description>In a previous post about my ROI stock portfolio you could read what my plan was. We&amp;rsquo;re now 5 months further, and that means we&amp;rsquo;ve reached the halfway mark of the buying period. So how&amp;rsquo;s it going?
-The portfolio As of 10th of January 2023, just before I deposited another €100, the portfolio looked like this:
-❌(-3.40%) Microsoft (MSFT) - ❌(-14.07%) ❌(-2.20%) Apple (AAPL) - ❌(-17.41%) ❌(-2.00%) Mastercard (MA) - ✔️(+5.</description></item><item><title>My ROI stock portfolio experiment</title><link>https://blog.gerbenjacobs.nl/my-roi-stock-portfolio-experiment/</link><pubDate>Sat, 17 Sep 2022 00:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/my-roi-stock-portfolio-experiment/</guid><description>After reading a bit about multiple well-known investors mentioning how important Return On Invested Capital is, I decided to generate a small portfolio (actually a pie within Trading212) with some metrics.
-I used finviz to screen and since they don&amp;rsquo;t have ROIC, I used Return On Investment (ROI). This is a different metric but is the closest option there is. My screening options were as follows:
-ROI of 25% or higher Net profit margin of 25% or higher Market cap of 2 billion or higher Positive dividend Average trading volume of 1 million So the important values are the ROI and net profit margins.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Roi-Stock-Portfolio on Gerben Jacobs</title><link>https://blog.gerbenjacobs.nl/tags/roi-stock-portfolio/</link><description>Recent content in Roi-Stock-Portfolio on Gerben Jacobs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 10 Aug 2023 10:59:15 +0100</lastBuildDate><atom:link href="https://blog.gerbenjacobs.nl/tags/roi-stock-portfolio/index.xml" rel="self" type="application/rss+xml"/><item><title>My ROI stock portfolio experiment; the results</title><link>https://blog.gerbenjacobs.nl/my-roi-stock-portfolio-experiment-the-results/</link><pubDate>Thu, 10 Aug 2023 10:59:15 +0100</pubDate><guid>https://blog.gerbenjacobs.nl/my-roi-stock-portfolio-experiment-the-results/</guid><description>&lt;p>
+ A year has passed since my
+ &lt;a href="https://blog.gerbenjacobs.nl/my-roi-stock-portfolio-experiment/">first post about my ROI stock portfolio&lt;/a>
+ and that means it is time to see how it went.
+&lt;/p>
+
+&lt;h2 id="portfolio">The portfolio&lt;/h2>
+
+&lt;p>
+ As of 10th of August 2023, using USD-based percentages, the portfolio looks like this:
+&lt;/p>
+
+&lt;table>
+ &lt;caption>ROI portfolio stock returns after 1 year&lt;/caption>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Stock&lt;/th>
+ &lt;th>Return&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>Novo Nordisk (NVO)&lt;/td>
+ &lt;td>✔️(42.25%)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Applied Materials (AMAT)&lt;/td>
+ &lt;td>✔️(37.67%)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Southern Copper (SCCO)&lt;/td>
+ &lt;td>✔️(34.97%)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>KLA Corporation (KLAC)&lt;/td>
+ &lt;td>✔️(33.28%)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Microsoft (MSFT)&lt;/td>
+ &lt;td>✔️(24.82%)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Apple (AAPL)&lt;/td>
+ &lt;td>✔️(18.09%)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Crescent Point Energy (CPG)&lt;/td>
+ &lt;td>✔️(16.57%)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Mastercard (MA)&lt;/td>
+ &lt;td>✔️(13.67%)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Blackstone Inc (BX)&lt;/td>
+ &lt;td>✔️(13.64%)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>S&amp;P Global (SPGI)&lt;/td>
+ &lt;td>✔️(11.33%)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>McDonald's (MCD)&lt;/td>
+ &lt;td>✔️(7.51%)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Paychex (PAYX)&lt;/td>
+ &lt;td>✔️(7.00%)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Lousiana Pacific (LPX)&lt;/td>
+ &lt;td>✔️(6.95%)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Qualcomm (QCOM)&lt;/td>
+ &lt;td>❌(-7.96%)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Rio Tinto (RIO)&lt;/td>
+ &lt;td>❌(-10.97%)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Vale (VALE)&lt;/td>
+ &lt;td>❌(-11.35%)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Vermillion Energy (VET)&lt;/td>
+ &lt;td>❌️️(-12.60%)&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+
+&lt;p>
+ In US Dollars this is a &lt;strong>14.4%&lt;/strong> return, which is not bad at all.
+ Foreign exchange rates however gave me a &lt;strong>-5%&lt;/strong> if I were to convert it to Euros straight away.
+&lt;/p></description></item><item><title>My ROI stock portfolio experiment; half way there</title><link>https://blog.gerbenjacobs.nl/my-roi-stock-portfolio-experiment-half-way-there/</link><pubDate>Wed, 18 Jan 2023 19:59:15 +0100</pubDate><guid>https://blog.gerbenjacobs.nl/my-roi-stock-portfolio-experiment-half-way-there/</guid><description>&lt;p>In a &lt;a href="https://blog.gerbenjacobs.nl/my-roi-stock-portfolio-experiment/">previous post about my ROI stock portfolio&lt;/a> you could read
+what my plan was. We&amp;rsquo;re now 5 months further, and that means we&amp;rsquo;ve reached the halfway mark of the buying period.
+So how&amp;rsquo;s it going?&lt;/p>
+&lt;h2 id="the-portfolio">The portfolio&lt;/h2>
+&lt;p>As of 10th of January 2023, just before I deposited another €100, the portfolio looked like this:&lt;/p>
+&lt;ul>
+&lt;li>❌(-3.40%) Microsoft (MSFT) - ❌(-14.07%)&lt;/li>
+&lt;li>❌(-2.20%) Apple (AAPL) - ❌(-17.41%)&lt;/li>
+&lt;li>❌(-2.00%) Mastercard (MA) - ✔️(+5.32%)&lt;/li>
+&lt;li>❌(-3.93%) Qualcomm (QCOM) - ❌(-13.68%)&lt;/li>
+&lt;li>✔️(+0.72%) McDonald&amp;rsquo;s (MCD) - ❌(-3.06%)&lt;/li>
+&lt;li>❌(-1.36%) S&amp;amp;P Global (SPGI) - ❌(-5.01%)&lt;/li>
+&lt;li>✔️(+1.36%) Novo Nordisk (NVO) - ✔️(+13.02%)&lt;/li>
+&lt;li>✔️(+2.07%) Southern Copper (SCCO) - ✔️(+26.55%)&lt;/li>
+&lt;li>❌(-1.43%) Blackstone Inc (BX) - ❌(-17.91%)&lt;/li>
+&lt;li>❌(-1.65%) Paychex (PAYX) - ❌(-8.18%)&lt;/li>
+&lt;li>❌(-2.72%) Lousiana Pacific (LPX) - ❌(-1.89%)&lt;/li>
+&lt;li>❌(-2.32%) Rio Tinto (RIO) - ✔️(+14.96%)&lt;/li>
+&lt;li>❌(-1.36%) Vale (VALE) - ✔️(+17.29%)&lt;/li>
+&lt;li>❌(-1.42%) Applied Materials (AMAT) - ✔️(+4.07%)&lt;/li>
+&lt;li>❌(-0.27%) KLA Corporation (KLAC) - ✔️(+8.67%)&lt;/li>
+&lt;li>✔️(+2.79%) Vermillion Energy (VET) - ❌(-33.76%)&lt;/li>
+&lt;li>✔️(+0.55%) Crescent Point Energy (CPG) - ❌(-10.19%)&lt;/li>
+&lt;/ul>
+&lt;p>Volatile, that&amp;rsquo;s how it&amp;rsquo;s going. Just like the rest of the 2022 market. In fact, now with a couple of months
+of hindsight we can also see that my starting point, August 2022, was one of the &amp;lsquo;worst&amp;rsquo; months to start.&lt;/p></description></item><item><title>My ROI stock portfolio experiment</title><link>https://blog.gerbenjacobs.nl/my-roi-stock-portfolio-experiment/</link><pubDate>Sat, 17 Sep 2022 00:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/my-roi-stock-portfolio-experiment/</guid><description>&lt;p>After reading a bit about multiple well-known investors mentioning how important Return On Invested Capital is,
+I decided to generate a small portfolio (actually a pie within &lt;a href="https://www.trading212.com/invite/HrAs2dFZ">Trading212&lt;/a>) with some metrics.&lt;/p>
+&lt;p>I used &lt;a href="https://finviz.com/screener.ashx?v=111&amp;amp;f=cap_midover,fa_div_pos,fa_netmargin_o25,fa_roi_verypos,sh_avgvol_o1000&amp;amp;ft=4">finviz&lt;/a> to screen and since they don&amp;rsquo;t have ROIC, I used Return On Investment (ROI).
+This is a different metric but is the closest option there is. My screening options were as follows:&lt;/p>
+&lt;ul>
+&lt;li>ROI of 25% or higher&lt;/li>
+&lt;li>Net profit margin of 25% or higher&lt;/li>
+&lt;li>Market cap of 2 billion or higher&lt;/li>
+&lt;li>Positive dividend&lt;/li>
+&lt;li>Average trading volume of 1 million&lt;/li>
+&lt;/ul>
+&lt;p>So the important values are the ROI and net profit margins. However to give me some more established companies
+I also made sure that they have a market cap of 2 billion or more, enough trading volume and a positive dividend.
+This last option as a soft guarantee that the company is free cash flow positive.&lt;/p></description></item></channel></rss>
