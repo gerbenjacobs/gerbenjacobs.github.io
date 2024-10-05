@@ -63,7 +63,7 @@
  Pretty semantic title, huh? But that's basically what this is all about.
 &lt;/p>
 
-&lt;figure class="figure">
+&lt;figure class="figure ">
  
  &lt;img class="figure-img img-fluid rounded" src=https://blog.gerbenjacobs.nl/img/blog/2012/shoutcast.gif alt=Shoutcast&amp;#32;logo>
  

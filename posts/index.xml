@@ -163,11 +163,11 @@ they were awesome and all ended up on my MacBook. Eight years later I now work a
 standard time, so that meant 8PM CET. The first thing that you&amp;rsquo;ll notice is that a lot of the work
 you do is by using GitHub itself. There&amp;rsquo;s an &lt;code>onboarding&lt;/code> repository with a project for every
 person that joined during your cohort. Here you can find &lt;strong>issues&lt;/strong> with tasks that you can complete
-during the first days.&lt;/p></description></item><item><title>How many points would you give this story?</title><link>https://blog.gerbenjacobs.nl/how-many-points-would-you-give-this-story/</link><pubDate>Fri, 05 Jan 2018 18:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/how-many-points-would-you-give-this-story/</guid><description>&lt;p>It’s time for a mental exercise. You are going to give story points to a user story, that I actually completed.
+during the first days.&lt;/p></description></item><item><title>How many points would you give this story?</title><link>https://blog.gerbenjacobs.nl/how-many-points-would-you-give-this-story/</link><pubDate>Fri, 05 Jan 2018 18:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/how-many-points-would-you-give-this-story/</guid><description>&lt;p>It’s time for a mental exercise. You are going to give &lt;a href="https://www.atlassian.com/agile/project-management/estimation">story points&lt;/a> to a user story, that I actually completed.
 Then I’m going to tell you what I had to do and which issues I ran into.&lt;/p>
 &lt;h2 id="background">Background&lt;/h2>
-&lt;p>We have a page that lists birthdays for people on the current day, but excluding the current year. In the descending order it then shows their age.&lt;/p>
-&lt;p>This is nice, but if you want to find out whose birthday is on a specific date, you might have to wait a year for it to come around.&lt;/p></description></item><item><title>My first open source project</title><link>https://blog.gerbenjacobs.nl/my-first-open-source-project/</link><pubDate>Fri, 20 Nov 2015 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/my-first-open-source-project/</guid><description>&lt;p>
+&lt;p>We have a page that lists birthdays for people on that day, but excluding the current year. This way we can showcase everyone who is 1 year or older.&lt;/p>
+&lt;p>This is nice, but if you want to find birthdays for a specific date, you might have to wait a year for it to come around.&lt;/p></description></item><item><title>My first open source project</title><link>https://blog.gerbenjacobs.nl/my-first-open-source-project/</link><pubDate>Fri, 20 Nov 2015 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/my-first-open-source-project/</guid><description>&lt;p>
  Since november last year I started working on &lt;a href="https://github.com/gerbenjacobs/HabboAPI" >the HabboAPI project&lt;/a>.
  While it is &lt;a href="https://github.com/gerbenjacobs?tab=repositories" >not my first repository&lt;/a>,
  and maybe also not the first serious project (that would be my attempt of the &lt;a href="https://github.com/gerbenjacobs/rws" >RWS library&lt;/a>),
@@ -190,7 +190,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
 
 &lt;div class="row">
  &lt;div class="col-md-6">
- &lt;figure class="figure">
+ &lt;figure class="figure ">
  
  &lt;img class="figure-img img-fluid rounded" src=https://blog.gerbenjacobs.nl/img/blog/2014/doh/amsterdam.jpg alt=Good&amp;#32;morning&amp;#32;Amsterdam!>
  
@@ -199,7 +199,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
  &lt;/figure>
  &lt;/div>
  &lt;div class="col-md-6">
- &lt;figure class="figure">
+ &lt;figure class="figure ">
  
  &lt;img class="figure-img img-fluid rounded" src=https://blog.gerbenjacobs.nl/img/blog/2014/doh/billie.jpg alt=Billie&amp;#32;got&amp;#32;hacked!>
  
@@ -210,7 +210,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
 &lt;/div>
 &lt;div class="row">
  &lt;div class="col-md-6">
- &lt;figure class="figure">
+ &lt;figure class="figure ">
  
  &lt;img class="figure-img img-fluid rounded" src=https://blog.gerbenjacobs.nl/img/blog/2014/doh/flightchairs.jpg alt=Tired&amp;#32;of&amp;#32;coding?&amp;#32;Take&amp;#32;a&amp;#32;&amp;amp;#039;flight&amp;amp;#039;&amp;#32;to&amp;#32;chillzone.>
  
@@ -219,7 +219,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
  &lt;/figure>
  &lt;/div>
  &lt;div class="col-md-6">
- &lt;figure class="figure">
+ &lt;figure class="figure ">
  
  &lt;img class="figure-img img-fluid rounded" src=https://blog.gerbenjacobs.nl/img/blog/2014/doh/atnight.jpg alt=A&amp;#32;little&amp;#32;bit&amp;#32;of&amp;#32;hacking,&amp;#32;a&amp;#32;little&amp;#32;bit&amp;#32;of&amp;#32;fresh&amp;#32;air&amp;#32;on&amp;#32;the&amp;#32;roof>
  
@@ -256,7 +256,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
  The main goal of Piwik is an analytics tool, a direct competitor to Google Analytics. But it's really more than that.
  Like the data collection method I just mentioned, it could also be a community monitoring tool, which is how we use it at 
  &lt;a href="http://www.habbies.nl" >Habbies.nl&lt;/a>.
-&lt;/p></description></item><item><title>Akismet doesn't cut it anymore, utilize Cloudflare against spam</title><link>https://blog.gerbenjacobs.nl/akismet-doesnt-cut-it-anymore-utilize-cloudflare-against-spam/</link><pubDate>Thu, 27 Feb 2014 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/akismet-doesnt-cut-it-anymore-utilize-cloudflare-against-spam/</guid><description>&lt;figure class="figure">
+&lt;/p></description></item><item><title>Akismet doesn't cut it anymore, utilize Cloudflare against spam</title><link>https://blog.gerbenjacobs.nl/akismet-doesnt-cut-it-anymore-utilize-cloudflare-against-spam/</link><pubDate>Thu, 27 Feb 2014 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/akismet-doesnt-cut-it-anymore-utilize-cloudflare-against-spam/</guid><description>&lt;figure class="figure ">
  &lt;a href=https://blog.gerbenjacobs.nl/img/blog/2014/wordpress_queue.png>
  &lt;img class="figure-img img-fluid rounded" src=https://blog.gerbenjacobs.nl/img/blog/2014/wordpress_queue.png alt=Spam&amp;#32;queue&amp;#32;in&amp;#32;Wordpress>
  &lt;/a>
@@ -281,7 +281,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
  But we didn't go there.
 &lt;/p>
 
-&lt;figure class="figure">
+&lt;figure class="figure ">
  &lt;a href=https://www.flickr.com/photos/theonewithout/9389967701/>
  &lt;img class="figure-img img-fluid rounded" src=https://farm3.staticflickr.com/2879/9389967701_37f445fe71_b.jpg alt=Preikestolen>
  &lt;/a>
@@ -306,7 +306,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
 
 &lt;div class="row">
  &lt;div class="col-md-6">
- &lt;figure class="figure">
+ &lt;figure class="figure ">
  
  &lt;img class="figure-img img-fluid rounded" src=https://farm4.staticflickr.com/3802/9389685050_d3c4365e68_z.jpg alt=Walked&amp;#32;to&amp;#32;the&amp;#32;beach&amp;#32;through&amp;#32;the&amp;#32;dunes>
  
@@ -315,7 +315,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
  &lt;/figure>
  &lt;/div>
  &lt;div class="col-md-6">
- &lt;figure class="figure">
+ &lt;figure class="figure ">
  
  &lt;img class="figure-img img-fluid rounded" src=https://farm4.staticflickr.com/3758/9386912369_27fb48a794_z.jpg alt=Lovely&amp;#32;composition&amp;#32;of&amp;#32;colours>
  
@@ -338,7 +338,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
 &lt;p>
  At a previous internship 2 co-workers of mine have been there and they were absolutely loving it, especially Norway.
  If you asked me in february where I'd go, I would have probably said the Garda lake in Italy. But since June all plans had changed to Norway.
-&lt;/p></description></item><item><title>SocialSpace at ESTEC in Noordwijk</title><link>https://blog.gerbenjacobs.nl/socialspace-at-estec-in-noordwijk/</link><pubDate>Tue, 08 Oct 2013 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/socialspace-at-estec-in-noordwijk/</guid><description>&lt;figure class="figure">
+&lt;/p></description></item><item><title>SocialSpace at ESTEC in Noordwijk</title><link>https://blog.gerbenjacobs.nl/socialspace-at-estec-in-noordwijk/</link><pubDate>Tue, 08 Oct 2013 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/socialspace-at-estec-in-noordwijk/</guid><description>&lt;figure class="figure ">
  
  &lt;img class="figure-img img-fluid rounded" src=https://blog.gerbenjacobs.nl/img/blog/2013/estec_swag.jpg alt=A&amp;#32;day&amp;#32;worth&amp;#39;s&amp;#32;of&amp;#32;swag!>
  
@@ -371,7 +371,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
 &lt;div class="alert alert-primary" role="alert">
  &lt;small>This blog post is written about what would now be known as &lt;em>Pagoda v1&lt;/em> and might not be representative.&lt;/small>
 &lt;/div>
-&lt;figure class="figure">
+&lt;figure class="figure ">
  
  &lt;img class="figure-img img-fluid rounded" src=https://blog.gerbenjacobs.nl/img/blog/2013/pagoda.png alt=Pagoda&amp;#32;Box>
  
@@ -451,7 +451,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
  Pretty semantic title, huh? But that's basically what this is all about.
 &lt;/p>
 
-&lt;figure class="figure">
+&lt;figure class="figure ">
  
  &lt;img class="figure-img img-fluid rounded" src=https://blog.gerbenjacobs.nl/img/blog/2012/shoutcast.gif alt=Shoutcast&amp;#32;logo>
  
