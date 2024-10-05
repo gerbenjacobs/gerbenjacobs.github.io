@@ -1,4 +1,4 @@
-<figure class="figure">
+<figure class="figure {{ .Get "class" }}">
     {{ with .Get "url" }}<a href={{ . }}>{{ end }}
         <img class="figure-img img-fluid rounded" src={{ .Get "src" }} alt={{ .Get "desc" }}>
     {{ with .Get "url" }}</a>{{ end }}
