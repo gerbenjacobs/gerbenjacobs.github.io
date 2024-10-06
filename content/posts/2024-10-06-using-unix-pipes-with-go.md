@@ -116,7 +116,7 @@ func main() {
 }
 ```
 
-In this example we pretend there's a reason for use to create a custom JSON object with the special `message` and `len` names.
+In this example we pretend there's a reason for us to create a custom JSON object with the special `message` and `len` names.
 
 We create a `json.Encoder` where the output stream is `os.Stdout` and we call `Encode()` with an inlined `Output`-struct.
 
