@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Open-Source on Gerben Jacobs</title><link>https://blog.gerbenjacobs.nl/tags/open-source/</link><description>Recent content in Open-Source on Gerben Jacobs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 06 Oct 2024 12:00:00 +0200</lastBuildDate><atom:link href="https://blog.gerbenjacobs.nl/tags/open-source/index.xml" rel="self" type="application/rss+xml"/><item><title>Using Unix pipes with Go</title><link>https://blog.gerbenjacobs.nl/using-unix-pipes-with-go/</link><pubDate>Sun, 06 Oct 2024 12:00:00 +0200</pubDate><guid>https://blog.gerbenjacobs.nl/using-unix-pipes-with-go/</guid><description>&lt;p>&lt;em>Header by &lt;a href="https://www.flickr.com/photos/cogdog/6034711842/">Alan Levine CC BY 2.0&lt;/a>&lt;/em>&lt;/p>
+&lt;p>Go has made it easy to work with Unix operations, it comes with the platform-independent built-in package &lt;code>os&lt;/code> to interface with the operating system.&lt;/p>
+&lt;p>They offer nice features such as &lt;code>os.Stdin&lt;/code> and &lt;code>os.Stdout&lt;/code>, wrappers of type &lt;code>os.File&lt;/code> around the OS&amp;rsquo;s common standard streams.&lt;/p>
+&lt;p>The &lt;code>os/exec&lt;/code> package is also great. It allows you to run Unix-tools from within your Go application.&lt;/p>
+&lt;blockquote>
+&lt;p>Package exec runs external commands. It wraps os.StartProcess to make it easier to remap stdin and stdout, connect I/O with pipes, and do other adjustments.&lt;/p></description></item><item><title>svc; an opinionated Go service framework</title><link>https://blog.gerbenjacobs.nl/svc-an-opinionated-go-service-framework/</link><pubDate>Fri, 17 Jun 2022 00:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/svc-an-opinionated-go-service-framework/</guid><description>&lt;p>I have been writing Go (or Golang) for about 6 years now. In that time I&amp;rsquo;ve seen quite a few different ways
+on how to organize a Go project. During my time at &lt;a href="https://www.messagebird.com/">MessageBird&lt;/a> I got introduced to a nice layered approach.
+I&amp;rsquo;ve taken those lessons and applied them to something that feels right for me; &lt;a href="https://github.com/gerbenjacobs/svc">github.com/gerbenjacobs/svc&lt;/a>&lt;/p>
+&lt;h2 id="svc">svc&lt;/h2>
+&lt;p>svc is not an actual framework, but more a convention for creating microservices.&lt;/p>
+&lt;p>The core of svc is centered around 3 layers: &lt;strong>handlers&lt;/strong>, &lt;strong>services&lt;/strong> and &lt;strong>storages&lt;/strong>.
+Together with the &lt;code>cmd&lt;/code> folder they are responsible for organizing your code into a clean and well-organized structure.&lt;/p></description></item><item><title>My first open source project</title><link>https://blog.gerbenjacobs.nl/my-first-open-source-project/</link><pubDate>Fri, 20 Nov 2015 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/my-first-open-source-project/</guid><description>&lt;p>
+ Since november last year I started working on &lt;a href="https://github.com/gerbenjacobs/HabboAPI" >the HabboAPI project&lt;/a>.
+ While it is &lt;a href="https://github.com/gerbenjacobs?tab=repositories" >not my first repository&lt;/a>,
+ and maybe also not the first serious project (that would be my attempt of the &lt;a href="https://github.com/gerbenjacobs/rws" >RWS library&lt;/a>),
+ it's the first where I went the extra mile to create documentation, tests, continuous integration and Packagist support.
+&lt;/p>
+
+&lt;p>
+ I also intend to support this and hope to see other people contribute. So far I have one favourite!
+&lt;/p></description></item></channel></rss>
