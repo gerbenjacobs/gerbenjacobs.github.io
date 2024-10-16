@@ -39,7 +39,7 @@ If you want to do this course/tutorial for yourself, you can find it at https://
 
 In case you're not familiar with piping, it allows you to combine multiple programs in a chain using the pipe-symbol "`|`" and in essence create a 'pipeline'.
 
-Data from one program gets sent on the 'stdout' and back into the 'stdin' from the next program.
+Data from one program gets sent on the 'stdout' and back into the 'stdin' for the next program.
 
 You might have already used this unknowingly while pretty-printing a cURL response:
 
@@ -74,13 +74,16 @@ func main() {
 
 And that's __literally__ it for the reading part.
 
-We've learned to use a `io.Reader` in combination with `stdin`, but for writing we'll need to use a `io.Writer`.
+We've learned to use a `io.ReadAll` (which implements the `io.Reader` interface) in combination with `stdin`, 
+but for writing we'll need to use a `io.Writer`.
 
 Since we know we're going to use JSON we can have a look at the `encoding/json` [package](https://pkg.go.dev/encoding/json).
 
-You're probably familiar with `json.Marshal` but the package also comes with an `json.Encoder`, that needs to be initialized with a `io.Writer` interface.
+You're probably familiar with `json.Marshal` but the package also comes with an `json.Encoder`, 
+that needs to be initialized with a `io.Writer` interface.
 
-We can use the `os.Stdout` file descriptor for this, cause as you remember, `os.File` structs adhere to the interface.
+We can use the `os.Stdout` file descriptor for this, cause as you remember, it's a wrapper around `os.File`
+and those adhere to the `io.Writer` interface.
 
 
 ```go
