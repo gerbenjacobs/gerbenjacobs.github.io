@@ -4,7 +4,7 @@ date: 2024-10-06T12:00:00+02:00
 layout: post
 description: Built your own Unix tool that allows data to be piped via stdin and stdout
 headerImage: img/6034711842_c3d1719f75_c.jpg
-tags: ["tech", "go", "unix", "tutorial"]
+tags: ["tech", "go", "unix", "tutorial", "open-source"]
 slug: using-unix-pipes-with-go
 toc: true
 comment: true

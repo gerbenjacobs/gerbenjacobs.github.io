@@ -4,7 +4,7 @@ title:  svc; an opinionated Go service framework
 description: I wrote a Go service framework that I use for my personal projects.
 date: 2022-06-17 00:00:00
 headerImage: img/flickr-theonewithout-fencers.jpg
-tags: [tech, go]
+tags: [tech, go, open-source]
 toc: true
 ---
 
