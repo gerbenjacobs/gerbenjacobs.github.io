@@ -1,0 +1,145 @@
+<!doctype html><html lang=en class=h-100><head><meta charset=utf-8><meta name=description content><meta name=viewport content="width=device-width,initial-scale=1"><link href=https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65 crossorigin=anonymous><link rel=stylesheet type=text/css href=/css/style.css><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Permanent+Marker&display=swap" rel=stylesheet><meta property="og:url" content="https://blog.gerbenjacobs.nl/fin-trading212-aggregator-tool/"><meta property="og:type" content="website"><meta property="og:title" content="fin: A Trading212 aggregator tool (for Yahoo)"><meta property="og:description" content><meta property="og:image" content="https://blog.gerbenjacobs.nl/img/Firefly%20A%20set%20of%20tools%20and%20pipelines%20together%20with%20stock%20charts%2038630.jpg"><meta name=twitter:card content="summary_large_image"><meta property="twitter:domain" content="blog.gerbenjacobs.nl"><meta property="twitter:url" content="https://blog.gerbenjacobs.nl/fin-trading212-aggregator-tool/"><meta name=twitter:title content="fin: A Trading212 aggregator tool (for Yahoo)"><meta name=twitter:description content><meta name=twitter:image content="https://blog.gerbenjacobs.nl/img/Firefly%20A%20set%20of%20tools%20and%20pipelines%20together%20with%20stock%20charts%2038630.jpg"><meta itemprop=name content="fin: A Trading212 aggregator tool (for Yahoo)"><meta itemprop=description content="As you could see in my ROI stock series, I’ve been using Trading212 for a while now.
+While it has some nice dashboards, I wanted more and since they offer a very nice CSV exporting feature, I decided to create my own Go-based tool to do aggregation and create a financial overview of my stocks.
+💸 You can still use my affiliate link to get your own Trading212 account including a free stock of up to €100: https://www.trading212.com/invite/HrAs2dFZ"><meta itemprop=datePublished content="2024-10-17T17:25:11+02:00"><meta itemprop=dateModified content="2024-10-17T17:25:11+02:00"><meta itemprop=wordCount content="796"><meta itemprop=keywords content="Tech,Open-Source,Go"><script async src="https://www.googletagmanager.com/gtag/js?id=G-KKSLTF3X24"></script><script>var dnt,doNotTrack=!1;if(!1&&(dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes"),!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-KKSLTF3X24")}</script><script src=/js/main.js></script><title>fin: A Trading212 aggregator tool (for Yahoo) | Gerben Jacobs</title></head><body class="d-flex flex-column h-100"><nav id=nav class="navbar navbar-expand-lg navbar-dark bg-dark"><div class=container-fluid><a class=navbar-brand href=/>Gerben Jacobs</a><ul class="navbar-nav d-flex mb-2 mb-lg-0"><li class=nav-item><a id=darkmode class="btn btn-primary" title="Toggle dark mode">🌓</a></li></ul></div></nav><div id=content class=container><div class="row justify-content-center"><div class="col-xl-6 col-lg-8 col-md-11"><article><header><h1>fin: A Trading212 aggregator tool (for Yahoo)</h1></header>📅
+<time datetime=2024-10-17>Oct 17, 2024</time> &mdash;
+🧮 796 words
+&mdash; 🏷️
+<a href=https://blog.gerbenjacobs.nl/tags/tech><span class="badge bg-secondary">tech</span></a>
+<a href=https://blog.gerbenjacobs.nl/tags/open-source><span class="badge bg-secondary">open-source</span></a>
+<a href=https://blog.gerbenjacobs.nl/tags/go><span class="badge bg-secondary">go</span></a><hr class=rainbow><strong>Table of contents</strong><nav id=TableOfContents><ul><li><a href=#fin>fin</a></li><li><a href=#config>Config</a></li><li><a href=#reporting>Reporting</a><ul><li><a href=#aggjson>agg.json</a></li><li><a href=#yahoocsv>yahoo.csv</a></li></ul></li><li><a href=#running>Running</a></li></ul></nav><hr class=rainbow><p>As you could see in my <a href=/tags/roi-stock-portfolio/>ROI stock series</a>, I&rsquo;ve been using Trading212 for a while now.</p><p>While it has some nice dashboards, I wanted more and since they offer a very nice CSV exporting feature,
+I decided to create my own Go-based tool to do aggregation and create a financial overview of my stocks.</p><p><em>💸 You can still use my affiliate link to get your own Trading212 account including a free stock of up to €100:
+<a href=https://www.trading212.com/invite/HrAs2dFZ>https://www.trading212.com/invite/HrAs2dFZ</a></em></p><h2 id=fin>fin</h2><p>fin is a Trading212 CSV utility that aggregates your transactional CSV files into a couple of output formats.</p><p>You can generate an <code>aggregate</code> formatted JSON file that&rsquo;s used by the reporting tool,
+or you can generate a <code>yahoo</code> formatted CSV file that can be imported into <a href=https://finance.yahoo.com/portfolios>Yahoo Finance</a>.</p><p>The tool deals with pies, stock splits and Yahoo ticker symbols. However, it&rsquo;s required by the user
+to maintain these settings in the <code>config.yaml</code> file. After running the tool for the first time
+a default <code>config.yaml</code> file will be generated for you.</p><p>⚡ The goal of this tool is to give a big overview of your portfolio, along with fees and costs.
+It combines all transactions and comes up with a final tally, as such it&rsquo;s not meant to help with taxes.</p><blockquote><p>More info and download options: <a href=https://github.com/gerbenjacobs/fin>https://github.com/gerbenjacobs/fin</a></p></blockquote><h2 id=config>Config</h2><p>There&rsquo;s quite a few things you can configure, depending on how you want to split your aggregating or reporting.</p><p>We support pies (a subset of stocks within your portfolio), splits, renames and more.
+These however need to be configured by the user.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span>---
+</span></span><span style=display:flex><span><span style=color:#75715e># Required config</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>input</span>: <span style=color:#ae81ff>data</span> <span style=color:#75715e># folder where your Trading212 CSVs are stored</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>output</span>: <span style=color:#ae81ff>aggregated_quotes</span> <span style=color:#75715e># name of output file (prefix)</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>format</span>: <span style=color:#ae81ff>aggregate</span> <span style=color:#75715e># aggregate or yahoo</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Optional config</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>skip-pies: true # skip splitting by pies (default</span>: <span style=color:#66d9ef>false</span><span style=color:#ae81ff>)</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>pie-only</span>: <span style=color:#e6db74>&#34;&#34;</span> <span style=color:#75715e># only generate this pie (default: &#34;&#34;)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Splits is a list of split events relevant to your portfolio</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># this is needed to calculate the total stock count</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>splits</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>symbol</span>: <span style=color:#ae81ff>ABEC</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>date</span>: <span style=color:#e6db74>2022-07-16</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>ratio</span>: <span style=color:#ae81ff>20</span> <span style=color:#75715e># for reverse splits, use a decimal ratio</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Symbols is a list of conversions to take Trading212 symbols</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># and convert them to the symbols used by Yahoo portfolios</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>symbols</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>RIO</span>: <span style=color:#ae81ff>RIO.L</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>SAN</span>: <span style=color:#ae81ff>SAN.PA</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Renames deal with stocks that have changed their symbol</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># for example by becoming a new company or by being delisted</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>renames</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>GPS</span>: <span style=color:#ae81ff>GAP</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>TUP</span>: <span style=color:#ae81ff>TUPBQ</span>
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span><span style=color:#75715e># Pies allows you split your aggregation into multiple CSVs</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># uncomment to use</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#pies:</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#  - name: Growth</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#    symbols:</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#      - GOOG</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#      - AMZN</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#  - name: Dividend</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#    symbols:</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#      - PEP</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#      - JNJ</span>
+</span></span></code></pre></div><h2 id=reporting>Reporting</h2><figure class=figure><img class="figure-img img-fluid rounded" src=https://raw.githubusercontent.com/gerbenjacobs/fin/refs/heads/main/report/reporting.png alt="Screenshot of the fin reporting tool"><figcaption class=figure-caption>Screenshot of the fin reporting tool</figcaption></figure><p>The project has a reporting tool that can be used to generate a report of your portfolio.
+It&rsquo;s also available at <a href=https://fin.gerben.dev>https://fin.gerben.dev</a> as hosted by GitHub Pages.</p><p>It uses jQuery, Bootstrap and Bootstrap Table to generate the report. It uses a local file mode with LocalStorage,
+and the resources coming from a CDN. None of the data is stored outside your browser.</p><h3 id=aggjson>agg.json</h3><p>The data from all your buy, sell or dividend events are aggregated and if you use the <code>aggregate</code>
+output method, it will look like this:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json><span style=display:flex><span>[
+</span></span><span style=display:flex><span> {
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;Symbol&#34;</span>: <span style=color:#e6db74>&#34;ABEC&#34;</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;Name&#34;</span>: <span style=color:#e6db74>&#34;Alphabet (Class C)&#34;</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;ShareCount&#34;</span>: <span style=color:#ae81ff>2.371231</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;AvgPrice&#34;</span>: <span style=color:#ae81ff>113.86</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;PriceCurrency&#34;</span>: <span style=color:#e6db74>&#34;EUR&#34;</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;ShareCost&#34;</span>: <span style=color:#ae81ff>270</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;ShareCostLocal&#34;</span>: <span style=color:#ae81ff>270</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;ShareResult&#34;</span>: <span style=color:#ae81ff>0</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;TotalDividend&#34;</span>: <span style=color:#ae81ff>0</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;Fees&#34;</span>: <span style=color:#ae81ff>0</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;Final&#34;</span>: <span style=color:#ae81ff>0</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;LastUpdate&#34;</span>: <span style=color:#e6db74>&#34;2022-07-29T14:28:17Z&#34;</span>
+</span></span><span style=display:flex><span> },
+</span></span><span style=display:flex><span> {
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;Symbol&#34;</span>: <span style=color:#e6db74>&#34;FB&#34;</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;Name&#34;</span>: <span style=color:#e6db74>&#34;Meta Platforms&#34;</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;ShareCount&#34;</span>: <span style=color:#ae81ff>0.086391</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;AvgPrice&#34;</span>: <span style=color:#ae81ff>362</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;PriceCurrency&#34;</span>: <span style=color:#e6db74>&#34;USD&#34;</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;ShareCost&#34;</span>: <span style=color:#ae81ff>31.27</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;ShareCostLocal&#34;</span>: <span style=color:#ae81ff>26.67</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;ShareResult&#34;</span>: <span style=color:#ae81ff>0</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;TotalDividend&#34;</span>: <span style=color:#ae81ff>0</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;Fees&#34;</span>: <span style=color:#ae81ff>0.04</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;Final&#34;</span>: <span style=color:#ae81ff>-0.04</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;LastUpdate&#34;</span>: <span style=color:#e6db74>&#34;2021-08-09T18:31:41Z&#34;</span>
+</span></span><span style=display:flex><span> },
+</span></span><span style=display:flex><span> {
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;Symbol&#34;</span>: <span style=color:#e6db74>&#34;MSFT&#34;</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;Name&#34;</span>: <span style=color:#e6db74>&#34;Microsoft&#34;</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;ShareCount&#34;</span>: <span style=color:#ae81ff>0</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;AvgPrice&#34;</span>: <span style=color:#ae81ff>0</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;PriceCurrency&#34;</span>: <span style=color:#e6db74>&#34;USD&#34;</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;ShareCost&#34;</span>: <span style=color:#ae81ff>0</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;ShareCostLocal&#34;</span>: <span style=color:#ae81ff>0</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;ShareResult&#34;</span>: <span style=color:#ae81ff>2.61</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;TotalDividend&#34;</span>: <span style=color:#ae81ff>0.11</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;Fees&#34;</span>: <span style=color:#ae81ff>0.2</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;Final&#34;</span>: <span style=color:#ae81ff>2.51</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;LastUpdate&#34;</span>: <span style=color:#e6db74>&#34;2021-09-30T11:15:32Z&#34;</span>
+</span></span><span style=display:flex><span> },
+</span></span><span style=display:flex><span> {
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;Symbol&#34;</span>: <span style=color:#e6db74>&#34;SAN&#34;</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;Name&#34;</span>: <span style=color:#e6db74>&#34;Sanofi&#34;</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;ShareCount&#34;</span>: <span style=color:#ae81ff>0.111796</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;AvgPrice&#34;</span>: <span style=color:#ae81ff>89.18</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;PriceCurrency&#34;</span>: <span style=color:#e6db74>&#34;EUR&#34;</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;ShareCost&#34;</span>: <span style=color:#ae81ff>9.97</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;ShareCostLocal&#34;</span>: <span style=color:#ae81ff>10</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;ShareResult&#34;</span>: <span style=color:#ae81ff>0</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;TotalDividend&#34;</span>: <span style=color:#ae81ff>0</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;Fees&#34;</span>: <span style=color:#ae81ff>0.03</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;Final&#34;</span>: <span style=color:#ae81ff>-0.03</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;LastUpdate&#34;</span>: <span style=color:#e6db74>&#34;2022-03-07T16:10:26Z&#34;</span>
+</span></span><span style=display:flex><span> },
+</span></span><span style=display:flex><span> {
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;Symbol&#34;</span>: <span style=color:#e6db74>&#34;TSLA&#34;</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;Name&#34;</span>: <span style=color:#e6db74>&#34;Tesla&#34;</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;ShareCount&#34;</span>: <span style=color:#ae81ff>0.076654</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;AvgPrice&#34;</span>: <span style=color:#ae81ff>713.94</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;PriceCurrency&#34;</span>: <span style=color:#e6db74>&#34;USD&#34;</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;ShareCost&#34;</span>: <span style=color:#ae81ff>54.72</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;ShareCostLocal&#34;</span>: <span style=color:#ae81ff>46.67</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;ShareResult&#34;</span>: <span style=color:#ae81ff>0</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;TotalDividend&#34;</span>: <span style=color:#ae81ff>0</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;Fees&#34;</span>: <span style=color:#ae81ff>0.07</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;Final&#34;</span>: <span style=color:#ae81ff>-0.08</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;LastUpdate&#34;</span>: <span style=color:#e6db74>&#34;2021-08-09T18:31:41Z&#34;</span>
+</span></span><span style=display:flex><span> }
+</span></span><span style=display:flex><span>]
+</span></span></code></pre></div><h3 id=yahoocsv>yahoo.csv</h3><p>Using the <code>yahoo</code> output format and writing to <code>yahoo.csv</code> we get this:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>Symbol,Current Price,Date,Time,Change,Open,High,Low,Volume,Trade Date,Purchase Price,Quantity,Commission,High Limit,Low Limit,Comment
+</span></span><span style=display:flex><span>FB,0,0001/01/01,00:00 UTC,0,0,0,0,0,20210809,362,0.086391,,0,0,
+</span></span><span style=display:flex><span>GOOG,0,0001/01/01,00:00 UTC,0,0,0,0,0,20220729,117.75,2.292856,,0,0,
+</span></span><span style=display:flex><span>SAN.PA,0,0001/01/01,00:00 UTC,0,0,0,0,0,20220307,89.18,0.111796,,0,0,
+</span></span><span style=display:flex><span>TSLA,0,0001/01/01,00:00 UTC,0,0,0,0,0,20210809,713.94,0.076654,,0,0,
+</span></span></code></pre></div><h2 id=running>Running</h2><p>You can download the binaries or compile the Go code, or even run from within a cloned project.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>go run cmd/aggregator/main.go --config config.yaml
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>INFO[0000] Starting process.                             format=aggregate input=testdata output=agg pie-only= pies=0 renames=2 skip-pies=true splits=1 symbols=2
+</span></span><span style=display:flex><span>INFO[0000] Completed aggregation.                        cash=1650.58 deposits=2000 dividends=0.11 fees=0.34 interest=0 invested=353.2 realized=2.61 realized-with-costs=2.25 taxes=0.02 withdrawals=-1.4
+</span></span><span style=display:flex><span>INFO[0000] Written 6 entries to agg.json.  
+</span></span></code></pre></div><p>It&rsquo;s free of charge, covers most cases, but is not 100% perfect. There&rsquo;s always issues with float arithmetics.</p><p>The tool tries its best to deal with multiple currencies, but because of the fluid nature of foreign exchange rates
+it&rsquo;s all based on best estimate.</p><blockquote><p>🔗 <a href=https://github.com/gerbenjacobs/fin>https://github.com/gerbenjacobs/fin</a></p></blockquote></article><hr class=rainbow><div id=disqus_thread></div><script>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//gerbenjacobs.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div></div><div class="row justify-content-center"><div class="col-xl-6 col-lg-8 col-md-11"><div class=row><div class=col-md-6></div><div class=col-md-6><div class=card><img src=https://blog.gerbenjacobs.nl/img/6034711842_c3d1719f75_c.jpg class="card-img-top card-img-height" alt="Using Unix pipes with Go"><div class=card-body><span class=card-title title="Using Unix pipes with Go">Using Unix pipes with Go</span></div><div class="card-footer text-end"><a href=https://blog.gerbenjacobs.nl/using-unix-pipes-with-go/ class="btn btn-primary">Previous &#187;</a></div></div></div></div><div class=row><div class=col>Find any post in the <a href=/posts/archive/>archive</a>.</div></div></div></div></div><footer class="footer mt-4 py-3 bg-light rainbow" id=footer><p>Copyright &copy; 2024 Gerben Jacobs</p><a href=/index.xml><span class="badge p-1 footer-social" style=border-color:orange><img src=/img/social/rss.svg alt=RSS>
+</span></a><a href=https://twitter.com/gerbenjacobs><span class="badge p-1 footer-social" style=border-color:#1da1f2><img src=/img/social/twitter.svg alt=Twitter>
+</span></a><a href=https://github.com/gerbenjacobs><span class="badge p-1 footer-social" style=border-color:#181717><img src=/img/social/github.svg alt=GitHub>
+</span></a><a href=https://todon.nl/@gerben rel=me><span class="badge p-1 footer-social" style=border-color:#6364ff><img src=/img/social/mastodon.svg alt=Mastodon>
+</span></a><a href=https://linkedin.com/in/gerbenjacobs><span class="badge p-1 footer-social" style=border-color:#0a66c2><img src=/img/social/linkedin.svg alt=LinkedIn></span></a></footer><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4344810300258970" crossorigin=anonymous></script><button class=btn id=btn-back-to-top>☝️</button></body></html>
