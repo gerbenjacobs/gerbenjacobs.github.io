@@ -22,9 +22,9 @@ to that regarding the blog. I realised I'm mostly writing for myself; 'cause it 
 interesting to read old blog posts from years ago. And as such, this actual blog post
 is an attempt to kickstart everything again.
 
-With regards to social media; I do miss old Twitter..  But I fear that will never come back.
+Regarding social media; I do miss old Twitter..  But I fear that will never come back.
 
-My go to spots right now are just Reddit and Instagram reels, when I'm bored.
+My go-to spots right now are just Reddit and Instagram reels, when I'm bored.
 
 ## Duality of being chronically online
 
