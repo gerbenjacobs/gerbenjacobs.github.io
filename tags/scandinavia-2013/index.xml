@@ -8,7 +8,7 @@
 
 &lt;figure class="figure ">
  &lt;a href=https://www.flickr.com/photos/theonewithout/9389967701/>
- &lt;img class="figure-img img-fluid rounded" src=https://farm3.staticflickr.com/2879/9389967701_37f445fe71_b.jpg alt=Preikestolen>
+ &lt;img loading="lazy" class="figure-img img-fluid rounded" src=https://farm3.staticflickr.com/2879/9389967701_37f445fe71_b.jpg alt=Preikestolen>
  &lt;/a>
 
  &lt;figcaption class="figure-caption">Preikestolen&lt;/figcaption>
@@ -33,7 +33,7 @@
  &lt;div class="col-md-6">
  &lt;figure class="figure ">
  
- &lt;img class="figure-img img-fluid rounded" src=https://farm4.staticflickr.com/3802/9389685050_d3c4365e68_z.jpg alt=Walked&amp;#32;to&amp;#32;the&amp;#32;beach&amp;#32;through&amp;#32;the&amp;#32;dunes>
+ &lt;img loading="lazy" class="figure-img img-fluid rounded" src=https://farm4.staticflickr.com/3802/9389685050_d3c4365e68_z.jpg alt=Walked&amp;#32;to&amp;#32;the&amp;#32;beach&amp;#32;through&amp;#32;the&amp;#32;dunes>
  
  
  &lt;figcaption class="figure-caption">Walked to the beach through the dunes&lt;/figcaption>
@@ -42,7 +42,7 @@
  &lt;div class="col-md-6">
  &lt;figure class="figure ">
  
- &lt;img class="figure-img img-fluid rounded" src=https://farm4.staticflickr.com/3758/9386912369_27fb48a794_z.jpg alt=Lovely&amp;#32;composition&amp;#32;of&amp;#32;colours>
+ &lt;img loading="lazy" class="figure-img img-fluid rounded" src=https://farm4.staticflickr.com/3758/9386912369_27fb48a794_z.jpg alt=Lovely&amp;#32;composition&amp;#32;of&amp;#32;colours>
  
  
  &lt;figcaption class="figure-caption">Lovely composition of colours&lt;/figcaption>

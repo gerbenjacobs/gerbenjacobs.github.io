@@ -201,7 +201,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
  &lt;div class="col-md-6">
  &lt;figure class="figure ">
  
- &lt;img class="figure-img img-fluid rounded" src=https://blog.gerbenjacobs.nl/img/blog/2014/doh/amsterdam.jpg alt=Good&amp;#32;morning&amp;#32;Amsterdam!>
+ &lt;img loading="lazy" class="figure-img img-fluid rounded" src=https://blog.gerbenjacobs.nl/img/blog/2014/doh/amsterdam.jpg alt=Good&amp;#32;morning&amp;#32;Amsterdam!>
  
  
  &lt;figcaption class="figure-caption">Good morning Amsterdam!&lt;/figcaption>
@@ -210,7 +210,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
  &lt;div class="col-md-6">
  &lt;figure class="figure ">
  
- &lt;img class="figure-img img-fluid rounded" src=https://blog.gerbenjacobs.nl/img/blog/2014/doh/billie.jpg alt=Billie&amp;#32;got&amp;#32;hacked!>
+ &lt;img loading="lazy" class="figure-img img-fluid rounded" src=https://blog.gerbenjacobs.nl/img/blog/2014/doh/billie.jpg alt=Billie&amp;#32;got&amp;#32;hacked!>
  
  
  &lt;figcaption class="figure-caption">Billie got hacked!&lt;/figcaption>
@@ -221,7 +221,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
  &lt;div class="col-md-6">
  &lt;figure class="figure ">
  
- &lt;img class="figure-img img-fluid rounded" src=https://blog.gerbenjacobs.nl/img/blog/2014/doh/flightchairs.jpg alt=Tired&amp;#32;of&amp;#32;coding?&amp;#32;Take&amp;#32;a&amp;#32;&amp;amp;#039;flight&amp;amp;#039;&amp;#32;to&amp;#32;chillzone.>
+ &lt;img loading="lazy" class="figure-img img-fluid rounded" src=https://blog.gerbenjacobs.nl/img/blog/2014/doh/flightchairs.jpg alt=Tired&amp;#32;of&amp;#32;coding?&amp;#32;Take&amp;#32;a&amp;#32;&amp;amp;#039;flight&amp;amp;#039;&amp;#32;to&amp;#32;chillzone.>
  
  
  &lt;figcaption class="figure-caption">Tired of coding? Take a &amp;amp;#039;flight&amp;amp;#039; to chillzone.&lt;/figcaption>
@@ -230,7 +230,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
  &lt;div class="col-md-6">
  &lt;figure class="figure ">
  
- &lt;img class="figure-img img-fluid rounded" src=https://blog.gerbenjacobs.nl/img/blog/2014/doh/atnight.jpg alt=A&amp;#32;little&amp;#32;bit&amp;#32;of&amp;#32;hacking,&amp;#32;a&amp;#32;little&amp;#32;bit&amp;#32;of&amp;#32;fresh&amp;#32;air&amp;#32;on&amp;#32;the&amp;#32;roof>
+ &lt;img loading="lazy" class="figure-img img-fluid rounded" src=https://blog.gerbenjacobs.nl/img/blog/2014/doh/atnight.jpg alt=A&amp;#32;little&amp;#32;bit&amp;#32;of&amp;#32;hacking,&amp;#32;a&amp;#32;little&amp;#32;bit&amp;#32;of&amp;#32;fresh&amp;#32;air&amp;#32;on&amp;#32;the&amp;#32;roof>
  
  
  &lt;figcaption class="figure-caption">A little bit of hacking, a little bit of fresh air on the roof&lt;/figcaption>
@@ -267,7 +267,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
  &lt;a href="http://www.habbies.nl" >Habbies.nl&lt;/a>.
 &lt;/p></description></item><item><title>Akismet doesn't cut it anymore, utilize Cloudflare against spam</title><link>https://blog.gerbenjacobs.nl/akismet-doesnt-cut-it-anymore-utilize-cloudflare-against-spam/</link><pubDate>Thu, 27 Feb 2014 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/akismet-doesnt-cut-it-anymore-utilize-cloudflare-against-spam/</guid><description>&lt;figure class="figure ">
  &lt;a href=https://blog.gerbenjacobs.nl/img/blog/2014/wordpress_queue.png>
- &lt;img class="figure-img img-fluid rounded" src=https://blog.gerbenjacobs.nl/img/blog/2014/wordpress_queue.png alt=Spam&amp;#32;queue&amp;#32;in&amp;#32;Wordpress>
+ &lt;img loading="lazy" class="figure-img img-fluid rounded" src=https://blog.gerbenjacobs.nl/img/blog/2014/wordpress_queue.png alt=Spam&amp;#32;queue&amp;#32;in&amp;#32;Wordpress>
  &lt;/a>
 
  &lt;figcaption class="figure-caption">Spam queue in Wordpress&lt;/figcaption>
@@ -292,7 +292,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
 
 &lt;figure class="figure ">
  &lt;a href=https://www.flickr.com/photos/theonewithout/9389967701/>
- &lt;img class="figure-img img-fluid rounded" src=https://farm3.staticflickr.com/2879/9389967701_37f445fe71_b.jpg alt=Preikestolen>
+ &lt;img loading="lazy" class="figure-img img-fluid rounded" src=https://farm3.staticflickr.com/2879/9389967701_37f445fe71_b.jpg alt=Preikestolen>
  &lt;/a>
 
  &lt;figcaption class="figure-caption">Preikestolen&lt;/figcaption>
@@ -317,7 +317,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
  &lt;div class="col-md-6">
  &lt;figure class="figure ">
  
- &lt;img class="figure-img img-fluid rounded" src=https://farm4.staticflickr.com/3802/9389685050_d3c4365e68_z.jpg alt=Walked&amp;#32;to&amp;#32;the&amp;#32;beach&amp;#32;through&amp;#32;the&amp;#32;dunes>
+ &lt;img loading="lazy" class="figure-img img-fluid rounded" src=https://farm4.staticflickr.com/3802/9389685050_d3c4365e68_z.jpg alt=Walked&amp;#32;to&amp;#32;the&amp;#32;beach&amp;#32;through&amp;#32;the&amp;#32;dunes>
  
  
  &lt;figcaption class="figure-caption">Walked to the beach through the dunes&lt;/figcaption>
@@ -326,7 +326,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
  &lt;div class="col-md-6">
  &lt;figure class="figure ">
  
- &lt;img class="figure-img img-fluid rounded" src=https://farm4.staticflickr.com/3758/9386912369_27fb48a794_z.jpg alt=Lovely&amp;#32;composition&amp;#32;of&amp;#32;colours>
+ &lt;img loading="lazy" class="figure-img img-fluid rounded" src=https://farm4.staticflickr.com/3758/9386912369_27fb48a794_z.jpg alt=Lovely&amp;#32;composition&amp;#32;of&amp;#32;colours>
  
  
  &lt;figcaption class="figure-caption">Lovely composition of colours&lt;/figcaption>
@@ -349,7 +349,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
  If you asked me in february where I'd go, I would have probably said the Garda lake in Italy. But since June all plans had changed to Norway.
 &lt;/p></description></item><item><title>SocialSpace at ESTEC in Noordwijk</title><link>https://blog.gerbenjacobs.nl/socialspace-at-estec-in-noordwijk/</link><pubDate>Tue, 08 Oct 2013 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/socialspace-at-estec-in-noordwijk/</guid><description>&lt;figure class="figure ">
  
- &lt;img class="figure-img img-fluid rounded" src=https://blog.gerbenjacobs.nl/img/blog/2013/estec_swag.jpg alt=A&amp;#32;day&amp;#32;worth&amp;#39;s&amp;#32;of&amp;#32;swag!>
+ &lt;img loading="lazy" class="figure-img img-fluid rounded" src=https://blog.gerbenjacobs.nl/img/blog/2013/estec_swag.jpg alt=A&amp;#32;day&amp;#32;worth&amp;#39;s&amp;#32;of&amp;#32;swag!>
  
 
  &lt;figcaption class="figure-caption">A day worth&amp;#39;s of swag!&lt;/figcaption>
@@ -382,7 +382,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
 &lt;/div>
 &lt;figure class="figure ">
  
- &lt;img class="figure-img img-fluid rounded" src=https://blog.gerbenjacobs.nl/img/blog/2013/pagoda.png alt=Pagoda&amp;#32;Box>
+ &lt;img loading="lazy" class="figure-img img-fluid rounded" src=https://blog.gerbenjacobs.nl/img/blog/2013/pagoda.png alt=Pagoda&amp;#32;Box>
  
 
  &lt;figcaption class="figure-caption">Pagoda Box&lt;/figcaption>
@@ -462,7 +462,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
 
 &lt;figure class="figure ">
  
- &lt;img class="figure-img img-fluid rounded" src=https://blog.gerbenjacobs.nl/img/blog/2012/shoutcast.gif alt=Shoutcast&amp;#32;logo>
+ &lt;img loading="lazy" class="figure-img img-fluid rounded" src=https://blog.gerbenjacobs.nl/img/blog/2012/shoutcast.gif alt=Shoutcast&amp;#32;logo>
  
 
  &lt;figcaption class="figure-caption">Shoutcast logo&lt;/figcaption>
