@@ -11,14 +11,7 @@
     More about me, including links to other online services, can be found at <a href="https://gerben.dev">gerben.dev</a>
 </p>
 
-<h3 class="mt-4">Tags</h3>
-{{ range $name, $taxonomy := .Site.Taxonomies.tags }} {{ $cnt := .Count }}
-    {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
-    <a href={{ .RelPermalink }} class="btn btn-primary m-1">
-        {{$name}} <span class="badge text-bg-light">{{$cnt}}</span>
-    </a>
-    {{end}}
-{{end}}
+{{ partial "tags.html" . }}
 
 <h3 class="mt-4">Socials</h3>
 <div class="list-group">

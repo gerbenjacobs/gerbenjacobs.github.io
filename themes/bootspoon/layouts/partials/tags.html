@@ -1,0 +1,8 @@
+<h3 class="mt-4">Tags</h3>
+{{ range $name, $taxonomy := .Site.Taxonomies.tags }} {{ $cnt := .Count }}
+    {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+    <a href={{ .RelPermalink }} class="btn btn-primary m-1">
+        {{$name}} <span class="badge text-bg-light">{{$cnt}}</span>
+    </a>
+    {{end}}
+{{end}}

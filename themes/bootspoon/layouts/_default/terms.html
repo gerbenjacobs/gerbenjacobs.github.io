@@ -1,8 +1,3 @@
 {{ define "main" }}
-    <h1>{{ .Title }}</h1>
-    {{ range .Pages.ByPublishDate.Reverse }}
-    <a href="{{ .RelPermalink }}" class="btn btn-primary">
-        {{ .Title }} <span class="badge text-bg-light">{{ len .Pages }}</span>
-    </a>
-    {{ end }}
+{{ partial "tags.html" . }}
 {{ end }}

@@ -10,7 +10,7 @@
 
         {{ range $paginator.Pages }}
         <div class="card">
-            <img src="{{ absURL .Params.headerImage }}" class="card-img-top card-img-height" alt="{{ .Title }}">
+            <img loading="lazy" src="{{ absURL .Params.headerImage }}" class="card-img-top card-img-height" alt="{{ .Title }}">
             <div class="card-body">
                 <h2 class="card-title"><a href="{{ .RelPermalink }}" class="post-link">{{ .Title }}</a></h2>
                 <h6 class="card-subtitle my-2 text-muted">{{ partial "metadata.html" . }}</h6>

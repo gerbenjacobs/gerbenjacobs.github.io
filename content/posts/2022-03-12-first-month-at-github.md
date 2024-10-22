@@ -69,10 +69,7 @@ I'll leave you with a quick list of fun or interesting facts that I've also expe
 - There's a chatops command for giving someone virtual kudos, called Sparkles ✨
 - GitHub is remote first, always has been, and as such is really good at documenting (for asynchronous workflows)
 - Technically I now work for Microsoft. 🤔
-- Unlimited <abbr title="Paid Time Off">PTO</abbr>, yes even for employees in the States!
+- Unlimited PTO (Paid Time Off), yes even for employees in the States!
 - A great culture of leadership, accountability, professionalism, but also compassion, understanding and great care for each other's well-being.
 
-<figure>
-    <img src="/img/blog/2022/mona-heart-hug-facebook.webp" alt="GitHub's Octocat called Mona">
-    <figcaption>Big hearts from GitHub's octocat called Mona</figcaption>
-</figure>
+{{< img src="/img/blog/2022/mona-heart-hug-facebook.webp" desc="Big hearts from GitHub's octocat called Mona" >}}
