@@ -1,0 +1,26 @@
+Hello human!
+
+You have reached humans.txt.
+
+This site is made by Gerben Jacobs, using Hugo (a static site generator) and a theme I created myself called Bootspoon.
+It's based on Bootstrap v5 and uses some fonts from Google, namely 'Nunito' and 'Permanent Marker'.
+
+If you're curious why this humans.txt has no formatting, it's because of this lovely post by Sarah Tamsin: https://sarahtamsin.com/humans-txt-file/
+
+You can check out what I'm upto by visiting '/now'.
+
+ __                 
+'. \                
+ '- \               
+  / /_         .---.
+ / | \\,.\/--.//    )
+ |  \//        )/  / 
+  \  ' ^ ^    /    )____.----..  6
+   '.____.    .___/            \._) 
+      .\/.                      )
+       '\                       /
+       _/ \/    ).        )    (
+      /#  .!    |        /\    /
+      \  C// #  /'-----''/ #  / 
+   .   'C/ |    |    |   |    |mrf  ,
+   \), .. .'OOO-'. ..'OOO'OOO-'. ..\(,
