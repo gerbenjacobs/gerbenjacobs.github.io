@@ -7,6 +7,7 @@ pagination:
 enableRobotsTXT: true
 enableEmoji: true
 enableInlineShortcodes: true
+enableGitInfo: true
 permalinks:
   posts: '/:slug'
 disqusShortname: 'gerbenjacobs'
