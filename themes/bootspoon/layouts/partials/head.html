@@ -11,20 +11,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="author" href="/humans.txt" />
 
-    <!-- Facebook Meta Tags -->
+    <!-- Open Graph Meta Tags -->
     <meta property="og:url" content="{{ absURL .RelPermalink }}">
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ .Title }}">
-    <meta property="og:description" content="{{ .Description }}">
+    <meta property="og:description" content="{{ .Description | default "Personal blog of Gerben Jacobs. We talk about tech like Go, PHP, Docker, devops, open source. And we take things personal: holidays, events, learnings, growth and love!" }}">
+    {{ if .Params.headerImage }}
     <meta property="og:image" content="{{ absURL .Params.headerImage }}">
+    {{ else }}
+    <meta property="og:image" content="{{ absURL "img/home-bg.jpg" }}">
+    {{ end }}
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="blog.gerbenjacobs.nl">
     <meta property="twitter:url" content="{{ absURL .RelPermalink }}">
     <meta name="twitter:title" content="{{ .Title }}">
-    <meta name="twitter:description" content="{{ .Description }}">
+    <meta name="twitter:description" content="{{ .Description | default "Personal blog of Gerben Jacobs. We talk about tech like Go, PHP, Docker, devops, open source. And we take things personal: holidays, events, learnings, growth and love!" }}">
+    {{ if .Params.headerImage }}
     <meta name="twitter:image" content="{{ absURL .Params.headerImage }}">
+    {{ else }}
+    <meta property="twitter:image" content="{{ absURL "img/home-bg.jpg" }}">
+    {{ end }}
 
     {{ template "_internal/schema.html" . }}
     {{ template "_internal/google_analytics.html" . }}
