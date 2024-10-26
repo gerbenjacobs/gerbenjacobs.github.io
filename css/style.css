@@ -1,3 +1,8 @@
+*:has(body.dark-theme) {
+    scrollbar-width: auto;
+    scrollbar-color: rgb(168, 79, 218) #111;
+}
+
 body {
     background: rgb(218, 209, 219);
     background: linear-gradient(69deg, rgba(218, 209, 219, 1) 0%, rgba(238, 240, 242, 1) 100%);
@@ -9,12 +14,15 @@ body.dark-theme {
     background: rgb(51, 51, 51);
     color: #ffffff;
 }
+
 body.dark-theme a:not(.btn, .page-link) {
     color: rgb(168, 79, 218);
 }
+
 body.dark-theme a:hover:not(.btn, .page-link) {
     color: rgb(73, 10, 77);
 }
+
 body.dark-theme #TableOfContents a {
     color: #CCC;
 }
@@ -58,15 +66,15 @@ body.dark-theme #nav {
     box-shadow: 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.footer-social > img {
+.footer-social>img {
     width: 1rem;
 }
 
-#footer > a {
+#footer>a {
     text-decoration: none;
 }
 
-.highlight > pre {
+.highlight>pre {
     padding: 20px;
     border-radius: 20px;
 }
@@ -90,12 +98,17 @@ hr {
     border: 0;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: "Permanent Marker", cursive;
 
 }
 
-.navbar-brand, header > h1, .post-link {
+.navbar-brand,
+header>h1,
+.post-link {
     font-family: "Nunito", sans-serif;
 }
 
