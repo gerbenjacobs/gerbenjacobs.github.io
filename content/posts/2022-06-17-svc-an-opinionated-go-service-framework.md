@@ -229,8 +229,8 @@ func (u *UserRepository) Read(ctx context.Context, userID uuid.UUID) (*app.User,
 If you want to get separation of concerns and clarity when developing, this is a nice convention to follow.
 
 - Your application is divided into layers.
-- Layers communicate with domain models via interfaces.
-- Handlers talk to services, services talk to other service and storages.
+- Layers communicate with other layers, via interfaces, by sending and receiving domain models
+- Handlers talk to services, services talk to other services and storages.
 
 I introduced this _framework_ successfully at [Kramp Hub][kh], and it allowed the team to easily jump between
 projects and quickly get started. We used GRPC so some interfaces were actually protobuf services, but other
