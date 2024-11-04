@@ -23,11 +23,12 @@
     </div>
 </div>
 
+{{ $pages := .CurrentSection.Pages }}
 <div class="row justify-content-center">
     <div class="col-xl-6 col-lg-8 col-md-11">
         <div class="row">
             <div class="col-md-6">
-                {{ if .Page.Next }}
+                {{ if $pages.Next . }}
                 <div class="card">
                     <img loading="lazy" src="{{ absURL .Page.Next.Params.headerImage }}" class="card-img-top card-img-height"
                          alt="{{ .Page.Next.Title }}">
@@ -43,7 +44,7 @@
                 {{ end }}
             </div>
             <div class="col-md-6">
-                {{ if .Page.Prev }}
+                {{ if $pages.Prev . }}
                 <div class="card">
                     <img loading="lazy" src="{{ absURL .Page.Prev.Params.headerImage }}" class="card-img-top card-img-height"
                          alt="{{ .Page.Prev.Title }}">
