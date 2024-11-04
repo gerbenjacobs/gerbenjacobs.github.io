@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Gerben Jacobs</title><link>https://blog.gerbenjacobs.nl/</link><description>Recent content on Gerben Jacobs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 01 Nov 2024 14:12:56 +0100</lastBuildDate><atom:link href="https://blog.gerbenjacobs.nl/index.xml" rel="self" type="application/rss+xml"/><item><title>Now</title><link>https://blog.gerbenjacobs.nl/now/</link><pubDate>Tue, 22 Oct 2024 21:29:15 +0100</pubDate><guid>https://blog.gerbenjacobs.nl/now/</guid><description>&lt;a href="https://blog.gerbenjacobs.nl/" class="btn btn-sm btn-success mb-4">⬅️ Return home&lt;/a>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Gerben Jacobs</title><link>https://blog.gerbenjacobs.nl/</link><description>Recent content on Gerben Jacobs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 04 Nov 2024 18:02:42 +0100</lastBuildDate><atom:link href="https://blog.gerbenjacobs.nl/index.xml" rel="self" type="application/rss+xml"/><item><title>Now</title><link>https://blog.gerbenjacobs.nl/now/</link><pubDate>Tue, 22 Oct 2024 21:29:15 +0100</pubDate><guid>https://blog.gerbenjacobs.nl/now/</guid><description>&lt;a href="https://blog.gerbenjacobs.nl/" class="btn btn-sm btn-success mb-4">⬅️ Return home&lt;/a>
 
 &lt;p class="float-end">
- &lt;small>Last updated: Oct 23, 2024&lt;/small>
+ &lt;small>Last updated: Nov 4, 2024&lt;/small>
 &lt;/p>
 
 &lt;h1>Now&lt;/h1>
 
 &lt;p>
  &lt;small>
- This page explains what my life currnently looks like.
+ This page explains what my life currently looks like.
  See &lt;a href="https://nownownow.com/about">nownownow.com&lt;/a> to learn about the concept.
  &lt;/small>
 &lt;/p>
@@ -16,7 +16,7 @@
 &lt;h3>Work 🦁&lt;/h3>
 
 &lt;p>
- Currently I'm a &lt;strong>Software Engineer&lt;/strong> at &lt;span style="color: #FE6200;">ING Netherlands&lt;/span>.
+ Currently, I'm a &lt;strong>Software Engineer&lt;/strong> at &lt;span style="color: #FE6200;">ING Netherlands&lt;/span>.
  I work in the MDPL team that's responsible for tracing, metrics and logs; also known as observability (o11y).
 &lt;/p>
 
