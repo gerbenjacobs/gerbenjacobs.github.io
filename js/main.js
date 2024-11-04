@@ -1,4 +1,3 @@
-const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 let upButton;
 
 // add listeners
@@ -17,59 +16,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
         toggleDarkMode();
     });
-
-    // set dark mode or not
-    toggleDarkMode();
 });
-
-function determineDarkMode() {
-    // fetch dark mode settings
-    let darknessSystem = prefersDarkScheme.matches;
-    let darknessStored = localStorage.getItem("darkmode");
-
-    // determine dark mode
-    if (darknessStored === "true") {
-       return true;
-    } else if (darknessStored === "false") {
-        return false;
-    } else {
-        return darknessSystem;
-    }
-}
-
-// toggle dark mode
-function toggleDarkMode() {
-    let on = determineDarkMode();
-    let cards = document.querySelectorAll('.card');
-    let buttons = document.querySelectorAll('.btn');
-    let listgroups = document.querySelectorAll('.list-group-item');
-
-    if (on) {
-        document.body.classList.add("dark-theme");
-        for (let card of cards) {
-            card.classList.add("text-bg-dark");
-        }
-        for (let button of buttons) {
-            button.classList.add("btn-secondary");
-            button.classList.remove("btn-primary");
-        }
-        for (let listgroup of listgroups) {
-            listgroup.classList.add("list-group-item-dark");
-        }
-    } else {
-        document.body.classList.remove("dark-theme");
-        for (let card of cards) {
-            card.classList.remove("text-bg-dark");
-        }
-        for (let button of buttons) {
-            button.classList.remove("btn-secondary");
-            button.classList.add("btn-primary");
-        }
-        for (let listgroup of listgroups) {
-            listgroup.classList.remove("list-group-item-dark");
-        }
-    }
-}
 
 window.onscroll = function () {
     scrollFunction();
