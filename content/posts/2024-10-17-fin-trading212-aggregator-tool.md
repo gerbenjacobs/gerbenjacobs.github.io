@@ -3,7 +3,7 @@ title: "fin: A Trading212 aggregator tool (for Yahoo)"
 date: 2024-10-17T17:25:11+02:00
 layout: post
 description: fin is a Trading212 CSV utility that aggregates your transactional CSV files into a couple of output formats.
-headerImage: img/Firefly A set of tools and pipelines together with stock charts 38630.jpg
+headerImage: img/Firefly A set of tools and pipelines together with stock charts 38630_comp.jpeg
 tags: ["tech", "open-source", "go"]
 slug: fin-trading212-aggregator-tool
 toc: true
