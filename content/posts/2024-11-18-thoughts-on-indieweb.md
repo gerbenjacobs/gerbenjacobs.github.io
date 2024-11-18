@@ -2,7 +2,7 @@
 title: "Thoughts on IndieWeb"
 date: 2024-11-18T19:00:07+01:00
 layout: post
-description: 
+description: The death of silos, identity crises and a web presence as a form of self-expression. What is indieweb?
 headerImage: img/photo-1658963642269-0a36c9eb5d66.avif
 tags: ["personal", "indieweb"]
 slug: thoughts-on-indieweb
