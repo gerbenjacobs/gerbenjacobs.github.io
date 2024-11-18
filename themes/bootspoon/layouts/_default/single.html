@@ -29,34 +29,38 @@
         <div class="row">
             <div class="col-md-6">
                 {{ if $pages.Next . }}
+                {{ with $pages.Next . }}
                 <div class="card">
-                    <img loading="lazy" src="{{ absURL .Page.Next.Params.headerImage }}" class="card-img-top card-img-height"
-                         alt="{{ .Page.Next.Title }}">
+                    <img loading="lazy" src="{{ absURL .Params.headerImage }}" class="card-img-top card-img-height"
+                         alt="{{ .Title }}">
                     <div class="card-body">
-                        <span class="card-title" title="{{ .Page.Next.Title }}">
-                            {{ .Page.Next.Title | truncate 30 "..." }}
+                        <span class="card-title" title="{{ .Title }}">
+                            {{ .Title | truncate 30 "..." }}
                         </span>
                     </div>
                     <div class="card-footer">
-                        <a href="{{ .Page.Next.Permalink }}" class="btn btn-primary">&laquo; Next</a>
+                        <a href="{{ .Permalink }}" class="btn btn-primary">&laquo; Next</a>
                     </div>
                 </div>
+                {{end}}
                 {{ end }}
             </div>
             <div class="col-md-6">
                 {{ if $pages.Prev . }}
+                {{ with $pages.Prev . }}
                 <div class="card">
-                    <img loading="lazy" src="{{ absURL .Page.Prev.Params.headerImage }}" class="card-img-top card-img-height"
-                         alt="{{ .Page.Prev.Title }}">
+                    <img loading="lazy" src="{{ absURL .Params.headerImage }}" class="card-img-top card-img-height"
+                         alt="{{ .Title }}">
                     <div class="card-body">
-                        <span class="card-title" title="{{ .Page.Prev.Title }}">
-                            {{ .Page.Prev.Title | truncate 30 "..." }}
+                        <span class="card-title" title="{{ .Title }}">
+                            {{ .Title | truncate 30 "..." }}
                         </span>
                     </div>
                     <div class="card-footer text-end">
-                        <a href="{{ .Page.Prev.Permalink }}" class="btn btn-primary">Previous &raquo;</a>
+                        <a href="{{ .Permalink }}" class="btn btn-primary">Previous &raquo;</a>
                     </div>
                 </div>
+                {{ end }}
                 {{ end }}
             </div>
         </div>
