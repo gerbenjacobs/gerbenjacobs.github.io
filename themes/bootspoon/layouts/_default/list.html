@@ -14,7 +14,7 @@
             <div class="card-body">
                 <h2 class="card-title"><a href="{{ .RelPermalink }}" class="post-link p-name">{{ .Title }}</a></h2>
                 <h6 class="card-subtitle my-2 text-muted">{{ partial "metadata.html" . }}</h6>
-                <p class="card-text p-summary">{{ .Summary }}</p>
+                <span class="card-text p-summary">{{ .Summary }}</span>
                 {{ if .Truncated }}
                     <a href="{{ .Permalink }}" class="btn btn-primary read-more u-url">💬 Read more</a>
                 {{ end }}
