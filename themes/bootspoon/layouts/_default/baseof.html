@@ -2,11 +2,11 @@
 <html lang="en" class="h-100">
 {{- partial "head.html" . -}}
 <body class="d-flex flex-column h-100">
-{{- partial "nav.html" . -}}
-<div id="content" class="container">
+{{ partial "nav.html" . }}
+<main id="content" class="container">
     {{- block "main" . }}{{- end }}
-</div>
-{{- partial "footer.html" . -}}
+</main>
+{{ partial "footer.html" . }}
 <button class="btn" id="btn-back-to-top">☝️</button>
 </body>
 </html>

@@ -1,37 +1,37 @@
 {{ define "main" }}
 
 <div class="row justify-content-center">
-    <div class="col-xl-6 col-lg-8 col-md-11">
+    <div class="col-xl-6 col-lg-8 col-md-11 h-feed">
         <a href="/" class="btn btn-sm btn-success mb-4">⬅️ Return home</a>
-        {{ $type := .Type }}
-        {{ $.Scratch.Set "count" 1 }}
+        {{- $type := .Type -}}
+        {{- $.Scratch.Set "count" 1 -}}
 
-        {{ range (.Site.RegularPages.GroupByDate "2006") }}
-        {{ if and (gt .Key 1) (gt (where .Pages "Type" $type) 0) }}
+        {{- range (.Site.RegularPages.GroupByDate "2006") -}}
+        {{- if and (gt .Key 1) (gt (where .Pages "Type" $type) 0) -}}
 
-        {{ range (where .Pages "Type" $type) }}
-        {{ if (eq ($.Scratch.Get "count") 1) }}
+        {{- range (where .Pages "Type" $type) -}}
+        {{- if (eq ($.Scratch.Get "count") 1) -}}
         {{ $.Scratch.Set "count" 0 }}
         <h1 class="post-link">{{ .Date.Format "2006" }}</h1>
-        {{ end }}
-        {{ end }}
+        {{- end -}}
+        {{- end -}}
 
         {{ $.Scratch.Set "count" 1 }}
 
         <ul>
             {{ range (where .Pages "Type" $type) }}
-            {{ if (ne .Params.hidden true) }}
+            {{- if (ne .Params.hidden true) -}}
             <li>
-                <a href="{{ .RelPermalink }}">
-                    <span>{{ .Date.Format "02 Jan" }}</span> — {{ .Title }}
+                <a href="{{ .Permalink }}" class="h-entry">
+                    <time class="dt-published" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02 Jan" }}</time> — <span class="p-name">{{ .Title }}</span>
                 </a>
             </li>
-            {{ end }}
+            {{- end -}}
             {{ end }}
         </ul>
 
         {{ end }}
-        {{ end }}
+        {{- end -}}
     </div>
 </div>
 

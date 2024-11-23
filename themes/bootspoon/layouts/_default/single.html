@@ -2,9 +2,9 @@
 
 <div class="row justify-content-center">
     <div class="col-xl-6 col-lg-8 col-md-11">
-        <article>
+        <article class="h-entry">
             <header>
-                <h1>{{ .Title }}</h1>
+                <h1 class="p-name">{{ .Title }}</h1>
             </header>
             {{ partial "metadata.html" . }}
             {{ if and (gt .WordCount 400 ) (.Params.toc) }}
@@ -13,7 +13,9 @@
             {{ .TableOfContents }}
             {{ end }}
             <hr class="rainbow">
+            <div class="e-content">
             {{ .Content }}
+            </div>
         </article>
 
         {{ if not .Params.hide_comments }}

@@ -39,7 +39,7 @@
     <!-- {{ range .AlternativeOutputFormats -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}} -->
-    <link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}posts/index.xml" title="Gerben Jacobs" />
+    <link rel="alternate" type="application/rss+xml" href="{{ absURL "/posts/index.xml" }}" title="Gerben Jacobs" />
 
     <script>
     const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");

@@ -1,16 +1,16 @@
-{{ if not .PublishDate.IsZero }}
+{{- if not .PublishDate.IsZero -}}
     {{ $dateTime := .PublishDate.Format "2006-01-02" }}
     {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
     📅
-    <time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time> &mdash;
+    <time class="dt-published" datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time> &mdash;
 {{ end }}
-{{ if .WordCount }}
+{{- if .WordCount -}}
 🧮 {{ .WordCount }} words
-{{ end }}
+{{- end -}}
 {{ with .Params.tags }}
 &mdash; 🏷️
     {{ range . }}
         {{ $href := print (absURL "tags/") (urlize .) }}
-        <a href="{{ $href }}"><span class="badge bg-secondary">{{ . }}</span></a>
+        <a class="p-category" href="{{ $href }}" rel="tag"><span class="badge bg-secondary">{{ . }}</span></a>
     {{ end }}
-{{ end }}
+{{- end -}}
