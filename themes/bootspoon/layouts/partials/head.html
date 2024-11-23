@@ -16,9 +16,9 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ .Title }}">
     <meta property="og:description" content="{{ .Description | default "Personal blog of Gerben Jacobs. We talk about tech like Go, PHP, Docker, devops, open source. And we take things personal: holidays, events, learnings, growth and love!" }}">
-    {{ if .Params.headerImage }}
+    {{- if .Params.headerImage -}}
     <meta property="og:image" content="{{ absURL .Params.headerImage }}">
-    {{ else }}
+    {{- else -}}
     <meta property="og:image" content="{{ absURL "img/home-bg.jpg" }}">
     {{ end }}
 
@@ -28,17 +28,18 @@
     <meta property="twitter:url" content="{{ absURL .RelPermalink }}">
     <meta name="twitter:title" content="{{ .Title }}">
     <meta name="twitter:description" content="{{ .Description | default "Personal blog of Gerben Jacobs. We talk about tech like Go, PHP, Docker, devops, open source. And we take things personal: holidays, events, learnings, growth and love!" }}">
-    {{ if .Params.headerImage }}
+    {{- if .Params.headerImage -}}
     <meta name="twitter:image" content="{{ absURL .Params.headerImage }}">
-    {{ else }}
+    {{- else -}}
     <meta property="twitter:image" content="{{ absURL "img/home-bg.jpg" }}">
     {{ end }}
 
     {{ template "_internal/schema.html" . }}
     {{ template "_internal/google_analytics.html" . }}
-    {{ range .AlternativeOutputFormats -}}
+    <!-- {{ range .AlternativeOutputFormats -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-    {{ end -}}
+    {{ end -}} -->
+    <link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}posts/index.xml" title="Gerben Jacobs" />
 
     <script>
     const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
