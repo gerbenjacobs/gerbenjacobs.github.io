@@ -1,10 +1,9 @@
 🔗 <a href="{{ .Permalink }}" class="u-url post-link">Permalink</a>
 &mdash;
 {{- if not .PublishDate.IsZero -}}
-    {{ $dateTime := .PublishDate.Format "2006-01-02" }}
     {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
     📅
-    <time class="dt-published" datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time> &mdash;
+    <time class="dt-published" datetime="{{ .PublishDate }}">{{ .PublishDate.Format $dateFormat }}</time> &mdash;
 {{ end }}
 {{- if .WordCount -}}
 🧮 {{ .WordCount }} words
