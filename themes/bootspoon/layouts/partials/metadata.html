@@ -1,3 +1,5 @@
+🔗 <a href="{{ .Permalink }}" class="u-url post-link">Permalink</a>
+&mdash;
 {{- if not .PublishDate.IsZero -}}
     {{ $dateTime := .PublishDate.Format "2006-01-02" }}
     {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
