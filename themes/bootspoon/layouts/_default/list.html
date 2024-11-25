@@ -10,7 +10,11 @@
 
         {{ range $paginator.Pages }}
         <div class="card h-entry">
-            <img loading="lazy" src="{{ absURL .Params.headerImage }}" class="card-img-top card-img-height u-photo" alt="{{ .Title }}">
+            <img loading="lazy" src="{{ absURL .Params.headerImage }}" class="card-img-top card-img-height u-featured u-photo" alt="{{ .Title }}">
+            <div class="p-author h-card" style="display: none;">
+                <img loading="lazy" src="/img/avatar.jpg" alt="Avatar of Gerben Jacobs" class="u-photo">
+                <a class="p-name u-url" href="https://gerben.dev">Gerben Jacobs</a>
+            </div>
             <div class="card-body">
                 <h2 class="card-title"><a href="{{ .RelPermalink }}" class="post-link p-name">{{ .Title }}</a></h2>
                 <h6 class="card-subtitle my-2 text-muted">{{ partial "metadata.html" . }}</h6>

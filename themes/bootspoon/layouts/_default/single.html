@@ -7,6 +7,11 @@
                 <h1 class="p-name">{{ .Title }}</h1>
             </header>
             {{ partial "metadata.html" . }}
+            <img loading="lazy" src="{{ absURL .Params.headerImage }}" class="img-fluid u-featured u-photo" alt="{{ .Title }}" style="display: none;">
+            <div class="p-author h-card" style="display: none;">
+                <img loading="lazy" src="/img/avatar.jpg" alt="Avatar of Gerben Jacobs" class="u-photo">
+                <a class="p-name u-url" href="https://gerben.dev">Gerben Jacobs</a>
+            </div>
             {{ if and (gt .WordCount 400 ) (.Params.toc) }}
             <hr class="rainbow">
             <strong>Table of contents</strong>
