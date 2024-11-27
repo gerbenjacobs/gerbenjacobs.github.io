@@ -8,6 +8,9 @@ tags: ["tech", "go", "unix", "tutorial", "open-source"]
 slug: using-unix-pipes-with-go
 toc: true
 comment: true
+syndication:
+  - type: linkedin
+    url: https://www.linkedin.com/feed/update/urn:li:activity:7255290871355469824/
 ---
 _Header by [Alan Levine CC BY 2.0](https://www.flickr.com/photos/cogdog/6034711842/)_
 

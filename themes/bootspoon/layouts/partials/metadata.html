@@ -24,6 +24,12 @@
                     <img src="/img/social/mastodon.svg" alt="Fediverse" class="p-1">
                 </span>
             </a>
+        {{ else if eq $v.type "linkedin" }}
+            <a href="{{$v.url}}" class="u-syndication" title="Also posted on LinkedIn" style="text-decoration: none;">
+                <span class="rounded text-center d-inline-block" style="background-color: rgb(10,102,194); width: 1.4rem;height:1.4rem;">
+                    <img src="/img/social/linkedin.svg" alt="LinkedIn" class="p-1">
+                </span>
+            </a>
         {{ else }}
             <a href="{{$v.url}}" class="u-syndication m-1" title="Also posted on {{$v.type}}" style="text-decoration: none;">
                 <span class="rounded text-center d-inline-block" style="background-color: rgb(255,165,0); width: 1.4rem;height:1.4rem;">
