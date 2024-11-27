@@ -8,6 +8,9 @@ tags: ["personal", "indieweb"]
 slug: thoughts-on-indieweb
 toc: false
 comment: true
+syndication:
+    - type: fediverse
+      url: https://todon.nl/@gerben/113505589328031965
 ---
 
 The universe has been aligned ever since I posted about [my social media detox]({{< ref "2024-09-10-social-media-detox.md" >}}).

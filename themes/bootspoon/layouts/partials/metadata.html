@@ -1,5 +1,4 @@
-🔗 <a href="{{ .Permalink }}" class="u-url post-link">Permalink</a>
-&mdash;
+
 {{- if not .PublishDate.IsZero -}}
     {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
     📅
@@ -13,5 +12,24 @@
     {{ range . }}
         {{ $href := print (absURL "tags/") (urlize .) }}
         <a class="p-category" href="{{ $href }}" rel="tag"><span class="badge bg-secondary">{{ . }}</span></a>
+    {{ end }}
+{{- end -}}
+<br>🔗 <a href="{{ .Permalink }}" class="u-url post-link">Permalink</a>
+{{ if .Params.syndication }}
+    &mdash;
+    {{ range $key, $v := .Params.syndication }}
+        {{ if eq $v.type "fediverse" }}
+            <a href="{{$v.url}}" class="u-syndication" title="Also posted on the Fediverse" style="text-decoration: none;">
+                <span class="rounded text-center d-inline-block" style="background-color: rgb(99,100,255); width: 1.4rem;height:1.4rem;">
+                    <img src="/img/social/mastodon.svg" alt="Fediverse" class="p-1">
+                </span>
+            </a>
+        {{ else }}
+            <a href="{{$v.url}}" class="u-syndication m-1" title="Also posted on {{$v.type}}" style="text-decoration: none;">
+                <span class="rounded text-center d-inline-block" style="background-color: rgb(255,165,0); width: 1.4rem;height:1.4rem;">
+                    <img src="/img/social/rss.svg" alt="{{$v.type}}" class="p-1">
+                </span>
+            </a>
+        {{ end }}
     {{ end }}
 {{- end -}}
