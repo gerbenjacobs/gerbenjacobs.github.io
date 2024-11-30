@@ -1,27 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Gerben Jacobs</title><link>https://blog.gerbenjacobs.nl/posts/</link><description>Recent content in Posts on Gerben Jacobs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 27 Nov 2024 12:02:19 +0100</lastBuildDate><atom:link href="https://blog.gerbenjacobs.nl/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Thoughts on IndieWeb</title><link>https://blog.gerbenjacobs.nl/thoughts-on-indieweb/</link><pubDate>Mon, 18 Nov 2024 19:00:07 +0100</pubDate><guid>https://blog.gerbenjacobs.nl/thoughts-on-indieweb/</guid><description>&lt;p>The universe has been aligned ever since I posted about &lt;a href="https://blog.gerbenjacobs.nl/social-media-detox/">my social media detox&lt;/a>.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Gerben Jacobs</title><link>https://blog.gerbenjacobs.nl/posts/</link><description>Recent content in Posts on Gerben Jacobs</description><generator>Hugo + gerben.dev</generator><language>en-us</language><lastBuildDate>Wed, 27 Nov 2024 12:02:19 +0100</lastBuildDate><atom:link href="https://blog.gerbenjacobs.nl/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Thoughts on IndieWeb</title><link>https://blog.gerbenjacobs.nl/thoughts-on-indieweb/</link><pubDate>Mon, 18 Nov 2024 19:00:07 +0100</pubDate><guid>https://blog.gerbenjacobs.nl/thoughts-on-indieweb/</guid><description>&lt;p>The universe has been aligned ever since I posted about &lt;a href="https://blog.gerbenjacobs.nl/social-media-detox/">my social media detox&lt;/a>.
 With my new-found intention to start blogging more, I&amp;rsquo;ve been going down rabbit holes. 🐰&lt;/p>
 &lt;p>It started with (re-)discovering Neocities and finding &lt;em>cool internet concepts&lt;/em> like a &lt;a href="https://blog.gerbenjacobs.nl/now">/now&lt;/a> page.&lt;/p>
 &lt;p>It was 2004 when I first got embroiled in web development, making fan-sites for Habbo Hotel.
 Which led to me building communities, which then evolved to tooling and open-source.&lt;/p>
 &lt;p>I was following the trends closely, I was there when microformats and the concept of the indieweb got born.
 I however did not fully understand it as a teenager. I was just curious about the concept of data
-aggregation with microformats and getting better SEO in Google.&lt;/p></description></item><item><title>fin: A Trading212 aggregator tool (for Yahoo)</title><link>https://blog.gerbenjacobs.nl/fin-trading212-aggregator-tool/</link><pubDate>Thu, 17 Oct 2024 17:25:11 +0200</pubDate><guid>https://blog.gerbenjacobs.nl/fin-trading212-aggregator-tool/</guid><description>&lt;p>As you could see in my &lt;a href="https://blog.gerbenjacobs.nl/tags/roi-stock-portfolio/">ROI stock series&lt;/a>, I&amp;rsquo;ve been using Trading212 for a while now.&lt;/p>
+aggregation with microformats and getting better SEO in Google.&lt;/p></description><category>personal</category><category>indieweb</category></item><item><title>fin: A Trading212 aggregator tool (for Yahoo)</title><link>https://blog.gerbenjacobs.nl/fin-trading212-aggregator-tool/</link><pubDate>Thu, 17 Oct 2024 17:25:11 +0200</pubDate><guid>https://blog.gerbenjacobs.nl/fin-trading212-aggregator-tool/</guid><description>&lt;p>As you could see in my &lt;a href="https://blog.gerbenjacobs.nl/tags/roi-stock-portfolio/">ROI stock series&lt;/a>, I&amp;rsquo;ve been using Trading212 for a while now.&lt;/p>
 &lt;p>While it has some nice dashboards, I wanted more and since they offer a very nice CSV exporting feature,
 I decided to create my own Go-based tool to do aggregation and create a financial overview of my stocks.&lt;/p>
 &lt;p>&lt;em>💸 You can still use my affiliate link to get your own Trading212 account including a free stock of up to €100:
-&lt;a href="https://www.trading212.com/invite/HrAs2dFZ">https://www.trading212.com/invite/HrAs2dFZ&lt;/a>&lt;/em>&lt;/p></description></item><item><title>Using Unix pipes with Go</title><link>https://blog.gerbenjacobs.nl/using-unix-pipes-with-go/</link><pubDate>Sun, 06 Oct 2024 12:00:00 +0200</pubDate><guid>https://blog.gerbenjacobs.nl/using-unix-pipes-with-go/</guid><description>&lt;p>&lt;em>Header by &lt;a href="https://www.flickr.com/photos/cogdog/6034711842/">Alan Levine CC BY 2.0&lt;/a>&lt;/em>&lt;/p>
+&lt;a href="https://www.trading212.com/invite/HrAs2dFZ">https://www.trading212.com/invite/HrAs2dFZ&lt;/a>&lt;/em>&lt;/p></description><category>tech</category><category>open-source</category><category>go</category></item><item><title>Using Unix pipes with Go</title><link>https://blog.gerbenjacobs.nl/using-unix-pipes-with-go/</link><pubDate>Sun, 06 Oct 2024 12:00:00 +0200</pubDate><guid>https://blog.gerbenjacobs.nl/using-unix-pipes-with-go/</guid><description>&lt;p>&lt;em>Header by &lt;a href="https://www.flickr.com/photos/cogdog/6034711842/">Alan Levine CC BY 2.0&lt;/a>&lt;/em>&lt;/p>
 &lt;p>Go has made it easy to work with Unix operations, it comes with the platform-independent built-in package &lt;code>os&lt;/code> to interface with the operating system.&lt;/p>
 &lt;p>They offer nice features such as &lt;code>os.Stdin&lt;/code> and &lt;code>os.Stdout&lt;/code>, wrappers of type &lt;code>os.File&lt;/code> around the OS&amp;rsquo;s common standard streams.&lt;/p>
 &lt;p>The &lt;code>os/exec&lt;/code> package is also great. It allows you to run Unix-tools from within your Go application.&lt;/p>
 &lt;blockquote>
-&lt;p>Package exec runs external commands. It wraps os.StartProcess to make it easier to remap stdin and stdout, connect I/O with pipes, and do other adjustments.&lt;/p></description></item><item><title>Social Media Detox</title><link>https://blog.gerbenjacobs.nl/social-media-detox/</link><pubDate>Tue, 10 Sep 2024 23:36:20 +0200</pubDate><guid>https://blog.gerbenjacobs.nl/social-media-detox/</guid><description>&lt;p>In november 2022 I left Twitter for Mastodon and I&amp;rsquo;ve been posting a bit there.&lt;/p>
+&lt;p>Package exec runs external commands. It wraps os.StartProcess to make it easier to remap stdin and stdout, connect I/O with pipes, and do other adjustments.&lt;/p></description><category>tech</category><category>go</category><category>unix</category><category>tutorial</category><category>open-source</category></item><item><title>Social Media Detox</title><link>https://blog.gerbenjacobs.nl/social-media-detox/</link><pubDate>Tue, 10 Sep 2024 23:36:20 +0200</pubDate><guid>https://blog.gerbenjacobs.nl/social-media-detox/</guid><description>&lt;p>In november 2022 I left Twitter for Mastodon and I&amp;rsquo;ve been posting a bit there.&lt;/p>
 &lt;p>However, between work and parenting, I&amp;rsquo;ve noticed I didn&amp;rsquo;t have much time and most of all,
 I was getting imposter syndrome. I felt like I had to perform &amp;rsquo;to be interesting'.&lt;/p>
 &lt;h2 id="so-i-kinda-stopped-posting-and-interacting">So I kinda stopped posting and interacting..&lt;/h2>
 &lt;p>The same imposter feeling I got for my blog and website. However recently I&amp;rsquo;ve come around
 to that regarding the blog. I realised I&amp;rsquo;m mostly writing for myself; &amp;lsquo;cause it sure is
 interesting to read old blog posts from years ago. And as such, this actual blog post
-is an attempt to kickstart everything again.&lt;/p></description></item><item><title>My ROI stock portfolio experiment; the results</title><link>https://blog.gerbenjacobs.nl/my-roi-stock-portfolio-experiment-the-results/</link><pubDate>Thu, 10 Aug 2023 10:59:15 +0100</pubDate><guid>https://blog.gerbenjacobs.nl/my-roi-stock-portfolio-experiment-the-results/</guid><description>&lt;p>
+is an attempt to kickstart everything again.&lt;/p></description><category>personal</category></item><item><title>My ROI stock portfolio experiment; the results</title><link>https://blog.gerbenjacobs.nl/my-roi-stock-portfolio-experiment-the-results/</link><pubDate>Thu, 10 Aug 2023 10:59:15 +0100</pubDate><guid>https://blog.gerbenjacobs.nl/my-roi-stock-portfolio-experiment-the-results/</guid><description>&lt;p>
  A year has passed since my
  &lt;a href="https://blog.gerbenjacobs.nl/my-roi-stock-portfolio-experiment/">first post about my ROI stock portfolio&lt;/a>
  and that means it is time to see how it went.
@@ -116,7 +116,7 @@ is an attempt to kickstart everything again.&lt;/p></description></item><item><t
 &lt;p>
  In US Dollars this is a &lt;strong>14.4%&lt;/strong> return, which is not bad at all.
  Foreign exchange rates however gave me a &lt;strong>-5%&lt;/strong> if I were to convert it to Euros straight away.
-&lt;/p></description></item><item><title>My ROI stock portfolio experiment; half way there</title><link>https://blog.gerbenjacobs.nl/my-roi-stock-portfolio-experiment-half-way-there/</link><pubDate>Wed, 18 Jan 2023 19:59:15 +0100</pubDate><guid>https://blog.gerbenjacobs.nl/my-roi-stock-portfolio-experiment-half-way-there/</guid><description>&lt;p>In a &lt;a href="https://blog.gerbenjacobs.nl/my-roi-stock-portfolio-experiment/">previous post about my ROI stock portfolio&lt;/a> you could read
+&lt;/p></description><category>stocks</category><category>personal</category><category>roi-stock-portfolio</category></item><item><title>My ROI stock portfolio experiment; half way there</title><link>https://blog.gerbenjacobs.nl/my-roi-stock-portfolio-experiment-half-way-there/</link><pubDate>Wed, 18 Jan 2023 19:59:15 +0100</pubDate><guid>https://blog.gerbenjacobs.nl/my-roi-stock-portfolio-experiment-half-way-there/</guid><description>&lt;p>In a &lt;a href="https://blog.gerbenjacobs.nl/my-roi-stock-portfolio-experiment/">previous post about my ROI stock portfolio&lt;/a> you could read
 what my plan was. We&amp;rsquo;re now 5 months further, and that means we&amp;rsquo;ve reached the halfway mark of the buying period.
 So how&amp;rsquo;s it going?&lt;/p>
 &lt;h2 id="the-portfolio">The portfolio&lt;/h2>
@@ -141,7 +141,7 @@ So how&amp;rsquo;s it going?&lt;/p>
 &lt;li>✔️(+0.55%) Crescent Point Energy (CPG) - ❌(-10.19%)&lt;/li>
 &lt;/ul>
 &lt;p>Volatile, that&amp;rsquo;s how it&amp;rsquo;s going. Just like the rest of the 2022 market. In fact, now with a couple of months
-of hindsight we can also see that my starting point, August 2022, was one of the &amp;lsquo;worst&amp;rsquo; months to start.&lt;/p></description></item><item><title>YouTube is my TV</title><link>https://blog.gerbenjacobs.nl/youtube-is-my-tv/</link><pubDate>Wed, 28 Dec 2022 23:00:00 +0100</pubDate><guid>https://blog.gerbenjacobs.nl/youtube-is-my-tv/</guid><description>&lt;p>
+of hindsight we can also see that my starting point, August 2022, was one of the &amp;lsquo;worst&amp;rsquo; months to start.&lt;/p></description><category>stocks</category><category>personal</category><category>roi-stock-portfolio</category></item><item><title>YouTube is my TV</title><link>https://blog.gerbenjacobs.nl/youtube-is-my-tv/</link><pubDate>Wed, 28 Dec 2022 23:00:00 +0100</pubDate><guid>https://blog.gerbenjacobs.nl/youtube-is-my-tv/</guid><description>&lt;p>
  When we bought our house in 2015 we got all the regular communication appliances;
  TVs and cable subscriptions, landlines, internet, etc.&lt;br>
  But we soon realized that we prefer to be on our computers more and as such the TV was left unused,
@@ -151,7 +151,7 @@ of hindsight we can also see that my starting point, August 2022, was one of the
 &lt;p>
  Recently I realized that I'm really using YouTube as if it was my cable TV. I could also clearly see the type of
  content that I'm watching, and it made me think that I've actually built my &lt;strong>own TV channel&lt;/strong>.
-&lt;/p></description></item><item><title>My ROI stock portfolio experiment</title><link>https://blog.gerbenjacobs.nl/my-roi-stock-portfolio-experiment/</link><pubDate>Sat, 17 Sep 2022 00:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/my-roi-stock-portfolio-experiment/</guid><description>&lt;p>After reading a bit about multiple well-known investors mentioning how important Return On Invested Capital is,
+&lt;/p></description><category>personal</category><category>youtube</category></item><item><title>My ROI stock portfolio experiment</title><link>https://blog.gerbenjacobs.nl/my-roi-stock-portfolio-experiment/</link><pubDate>Sat, 17 Sep 2022 00:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/my-roi-stock-portfolio-experiment/</guid><description>&lt;p>After reading a bit about multiple well-known investors mentioning how important Return On Invested Capital is,
 I decided to generate a small portfolio (actually a pie within &lt;a href="https://www.trading212.com/invite/HrAs2dFZ">Trading212&lt;/a>) with some metrics.&lt;/p>
 &lt;p>I used &lt;a href="https://finviz.com/screener.ashx?v=111&amp;amp;f=cap_midover,fa_div_pos,fa_netmargin_o25,fa_roi_verypos,sh_avgvol_o1000&amp;amp;ft=4">finviz&lt;/a> to screen and since they don&amp;rsquo;t have ROIC, I used Return On Investment (ROI).
 This is a different metric but is the closest option there is. My screening options were as follows:&lt;/p>
@@ -164,13 +164,13 @@ This is a different metric but is the closest option there is. My screening opti
 &lt;/ul>
 &lt;p>So the important values are the ROI and net profit margins. However to give me some more established companies
 I also made sure that they have a market cap of 2 billion or more, enough trading volume and a positive dividend.
-This last option as a soft guarantee that the company is free cash flow positive.&lt;/p></description></item><item><title>svc; an opinionated Go service framework</title><link>https://blog.gerbenjacobs.nl/svc-an-opinionated-go-service-framework/</link><pubDate>Fri, 17 Jun 2022 00:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/svc-an-opinionated-go-service-framework/</guid><description>&lt;p>I have been writing Go (or Golang) for about 6 years now. In that time I&amp;rsquo;ve seen quite a few different ways
+This last option as a soft guarantee that the company is free cash flow positive.&lt;/p></description><category>stocks</category><category>personal</category><category>roi-stock-portfolio</category></item><item><title>svc; an opinionated Go service framework</title><link>https://blog.gerbenjacobs.nl/svc-an-opinionated-go-service-framework/</link><pubDate>Fri, 17 Jun 2022 00:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/svc-an-opinionated-go-service-framework/</guid><description>&lt;p>I have been writing Go (or Golang) for about 6 years now. In that time I&amp;rsquo;ve seen quite a few different ways
 on how to organize a Go project. During my time at &lt;a href="https://www.messagebird.com/">MessageBird&lt;/a> I got introduced to a nice layered approach.
 I&amp;rsquo;ve taken those lessons and applied them to something that feels right for me; &lt;a href="https://github.com/gerbenjacobs/svc">github.com/gerbenjacobs/svc&lt;/a>&lt;/p>
 &lt;h2 id="svc">svc&lt;/h2>
 &lt;p>svc is not an actual framework, but more a convention for creating microservices.&lt;/p>
 &lt;p>The core of svc is centered around 3 layers: &lt;strong>handlers&lt;/strong>, &lt;strong>services&lt;/strong> and &lt;strong>storages&lt;/strong>.
-Together with the &lt;code>cmd&lt;/code> folder they are responsible for organizing your code into a clean and well-organized structure.&lt;/p></description></item><item><title>First month at GitHub</title><link>https://blog.gerbenjacobs.nl/first-month-at-github/</link><pubDate>Sat, 12 Mar 2022 00:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/first-month-at-github/</guid><description>&lt;p>It&amp;rsquo;s been a month since I joined GitHub in February of 2022.
+Together with the &lt;code>cmd&lt;/code> folder they are responsible for organizing your code into a clean and well-organized structure.&lt;/p></description><category>tech</category><category>go</category><category>open-source</category></item><item><title>First month at GitHub</title><link>https://blog.gerbenjacobs.nl/first-month-at-github/</link><pubDate>Sat, 12 Mar 2022 00:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/first-month-at-github/</guid><description>&lt;p>It&amp;rsquo;s been a month since I joined GitHub in February of 2022.
 I&amp;rsquo;m enjoying myself a lot, but I&amp;rsquo;m also not sure if the reality has set in completely.&lt;/p>
 &lt;p>In 2014 I started my first tech job and remember that I went to a conference and got GitHub stickers,
 they were awesome and all ended up on my MacBook. Eight years later I now work at that exact company. 🚀&lt;/p>
@@ -179,11 +179,11 @@ they were awesome and all ended up on my MacBook. Eight years later I now work a
 standard time, so that meant 8PM CET. The first thing that you&amp;rsquo;ll notice is that a lot of the work
 you do is by using GitHub itself. There&amp;rsquo;s an &lt;code>onboarding&lt;/code> repository with a project for every
 person that joined during your cohort. Here you can find &lt;strong>issues&lt;/strong> with tasks that you can complete
-during the first days.&lt;/p></description></item><item><title>How many points would you give this story?</title><link>https://blog.gerbenjacobs.nl/how-many-points-would-you-give-this-story/</link><pubDate>Fri, 05 Jan 2018 18:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/how-many-points-would-you-give-this-story/</guid><description>&lt;p>It’s time for a mental exercise. You are going to give &lt;a href="https://www.atlassian.com/agile/project-management/estimation">story points&lt;/a> to a user story, that I actually completed.
+during the first days.&lt;/p></description><category>tech</category><category>personal</category></item><item><title>How many points would you give this story?</title><link>https://blog.gerbenjacobs.nl/how-many-points-would-you-give-this-story/</link><pubDate>Fri, 05 Jan 2018 18:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/how-many-points-would-you-give-this-story/</guid><description>&lt;p>It’s time for a mental exercise. You are going to give &lt;a href="https://www.atlassian.com/agile/project-management/estimation">story points&lt;/a> to a user story, that I actually completed.
 Then I’m going to tell you what I had to do and which issues I ran into.&lt;/p>
 &lt;h2 id="background">Background&lt;/h2>
 &lt;p>We have a page that lists birthdays for people on that day, but excluding the current year. This way we can showcase everyone who is 1 year or older.&lt;/p>
-&lt;p>This is nice, but if you want to find birthdays for a specific date, you might have to wait a year for it to come around.&lt;/p></description></item><item><title>My first open source project</title><link>https://blog.gerbenjacobs.nl/my-first-open-source-project/</link><pubDate>Fri, 20 Nov 2015 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/my-first-open-source-project/</guid><description>&lt;p>
+&lt;p>This is nice, but if you want to find birthdays for a specific date, you might have to wait a year for it to come around.&lt;/p></description><category>tech</category><category>agile</category></item><item><title>My first open source project</title><link>https://blog.gerbenjacobs.nl/my-first-open-source-project/</link><pubDate>Fri, 20 Nov 2015 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/my-first-open-source-project/</guid><description>&lt;p>
  Since november last year I started working on &lt;a href="https://github.com/gerbenjacobs/HabboAPI" >the HabboAPI project&lt;/a>.
  While it is &lt;a href="https://github.com/gerbenjacobs?tab=repositories" >not my first repository&lt;/a>,
  and maybe also not the first serious project (that would be my attempt of the &lt;a href="https://github.com/gerbenjacobs/rws" >RWS library&lt;/a>),
@@ -192,11 +192,11 @@ Then I’m going to tell you what I had to do and which issues I ran into.&lt;/p
 
 &lt;p>
  I also intend to support this and hope to see other people contribute. So far I have one favourite!
-&lt;/p></description></item><item><title>Move to Jekyll</title><link>https://blog.gerbenjacobs.nl/move-to-jekyll/</link><pubDate>Wed, 19 Aug 2015 10:36:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/move-to-jekyll/</guid><description>&lt;p>So I moved my site to Jekyll and Github Pages.&lt;br>
+&lt;/p></description><category>tech</category><category>open-source</category></item><item><title>Move to Jekyll</title><link>https://blog.gerbenjacobs.nl/move-to-jekyll/</link><pubDate>Wed, 19 Aug 2015 10:36:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/move-to-jekyll/</guid><description>&lt;p>So I moved my site to Jekyll and Github Pages.&lt;br>
 The reason was that I wanted to get rid of my hosted VPS solution which I didn&amp;rsquo;t use at all.
 I had great plans of making lots of small websites, but that never really planned out.&lt;/p>
 &lt;p>I also wanted to get rid of the 500ms page loads of Wordpress (yes, I&amp;rsquo;m sure you can make that better).
-All I need for my blog is a static website. I plan to do comments with Disqus.&lt;/p></description></item><item><title>Dutch Open Hackathon</title><link>https://blog.gerbenjacobs.nl/dutch-open-hackathon/</link><pubDate>Thu, 25 Sep 2014 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/dutch-open-hackathon/</guid><description>&lt;p>
+All I need for my blog is a static website. I plan to do comments with Disqus.&lt;/p></description><category>tech</category></item><item><title>Dutch Open Hackathon</title><link>https://blog.gerbenjacobs.nl/dutch-open-hackathon/</link><pubDate>Thu, 25 Sep 2014 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/dutch-open-hackathon/</guid><description>&lt;p>
  Last weekend I attended the &lt;a title="Dutch Open Hackathon" href="https://www.dutchopenhackathon.com/">Dutch Open Hackathon&lt;/a>
  in the UP building (previously known as IJ-toren) in Amsterdam.
  &lt;br>I went there as part of team 'Pi Ducks'. The team consisted of some colleagues from
@@ -250,7 +250,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
 &lt;p>
  Our working title was "Ik ga op vakantie en neem mee" which is a Dutch little memory game where everyone has to cite a list of
  items to bring on holiday, pick a new item and then the turn goes to the next person, who has to cite that entire thing again. N+1.
-&lt;/p></description></item><item><title>meter; the HTML5 element</title><link>https://blog.gerbenjacobs.nl/meter-the-html5-element/</link><pubDate>Wed, 14 May 2014 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/meter-the-html5-element/</guid><description>&lt;p>
+&lt;/p></description><category>tech</category><category>personal</category></item><item><title>meter; the HTML5 element</title><link>https://blog.gerbenjacobs.nl/meter-the-html5-element/</link><pubDate>Wed, 14 May 2014 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/meter-the-html5-element/</guid><description>&lt;p>
  I'm amazed at how often I still "discover" a new HTML5 element. I say discover because really they're all written down in specs. But then again, who reads specs for their enjoyment?
 &lt;/p>
 
@@ -259,7 +259,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
  some sugary deliciousness in the form of colouring. It's here that you should note that IE10 (and higher) only support &amp;lt;progress&amp;gt; at the moment and not &amp;lt;meter&amp;gt;.
  So while both elements are rendered pretty much the same by &lt;span style="border-bottom: 1px dotted;" title="REAL browsers ;)">browsers&lt;/span>,
  it's the semantic meaning that you have to pick.
-&lt;/p></description></item><item><title>Piwik, a free open-source analytics tool</title><link>https://blog.gerbenjacobs.nl/piwik-a-free-open-source-analytics-tool/</link><pubDate>Wed, 05 Mar 2014 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/piwik-a-free-open-source-analytics-tool/</guid><description>&lt;p>
+&lt;/p></description><category>tech</category><category>web</category></item><item><title>Piwik, a free open-source analytics tool</title><link>https://blog.gerbenjacobs.nl/piwik-a-free-open-source-analytics-tool/</link><pubDate>Wed, 05 Mar 2014 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/piwik-a-free-open-source-analytics-tool/</guid><description>&lt;p>
  I have been using &lt;a href="http://piwik.org" >Piwik&lt;/a> for a couple of months and I love it.
 &lt;/p>
 
@@ -272,7 +272,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
  The main goal of Piwik is an analytics tool, a direct competitor to Google Analytics. But it's really more than that.
  Like the data collection method I just mentioned, it could also be a community monitoring tool, which is how we use it at 
  &lt;a href="http://www.habbies.nl" >Habbies.nl&lt;/a>.
-&lt;/p></description></item><item><title>Akismet doesn't cut it anymore, utilize Cloudflare against spam</title><link>https://blog.gerbenjacobs.nl/akismet-doesnt-cut-it-anymore-utilize-cloudflare-against-spam/</link><pubDate>Thu, 27 Feb 2014 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/akismet-doesnt-cut-it-anymore-utilize-cloudflare-against-spam/</guid><description>&lt;figure class="figure ">
+&lt;/p></description><category>tech</category></item><item><title>Akismet doesn't cut it anymore, utilize Cloudflare against spam</title><link>https://blog.gerbenjacobs.nl/akismet-doesnt-cut-it-anymore-utilize-cloudflare-against-spam/</link><pubDate>Thu, 27 Feb 2014 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/akismet-doesnt-cut-it-anymore-utilize-cloudflare-against-spam/</guid><description>&lt;figure class="figure ">
  &lt;a href=https://blog.gerbenjacobs.nl/img/blog/2014/wordpress_queue.png>
  &lt;img loading="lazy" class="figure-img img-fluid rounded" src=https://blog.gerbenjacobs.nl/img/blog/2014/wordpress_queue.png alt=Spam&amp;#32;queue&amp;#32;in&amp;#32;Wordpress>
  &lt;/a>
@@ -289,7 +289,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
 &lt;p>
  I didn't really think anything of it until I just realized why this change occurred; I had enabled Cloudflare for my
  blog.
-&lt;/p></description></item><item><title>Road trip to Scandinavia 2013 - Part III</title><link>https://blog.gerbenjacobs.nl/road-trip-to-scandinavia-2013-part-iii/</link><pubDate>Thu, 28 Nov 2013 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/road-trip-to-scandinavia-2013-part-iii/</guid><description>&lt;h2 id="day6">Day 6: Preikestolen&lt;/h2>
+&lt;/p></description><category>tech</category></item><item><title>Road trip to Scandinavia 2013 - Part III</title><link>https://blog.gerbenjacobs.nl/road-trip-to-scandinavia-2013-part-iii/</link><pubDate>Thu, 28 Nov 2013 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/road-trip-to-scandinavia-2013-part-iii/</guid><description>&lt;h2 id="day6">Day 6: Preikestolen&lt;/h2>
 
 &lt;p>
  Preikestolen is one of Norway's famous tourist&lt;s>traps&lt;/s>locations, it's a hiking trail that ends at the Preikestolen (Pulpit/Preacher's Chair),
@@ -313,7 +313,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
  After the ferry ramp you make a sharp turn and go through a tunnel to the other side of the mountain.
  After a short while you leave the main road again and take a smaller "mountain road".
  Here we ended up in a tiny traffic jam; this meant it was the right location.
-&lt;/p></description></item><item><title>Road trip to Scandinavia 2013 - Part II</title><link>https://blog.gerbenjacobs.nl/road-trip-to-scandinavia-2013-part-ii/</link><pubDate>Wed, 27 Nov 2013 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/road-trip-to-scandinavia-2013-part-ii/</guid><description>&lt;h2 id="day3">Day 3: Løkken and Hjørring&lt;/h2>
+&lt;/p></description><category>personal</category><category>scandinavia-2013</category></item><item><title>Road trip to Scandinavia 2013 - Part II</title><link>https://blog.gerbenjacobs.nl/road-trip-to-scandinavia-2013-part-ii/</link><pubDate>Wed, 27 Nov 2013 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/road-trip-to-scandinavia-2013-part-ii/</guid><description>&lt;h2 id="day3">Day 3: Løkken and Hjørring&lt;/h2>
 
 &lt;p>
  The next day we drove to the seaside town of Løkken, famous for its candy store and beaches.
@@ -346,7 +346,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
  &lt;a title="Wikipedia page for Atlantic Wall" href="http://en.wikipedia.org/wiki/Atlantic_Wall" >Atlantic Wall&lt;/a> and we
  could see them in the distance. But first a little walk on the beach and visiting the pier, where the water was frantically splashing over.
  Something I wanted to get on camera &amp;mdash; would have been better if I had cleaned the salt seawater afterwards.
-&lt;/p></description></item><item><title>Road trip to Scandinavia 2013 - Part I</title><link>https://blog.gerbenjacobs.nl/road-trip-to-scandinavia-2013-part-i/</link><pubDate>Tue, 26 Nov 2013 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/road-trip-to-scandinavia-2013-part-i/</guid><description>&lt;h1>Our road trip to Scandinavia&lt;/h1>
+&lt;/p></description><category>personal</category><category>scandinavia-2013</category></item><item><title>Road trip to Scandinavia 2013 - Part I</title><link>https://blog.gerbenjacobs.nl/road-trip-to-scandinavia-2013-part-i/</link><pubDate>Tue, 26 Nov 2013 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/road-trip-to-scandinavia-2013-part-i/</guid><description>&lt;h1>Our road trip to Scandinavia&lt;/h1>
 &lt;p>
  I've been wanting to visit Scandinavia for quite a while, I've been to many European countries
  (Great-Britain, Germany, Belgium, France, Spain, Austria) but never to one of the nordic ones.
@@ -354,7 +354,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
 &lt;p>
  At a previous internship 2 co-workers of mine have been there and they were absolutely loving it, especially Norway.
  If you asked me in february where I'd go, I would have probably said the Garda lake in Italy. But since June all plans had changed to Norway.
-&lt;/p></description></item><item><title>SocialSpace at ESTEC in Noordwijk</title><link>https://blog.gerbenjacobs.nl/socialspace-at-estec-in-noordwijk/</link><pubDate>Tue, 08 Oct 2013 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/socialspace-at-estec-in-noordwijk/</guid><description>&lt;figure class="figure ">
+&lt;/p></description><category>personal</category><category>scandinavia-2013</category></item><item><title>SocialSpace at ESTEC in Noordwijk</title><link>https://blog.gerbenjacobs.nl/socialspace-at-estec-in-noordwijk/</link><pubDate>Tue, 08 Oct 2013 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/socialspace-at-estec-in-noordwijk/</guid><description>&lt;figure class="figure ">
  
  &lt;img loading="lazy" class="figure-img img-fluid rounded" src=https://blog.gerbenjacobs.nl/img/blog/2013/estec_swag.jpg alt=A&amp;#32;day&amp;#32;worth&amp;#39;s&amp;#32;of&amp;#32;swag!>
  
@@ -374,7 +374,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
  &lt;a title="@social4space on Twitter" href="https://twitter.com/social4space" >@social4space&lt;/a> together with
  &lt;a title="SocialSpace tweeps from ESTEC" href="https://twitter.com/social4space/socialspace-estec-2/members" >these tweeps&lt;/a>.
  Mostly Dutch people, but also some from Belgium, Germany, France and even Spain.
-&lt;/p></description></item><item><title>The problem(s) with Open Data</title><link>https://blog.gerbenjacobs.nl/the-problems-with-open-data/</link><pubDate>Tue, 17 Sep 2013 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/the-problems-with-open-data/</guid><description>&lt;p>
+&lt;/p></description><category>personal</category></item><item><title>The problem(s) with Open Data</title><link>https://blog.gerbenjacobs.nl/the-problems-with-open-data/</link><pubDate>Tue, 17 Sep 2013 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/the-problems-with-open-data/</guid><description>&lt;p>
  &lt;em>To put this blog post into context; this is written by a 25-year-old developer who uses the Dutch open data
  (&lt;a title="Dutch Open Data" href="https://data.overheid.nl">https://data.overheid.nl&lt;/a>) and doesn't like to read too much.
  I rather hack tutorials than read specs and I code stuff for the use of the public, i.e.: data needs to accommodate to the common people.&lt;/em>
@@ -382,7 +382,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
 
 &lt;p>
  With that out of the way and allowing you to see this from my perspective here goes; the biggest problem(s) with Open Data.
-&lt;/p></description></item><item><title>My first experience with PagodaBox</title><link>https://blog.gerbenjacobs.nl/my-first-experience-with-pagodabox/</link><pubDate>Fri, 10 May 2013 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/my-first-experience-with-pagodabox/</guid><description>&lt;h2>What is PagodaBox&lt;/h2>
+&lt;/p></description><category>tech</category></item><item><title>My first experience with PagodaBox</title><link>https://blog.gerbenjacobs.nl/my-first-experience-with-pagodabox/</link><pubDate>Fri, 10 May 2013 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/my-first-experience-with-pagodabox/</guid><description>&lt;h2>What is PagodaBox&lt;/h2>
 
 &lt;div class="alert alert-primary" role="alert">
  &lt;small>This blog post is written about what would now be known as &lt;em>Pagoda v1&lt;/em> and might not be representative.&lt;/small>
@@ -402,7 +402,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
 &lt;p>
  At Pagoda you can launch components, such as; &lt;strong>web&lt;/strong> (Apache + PHP), &lt;strong>database&lt;/strong> (I know MySQL works for a fact),
  &lt;strong>cache&lt;/strong> (Memcache or Redis), &lt;strong>worker&lt;/strong> and &lt;strong>cron job&lt;/strong> (beta).
-&lt;/p></description></item><item><title>Quickly create an empty stdClass object in PHP</title><link>https://blog.gerbenjacobs.nl/quickly-create-an-empty-stdclass-object-in-php/</link><pubDate>Fri, 19 Apr 2013 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/quickly-create-an-empty-stdclass-object-in-php/</guid><description>&lt;p>
+&lt;/p></description><category>tech</category></item><item><title>Quickly create an empty stdClass object in PHP</title><link>https://blog.gerbenjacobs.nl/quickly-create-an-empty-stdclass-object-in-php/</link><pubDate>Fri, 19 Apr 2013 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/quickly-create-an-empty-stdclass-object-in-php/</guid><description>&lt;p>
  I was working on a Laravel project and had to work with a &lt;a title="Eloquent ORM docs" href="https://laravel.com/docs/database/eloquent" >Eloquent ORM&lt;/a> object;
  I then needed to create an empty stdClass object.
 &lt;/p>
@@ -422,7 +422,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
 &lt;p>
  I'd say &lt;a href="https://gist.github.com/gerbenjacobs/5525165" title="Create an empty stdClass object Gist" >this solution&lt;/a> is quick and dirty.. but frankly,
  it's not that dirty at all!
-&lt;/p></description></item><item><title>Get IP range by CIDR notation</title><link>https://blog.gerbenjacobs.nl/get-ip-range-by-cidr-notation/</link><pubDate>Wed, 21 Nov 2012 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/get-ip-range-by-cidr-notation/</guid><description>&lt;p>
+&lt;/p></description><category>tech</category><category>php</category></item><item><title>Get IP range by CIDR notation</title><link>https://blog.gerbenjacobs.nl/get-ip-range-by-cidr-notation/</link><pubDate>Wed, 21 Nov 2012 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/get-ip-range-by-cidr-notation/</guid><description>&lt;p>
  I wanted to get the IPv4 range of a WHOIS record provided by
  &lt;a title="Latin America and Caribbean Internet Address Registry" href="http://www.lacnic.net/en/web/lacnic/inicio" >LACNIC&lt;/a>,
  because unlike other &lt;a title="Regional Internet Registries" href="https://en.wikipedia.org/wiki/Regional_Internet_registry" >RIRs&lt;/a>
@@ -432,7 +432,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
 
 &lt;p>
  To make matters worse, they give 'incomplete' net numbers. The only working "CIDR to IP range" function I could find didn't accept it, so I had to sprinkle some &lt;em>magic&lt;/em>.
-&lt;/p></description></item><item><title>Perfect separator for Shoutcast 7.html file</title><link>https://blog.gerbenjacobs.nl/perfect-separator-for-shoutcast-7.html-file/</link><pubDate>Sun, 08 Apr 2012 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/perfect-separator-for-shoutcast-7.html-file/</guid><description>&lt;p>
+&lt;/p></description><category>tech</category><category>php</category></item><item><title>Perfect separator for Shoutcast 7.html file</title><link>https://blog.gerbenjacobs.nl/perfect-separator-for-shoutcast-7.html-file/</link><pubDate>Sun, 08 Apr 2012 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/perfect-separator-for-shoutcast-7.html-file/</guid><description>&lt;p>
  To go along nicely with &lt;a href="{% post_url 2012-04-07-add-ip-address-to-shoutcast-rip %}">my previous Shoutcast tip&lt;/a>,
  here is a trick to separate the data in the Shoutcast 7.html for displaying.
 &lt;/p>
@@ -463,7 +463,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
 
 &lt;p>
  If you were to &lt;code>explode()&lt;/code> this string, you'd get the artist in 2 nodes and with this song title you'd get that one in 2 nodes as well.
-&lt;/p></description></item><item><title>How to programmatically add an IP address to a Shoutcast Reserved IP list in PHP</title><link>https://blog.gerbenjacobs.nl/how-to-programmatically-add-an-ip-address-to-a-shoutcast-reserved-ip-list-in-php/</link><pubDate>Sat, 07 Apr 2012 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/how-to-programmatically-add-an-ip-address-to-a-shoutcast-reserved-ip-list-in-php/</guid><description>&lt;p>
+&lt;/p></description><category>tech</category><category>php</category></item><item><title>How to programmatically add an IP address to a Shoutcast Reserved IP list in PHP</title><link>https://blog.gerbenjacobs.nl/how-to-programmatically-add-an-ip-address-to-a-shoutcast-reserved-ip-list-in-php/</link><pubDate>Sat, 07 Apr 2012 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/how-to-programmatically-add-an-ip-address-to-a-shoutcast-reserved-ip-list-in-php/</guid><description>&lt;p>
  Pretty semantic title, huh? But that's basically what this is all about.
 &lt;/p>
 
@@ -482,7 +482,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
 
 &lt;p>
  Let's have a quick look at the code and then analyze it to understand what it's doing.
-&lt;/p></description></item><item><title>array_push_insert: Push new value into array with PHP</title><link>https://blog.gerbenjacobs.nl/array_push_insert-push-new-value-into-array-with-php/</link><pubDate>Thu, 19 May 2011 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/array_push_insert-push-new-value-into-array-with-php/</guid><description>&lt;div class="alert alert-primary" role="alert">
+&lt;/p></description><category>tech</category><category>php</category></item><item><title>array_push_insert: Push new value into array with PHP</title><link>https://blog.gerbenjacobs.nl/array_push_insert-push-new-value-into-array-with-php/</link><pubDate>Thu, 19 May 2011 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/array_push_insert-push-new-value-into-array-with-php/</guid><description>&lt;div class="alert alert-primary" role="alert">
  This blogpost is for historical purposes.
  There is a better way with &lt;a
  href="https://www.php.net/manual/en/function.array-splice.php">array_splice&lt;/a>.
@@ -500,7 +500,7 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
  We couldn't find any existing &lt;a href="https://www.php.net/manual/en/ref.array.php">Array function&lt;/a> at php.net,
  so
  I decided to make my own version.
-&lt;/p></description></item><item><title>T-Mobile traffic through http://1.2.3.12</title><link>https://blog.gerbenjacobs.nl/t-mobile-traffic-through-1-2-3-12/</link><pubDate>Sat, 16 Apr 2011 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/t-mobile-traffic-through-1-2-3-12/</guid><description>&lt;p>
+&lt;/p></description><category>tech</category><category>php</category></item><item><title>T-Mobile traffic through http://1.2.3.12</title><link>https://blog.gerbenjacobs.nl/t-mobile-traffic-through-1-2-3-12/</link><pubDate>Sat, 16 Apr 2011 12:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/t-mobile-traffic-through-1-2-3-12/</guid><description>&lt;p>
  I'm at a place where there's no internet, so I hooked up my T-Mobile G1 (an HTC Dream) to my laptop through the
  &lt;a title="PdaNet at the Android Market" href="https://market.android.com/details?id=com.pdanet">PdaNet app&lt;/a>.
 &lt;/p>
@@ -509,4 +509,4 @@ All I need for my blog is a static website. I plan to do comments with Disqus.&l
  When I was browsing a site, I noticed an image that wasn't working. So I opened it up in a new tab, where it seemed to work again, but I then noticed the URL.
  The http:// part of the original source was dropped and replaced by &lt;code>http://1.2.3.12/bmi/&lt;/code>, i.e.:
  &lt;code>http://1.2.3.9/bmi/www.gerbenjacobs.nl/wp-content/uploads/2011/01/cute-kitten-laughing-64x64.jpg&lt;/code>
-&lt;/p></description></item><item><title>Posts archive</title><link>https://blog.gerbenjacobs.nl/posts/archive/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/posts/archive/</guid><description/></item></channel></rss>
+&lt;/p></description><category>tech</category></item><item><title>Posts archive</title><link>https://blog.gerbenjacobs.nl/posts/archive/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/posts/archive/</guid><description/></item></channel></rss>
