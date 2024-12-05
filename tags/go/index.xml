@@ -1,16 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Go on Gerben Jacobs</title><link>https://blog.gerbenjacobs.nl/tags/go/</link><description>Recent content in Go on Gerben Jacobs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 27 Nov 2024 12:02:19 +0100</lastBuildDate><atom:link href="https://blog.gerbenjacobs.nl/tags/go/index.xml" rel="self" type="application/rss+xml"/><item><title>fin: A Trading212 aggregator tool (for Yahoo)</title><link>https://blog.gerbenjacobs.nl/fin-trading212-aggregator-tool/</link><pubDate>Thu, 17 Oct 2024 17:25:11 +0200</pubDate><guid>https://blog.gerbenjacobs.nl/fin-trading212-aggregator-tool/</guid><description>&lt;p>As you could see in my &lt;a href="https://blog.gerbenjacobs.nl/tags/roi-stock-portfolio/">ROI stock series&lt;/a>, I&amp;rsquo;ve been using Trading212 for a while now.&lt;/p>
-&lt;p>While it has some nice dashboards, I wanted more and since they offer a very nice CSV exporting feature,
-I decided to create my own Go-based tool to do aggregation and create a financial overview of my stocks.&lt;/p>
-&lt;p>&lt;em>💸 You can still use my affiliate link to get your own Trading212 account including a free stock of up to €100:
-&lt;a href="https://www.trading212.com/invite/HrAs2dFZ">https://www.trading212.com/invite/HrAs2dFZ&lt;/a>&lt;/em>&lt;/p></description></item><item><title>Using Unix pipes with Go</title><link>https://blog.gerbenjacobs.nl/using-unix-pipes-with-go/</link><pubDate>Sun, 06 Oct 2024 12:00:00 +0200</pubDate><guid>https://blog.gerbenjacobs.nl/using-unix-pipes-with-go/</guid><description>&lt;p>&lt;em>Header by &lt;a href="https://www.flickr.com/photos/cogdog/6034711842/">Alan Levine CC BY 2.0&lt;/a>&lt;/em>&lt;/p>
-&lt;p>Go has made it easy to work with Unix operations, it comes with the platform-independent built-in package &lt;code>os&lt;/code> to interface with the operating system.&lt;/p>
-&lt;p>They offer nice features such as &lt;code>os.Stdin&lt;/code> and &lt;code>os.Stdout&lt;/code>, wrappers of type &lt;code>os.File&lt;/code> around the OS&amp;rsquo;s common standard streams.&lt;/p>
-&lt;p>The &lt;code>os/exec&lt;/code> package is also great. It allows you to run Unix-tools from within your Go application.&lt;/p>
-&lt;blockquote>
-&lt;p>Package exec runs external commands. It wraps os.StartProcess to make it easier to remap stdin and stdout, connect I/O with pipes, and do other adjustments.&lt;/p></description></item><item><title>svc; an opinionated Go service framework</title><link>https://blog.gerbenjacobs.nl/svc-an-opinionated-go-service-framework/</link><pubDate>Fri, 17 Jun 2022 00:00:00 +0000</pubDate><guid>https://blog.gerbenjacobs.nl/svc-an-opinionated-go-service-framework/</guid><description>&lt;p>I have been writing Go (or Golang) for about 6 years now. In that time I&amp;rsquo;ve seen quite a few different ways
-on how to organize a Go project. During my time at &lt;a href="https://www.messagebird.com/">MessageBird&lt;/a> I got introduced to a nice layered approach.
-I&amp;rsquo;ve taken those lessons and applied them to something that feels right for me; &lt;a href="https://github.com/gerbenjacobs/svc">github.com/gerbenjacobs/svc&lt;/a>&lt;/p>
-&lt;h2 id="svc">svc&lt;/h2>
-&lt;p>svc is not an actual framework, but more a convention for creating microservices.&lt;/p>
-&lt;p>The core of svc is centered around 3 layers: &lt;strong>handlers&lt;/strong>, &lt;strong>services&lt;/strong> and &lt;strong>storages&lt;/strong>.
-Together with the &lt;code>cmd&lt;/code> folder they are responsible for organizing your code into a clean and well-organized structure.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Go on Gerben Jacobs</title>
+    <link>https://blog.gerbenjacobs.nl/tags/go/</link>
+    <description>Recent content in Go on Gerben Jacobs</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 27 Nov 2024 12:02:19 +0100</lastBuildDate>
+    <atom:link href="https://blog.gerbenjacobs.nl/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>fin: A Trading212 aggregator tool (for Yahoo)</title>
+      <link>https://blog.gerbenjacobs.nl/fin-trading212-aggregator-tool/</link>
+      <pubDate>Thu, 17 Oct 2024 17:25:11 +0200</pubDate>
+      <guid>https://blog.gerbenjacobs.nl/fin-trading212-aggregator-tool/</guid>
+      <description>&lt;p&gt;As you could see in my &lt;a href=&#34;https://blog.gerbenjacobs.nl/tags/roi-stock-portfolio/&#34;&gt;ROI stock series&lt;/a&gt;, I&amp;rsquo;ve been using Trading212 for a while now.&lt;/p&gt;&#xA;&lt;p&gt;While it has some nice dashboards, I wanted more and since they offer a very nice CSV exporting feature,&#xA;I decided to create my own Go-based tool to do aggregation and create a financial overview of my stocks.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;💸 You can still use my affiliate link to get your own Trading212 account including a free stock of up to €100:&#xA;&lt;a href=&#34;https://www.trading212.com/invite/HrAs2dFZ&#34;&gt;https://www.trading212.com/invite/HrAs2dFZ&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Using Unix pipes with Go</title>
+      <link>https://blog.gerbenjacobs.nl/using-unix-pipes-with-go/</link>
+      <pubDate>Sun, 06 Oct 2024 12:00:00 +0200</pubDate>
+      <guid>https://blog.gerbenjacobs.nl/using-unix-pipes-with-go/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Header by &lt;a href=&#34;https://www.flickr.com/photos/cogdog/6034711842/&#34;&gt;Alan Levine CC BY 2.0&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Go has made it easy to work with Unix operations, it comes with the platform-independent built-in package &lt;code&gt;os&lt;/code&gt; to interface with the operating system.&lt;/p&gt;&#xA;&lt;p&gt;They offer nice features such as &lt;code&gt;os.Stdin&lt;/code&gt; and &lt;code&gt;os.Stdout&lt;/code&gt;, wrappers of type &lt;code&gt;os.File&lt;/code&gt; around the OS&amp;rsquo;s common standard streams.&lt;/p&gt;&#xA;&lt;p&gt;The &lt;code&gt;os/exec&lt;/code&gt; package is also great. It allows you to run Unix-tools from within your Go application.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Package exec runs external commands. It wraps os.StartProcess to make it easier to remap stdin and stdout, connect I/O with pipes, and do other adjustments.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>svc; an opinionated Go service framework</title>
+      <link>https://blog.gerbenjacobs.nl/svc-an-opinionated-go-service-framework/</link>
+      <pubDate>Fri, 17 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>https://blog.gerbenjacobs.nl/svc-an-opinionated-go-service-framework/</guid>
+      <description>&lt;p&gt;I have been writing Go (or Golang) for about 6 years now. In that time I&amp;rsquo;ve seen quite a few different ways&#xA;on how to organize a Go project. During my time at &lt;a href=&#34;https://www.messagebird.com/&#34;&gt;MessageBird&lt;/a&gt; I got introduced to a nice layered approach.&#xA;I&amp;rsquo;ve taken those lessons and applied them to something that feels right for me; &lt;a href=&#34;https://github.com/gerbenjacobs/svc&#34;&gt;github.com/gerbenjacobs/svc&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;svc&#34;&gt;svc&lt;/h2&gt;&#xA;&lt;p&gt;svc is not an actual framework, but more a convention for creating microservices.&lt;/p&gt;&#xA;&lt;p&gt;The core of svc is centered around 3 layers: &lt;strong&gt;handlers&lt;/strong&gt;, &lt;strong&gt;services&lt;/strong&gt; and &lt;strong&gt;storages&lt;/strong&gt;.&#xA;Together with the &lt;code&gt;cmd&lt;/code&gt; folder they are responsible for organizing your code into a clean and well-organized structure.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

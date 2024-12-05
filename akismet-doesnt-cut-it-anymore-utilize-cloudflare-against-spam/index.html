@@ -1,19 +1,325 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=description content="When even Akismet can't keep up with the spam, there is another way to not prevent spam comments but bots all together."><meta name=viewport content="width=device-width,initial-scale=1"><link href=https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65 crossorigin=anonymous><link rel=stylesheet type=text/css href=/css/style.css><link rel=stylesheet type=text/css href=/css/webmention.css><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Permanent+Marker&display=swap" rel=stylesheet><link rel=author href=/humans.txt><link rel=webmention href=https://webmention.io/gerben.dev/webmention><meta property="og:url" content="https://blog.gerbenjacobs.nl/akismet-doesnt-cut-it-anymore-utilize-cloudflare-against-spam/"><meta property="og:type" content="website"><meta property="og:title" content="Akismet doesn't cut it anymore, utilize Cloudflare against spam"><meta property="og:description" content="When even Akismet can't keep up with the spam, there is another way to not prevent spam comments but bots all together."><meta property="og:image" content="https://blog.gerbenjacobs.nl/img/flickr-theonewithout-burgerszoo-lion.jpeg"><meta name=twitter:card content="summary_large_image"><meta property="twitter:domain" content="blog.gerbenjacobs.nl"><meta property="twitter:url" content="https://blog.gerbenjacobs.nl/akismet-doesnt-cut-it-anymore-utilize-cloudflare-against-spam/"><meta name=twitter:title content="Akismet doesn't cut it anymore, utilize Cloudflare against spam"><meta name=twitter:description content="When even Akismet can't keep up with the spam, there is another way to not prevent spam comments but bots all together."><meta name=twitter:image content="https://blog.gerbenjacobs.nl/img/flickr-theonewithout-burgerszoo-lion.jpeg"><meta itemprop=name content="Akismet doesn't cut it anymore, utilize Cloudflare against spam"><meta itemprop=description content="When even Akismet can't keep up with the spam, there is another way to not prevent spam comments but bots all together."><meta itemprop=datePublished content="2014-02-27T12:00:00+00:00"><meta itemprop=dateModified content="2022-11-29T00:22:35+01:00"><meta itemprop=wordCount content="200"><meta itemprop=keywords content="Tech"><script async src="https://www.googletagmanager.com/gtag/js?id=G-KKSLTF3X24"></script><script>var dnt,doNotTrack=!1;if(!1&&(dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes"),!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-KKSLTF3X24")}</script><link rel=alternate type=application/rss+xml href=https://blog.gerbenjacobs.nl/posts/index.xml title="Gerben Jacobs"><script>const prefersDarkScheme=window.matchMedia("(prefers-color-scheme: dark)");document.addEventListener("DOMContentLoaded",function(){toggleDarkMode()});function determineDarkMode(){let t=prefersDarkScheme.matches,e=localStorage.getItem("darkmode");return e==="true"||e!=="false"&&t}function toggleDarkMode(){let s=determineDarkMode(),e=document.querySelectorAll(".card"),t=document.querySelectorAll(".btn"),n=document.querySelectorAll(".list-group-item");if(s){document.body.classList.add("dark-theme");for(let t of e)t.classList.add("text-bg-dark");for(let e of t)e.classList.add("btn-secondary"),e.classList.remove("btn-primary");for(let e of n)e.classList.add("list-group-item-dark")}else{document.body.classList.remove("dark-theme");for(let t of e)t.classList.remove("text-bg-dark");for(let e of t)e.classList.remove("btn-secondary"),e.classList.add("btn-primary");for(let e of n)e.classList.remove("list-group-item-dark")}}</script><script defer src=/js/main.js></script><title>Akismet doesn't cut it anymore, utilize Cloudflare against spam | Gerben Jacobs</title></head><body class="d-flex flex-column"><nav id=nav class="navbar navbar-expand-lg navbar-dark bg-dark"><div class=container-fluid><a class=navbar-brand href=https://blog.gerbenjacobs.nl/>Gerben Jacobs</a><ul class="navbar-nav d-flex mb-2 mb-lg-0"><li class=nav-item><a id=darkmode class="btn btn-primary" title="Toggle dark mode">🌓</a></li></ul></div></nav><main id=content class=container><div class="row justify-content-center"><div class="col-xl-6 col-lg-8 col-md-11"><article class=h-entry><header><h1 class=p-name>Akismet doesn't cut it anymore, utilize Cloudflare against spam</h1></header>📅
-<time class=dt-published datetime="2014-02-27 12:00:00 +0000 UTC">Feb 27, 2014</time> &mdash;
+<!doctype html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="description" content="When even Akismet can&#39;t keep up with the spam, there is another way to not prevent spam comments but bots all together.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+          crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/webmention.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="author" href="/humans.txt" />
+    <link rel="webmention" href="https://webmention.io/gerben.dev/webmention" />
+
+    
+    <meta property="og:url" content="https://blog.gerbenjacobs.nl/akismet-doesnt-cut-it-anymore-utilize-cloudflare-against-spam/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Akismet doesn&#39;t cut it anymore, utilize Cloudflare against spam">
+    <meta property="og:description" content="When even Akismet can&#39;t keep up with the spam, there is another way to not prevent spam comments but bots all together."><meta property="og:image" content="https://blog.gerbenjacobs.nl/img/flickr-theonewithout-burgerszoo-lion.jpeg">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="blog.gerbenjacobs.nl">
+    <meta property="twitter:url" content="https://blog.gerbenjacobs.nl/akismet-doesnt-cut-it-anymore-utilize-cloudflare-against-spam/">
+    <meta name="twitter:title" content="Akismet doesn&#39;t cut it anymore, utilize Cloudflare against spam">
+    <meta name="twitter:description" content="When even Akismet can&#39;t keep up with the spam, there is another way to not prevent spam comments but bots all together."><meta name="twitter:image" content="https://blog.gerbenjacobs.nl/img/flickr-theonewithout-burgerszoo-lion.jpeg">
+
+    
+  <meta itemprop="name" content="Akismet doesn&#39;t cut it anymore, utilize Cloudflare against spam">
+  <meta itemprop="description" content="When even Akismet can&#39;t keep up with the spam, there is another way to not prevent spam comments but bots all together.">
+  <meta itemprop="datePublished" content="2014-02-27T12:00:00+00:00">
+  <meta itemprop="dateModified" content="2022-11-29T00:22:35+01:00">
+  <meta itemprop="wordCount" content="200">
+  <meta itemprop="keywords" content="Tech">
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-KKSLTF3X24"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-KKSLTF3X24');
+        }
+      </script>
+    
+    <link rel="alternate" type="application/rss+xml" href="https://blog.gerbenjacobs.nl/posts/index.xml" title="Gerben Jacobs" />
+
+    <script>
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+    
+    document.addEventListener("DOMContentLoaded", function () {
+        toggleDarkMode()
+    })
+
+    function determineDarkMode() {
+        
+        let darknessSystem = prefersDarkScheme.matches;
+        let darknessStored = localStorage.getItem("darkmode");
+
+        
+        if (darknessStored === "true") {
+            return true;
+        } else if (darknessStored === "false") {
+            return false;
+        } else {
+            return darknessSystem;
+        }
+    }
+
+    
+    function toggleDarkMode() {
+        let on = determineDarkMode();
+        let cards = document.querySelectorAll('.card');
+        let buttons = document.querySelectorAll('.btn');
+        let listgroups = document.querySelectorAll('.list-group-item');
+
+        if (on) {
+            document.body.classList.add("dark-theme");
+            for (let card of cards) {
+                card.classList.add("text-bg-dark");
+            }
+            for (let button of buttons) {
+                button.classList.add("btn-secondary");
+                button.classList.remove("btn-primary");
+            }
+            for (let listgroup of listgroups) {
+                listgroup.classList.add("list-group-item-dark");
+            }
+        } else {
+            document.body.classList.remove("dark-theme");
+            for (let card of cards) {
+                card.classList.remove("text-bg-dark");
+            }
+            for (let button of buttons) {
+                button.classList.remove("btn-secondary");
+                button.classList.add("btn-primary");
+            }
+            for (let listgroup of listgroups) {
+                listgroup.classList.remove("list-group-item-dark");
+            }
+        }
+    }
+    </script>
+    <script defer src="/js/main.js"></script>
+
+    
+    
+    <title>Akismet doesn&#39;t cut it anymore, utilize Cloudflare against spam | Gerben Jacobs</title>
+</head><body class="d-flex flex-column">
+<nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="https://blog.gerbenjacobs.nl/">Gerben Jacobs</a>
+        <ul class="navbar-nav d-flex mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a id="darkmode" class="btn btn-primary" title="Toggle dark mode">🌓</a>
+            </li>
+        </ul>
+        
+        
+        
+        
+        
+        
+        
+        
+    </div>
+</nav>
+<main id="content" class="container">
+
+<div class="row justify-content-center">
+    <div class="col-xl-6 col-lg-8 col-md-11">
+        <article class="h-entry">
+            <header>
+                <h1 class="p-name">Akismet doesn&#39;t cut it anymore, utilize Cloudflare against spam</h1>
+            </header>
+            
+    📅
+    <time class="dt-published" datetime="2014-02-27 12:00:00 &#43;0000 UTC">Feb 27, 2014</time> &mdash;
 🧮 200 words
 &mdash; 🏷️
-<a class=p-category href=https://blog.gerbenjacobs.nl/tags/tech rel=tag><span class="badge bg-secondary">tech</span></a><br>🔗 <a href=https://blog.gerbenjacobs.nl/akismet-doesnt-cut-it-anymore-utilize-cloudflare-against-spam/ class="u-url post-link">Permalink</a>
-<img loading=lazy src=https://blog.gerbenjacobs.nl/img/flickr-theonewithout-burgerszoo-lion.jpeg class="img-fluid u-featured u-photo" alt="Akismet doesn't cut it anymore, utilize Cloudflare against spam" style=display:none><div class="p-author h-card" style=display:none><img loading=lazy src=/img/avatar.jpg alt="Avatar of Gerben Jacobs" class=u-photo>
-<a class="p-name u-url" href=https://gerben.dev>Gerben Jacobs</a></div><hr class=rainbow><div class=e-content><figure class=figure><a href=/img/blog/2014/wordpress_queue.png><img loading=lazy class="figure-img img-fluid rounded" src=/img/blog/2014/wordpress_queue.png alt="Spam queue in Wordpress"></a><figcaption class=figure-caption>Spam queue in Wordpress</figcaption></figure><p>I have been noticing a severe drop in spam in my comment queue. I used to have to delete anywhere from 5 to 10
-comments a day in the queue with just Akismet.
-Now there's not <strong>one</strong> comment.. 99.99% of the time.</p><p>I didn't really think anything of it until I just realized why this change occurred; I had enabled Cloudflare for my
-blog.</p><figure class=figure><img loading=lazy class="figure-img img-fluid rounded" src=/img/blog/2014/cloudfare_saved.png alt="Cloudflare saving requests and thus MBs"><figcaption class=figure-caption>Cloudflare saving requests and thus MBs</figcaption></figure><p><a title=Cloudflare href=https://www.cloudflare.com/>Cloudflare</a> acts as somewhat of a
-firewall and CDN in one, it blocks malicious requests and
-serves cached versions of your blog/site/resources. For this particular blog the stats aren't that overwhelming, but
-for one of my other sites we're talking about multiple gigabytes!</p><p>The <a title="Cloudflare plugin for Wordpress" href=https://wordpress.org/plugins/cloudflare/>Cloudflare
-plugin for Wordpress</a> doesn't only adjust the incoming IPs (they have to change it to the <code>X-FORWARDED-FOR</code>) but it also will tag
-any comment (and accompanying meta-data) as a spammer in the <abbr title=CloudFlare>CF</abbr> system.</p><p>So with my efforts and those of the other thousand of Cloudflare users combined, the spam queue is getting smaller
-and smaller every month. Making Cloudflare a better spam protection than <a href=https://akismet.com>Akismet</a>.</p><p><em>The spammers don't even get to reach the stage where Akismet has to kick in.</em></p></div></article><hr class=rainbow><div id=disqus_thread></div><script>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//gerbenjacobs.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a><div id=webmentions></div><script src=/js/webmention.js data-page-url=https://blog.gerbenjacobs.nl/akismet-doesnt-cut-it-anymore-utilize-cloudflare-against-spam/ lazy></script><hr class=rainbow></div></div><div class="row justify-content-center"><div class="col-xl-6 col-lg-8 col-md-11"><div class=row><div class=col-md-6><div class=card><img loading=lazy src=https://blog.gerbenjacobs.nl/img/airballoon_b.jpg class="card-img-top card-img-height" alt="Piwik, a free open-source analytics tool"><div class=card-body><span class=card-title title="Piwik, a free open-source analytics tool">Piwik, a free open-source...</span></div><div class=card-footer><a href=https://blog.gerbenjacobs.nl/piwik-a-free-open-source-analytics-tool/ class="btn btn-primary">&#171; Next</a></div></div></div><div class=col-md-6><div class=card><img loading=lazy src=https://blog.gerbenjacobs.nl/img/flickr-theonewithout-norway-laguna.png class="card-img-top card-img-height" alt="Road trip to Scandinavia 2013 - Part III"><div class=card-body><span class=card-title title="Road trip to Scandinavia 2013 - Part III">Road trip to Scandinavia 2013...</span></div><div class="card-footer text-end"><a href=https://blog.gerbenjacobs.nl/road-trip-to-scandinavia-2013-part-iii/ class="btn btn-primary">Previous &#187;</a></div></div></div></div><div class=row><div class=col>Find any post in the <a href=/posts/archive/>archive</a>.</div></div></div></div></main><footer class="footer mt-4 py-3 bg-light rainbow" id=footer><p>Copyright &copy; 2024 Gerben Jacobs</p><a href=/posts/index.xml><span class="badge p-1 footer-social" style=border-color:orange><img src=/img/social/rss.svg alt=RSS>
-</span></a><a href=https://github.com/gerbenjacobs rel=me><span class="badge p-1 footer-social" style=border-color:#181717><img src=/img/social/github.svg alt=GitHub>
-</span></a><a href=https://todon.nl/@gerben rel=me><span class="badge p-1 footer-social" style=border-color:#6364ff><img src=/img/social/mastodon.svg alt=Fediverse>
-</span></a><a href=https://linkedin.com/in/gerbenjacobs rel=me><span class="badge p-1 footer-social" style=border-color:#0a66c2><img src=/img/social/linkedin.svg alt=LinkedIn></span></a></footer><button class=btn id=btn-back-to-top>☝️</button></body></html>
+    
+        
+        <a class="p-category" href="https://blog.gerbenjacobs.nl/tags/tech" rel="tag"><span class="badge bg-secondary">tech</span></a>
+    <br>🔗 <a href="https://blog.gerbenjacobs.nl/akismet-doesnt-cut-it-anymore-utilize-cloudflare-against-spam/" class="u-url post-link">Permalink</a>
+
+            <img loading="lazy" src="https://blog.gerbenjacobs.nl/img/flickr-theonewithout-burgerszoo-lion.jpeg" class="img-fluid u-featured u-photo" alt="Akismet doesn&#39;t cut it anymore, utilize Cloudflare against spam" style="display: none;">
+            <div class="p-author h-card" style="display: none;">
+                <img loading="lazy" src="/img/avatar.jpg" alt="Avatar of Gerben Jacobs" class="u-photo">
+                <a class="p-name u-url" href="https://gerben.dev">Gerben Jacobs</a>
+            </div>
+            
+            <hr class="rainbow">
+            <div class="e-content">
+            
+<figure class="figure ">
+    <a href=/img/blog/2014/wordpress_queue.png>
+        <img loading="lazy" class="figure-img img-fluid rounded" src=/img/blog/2014/wordpress_queue.png alt=Spam&#32;queue&#32;in&#32;Wordpress>
+    </a>
+
+    <figcaption class="figure-caption">Spam queue in Wordpress</figcaption>
+</figure>
+
+<p>
+    I have been noticing a severe drop in spam in my comment queue. I used to have to delete anywhere from 5 to 10
+    comments a day in the queue with just Akismet.
+    Now there's not <strong>one</strong> comment.. 99.99% of the time.
+</p>
+
+<p>
+    I didn't really think anything of it until I just realized why this change occurred; I had enabled Cloudflare for my
+    blog.
+</p>
+
+<figure class="figure ">
+    
+        <img loading="lazy" class="figure-img img-fluid rounded" src=/img/blog/2014/cloudfare_saved.png alt=Cloudflare&#32;saving&#32;requests&#32;and&#32;thus&#32;MBs>
+    
+
+    <figcaption class="figure-caption">Cloudflare saving requests and thus MBs</figcaption>
+</figure>
+
+<p>
+    <a title="Cloudflare" href="https://www.cloudflare.com/">Cloudflare</a> acts as somewhat of a
+    firewall and CDN in one, it blocks malicious requests and
+    serves cached versions of your blog/site/resources. For this particular blog the stats aren't that overwhelming, but
+    for one of my other sites we're talking about multiple gigabytes!
+</p>
+
+<p>
+    The <a title="Cloudflare plugin for Wordpress" href="https://wordpress.org/plugins/cloudflare/">Cloudflare
+    plugin for Wordpress</a> doesn't only adjust the incoming IPs (they have to change it to the <code>X-FORWARDED-FOR</code>) but it also will tag
+    any comment (and accompanying meta-data) as a spammer in the <abbr title="CloudFlare">CF</abbr> system.
+</p>
+
+<p>
+    So with my efforts and those of the other thousand of Cloudflare users combined, the spam queue is getting smaller
+    and smaller every month. Making Cloudflare a better spam protection than <a href="https://akismet.com">Akismet</a>.
+</p>
+
+<p>
+    <em>The spammers don't even get to reach the stage where Akismet has to kick in.</em>
+</p>
+            </div>
+        </article>
+
+        
+        <hr class="rainbow">
+        <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "gerbenjacobs" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+        <div id="webmentions"></div>
+        <script src="/js/webmention.js" data-page-url="https://blog.gerbenjacobs.nl/akismet-doesnt-cut-it-anymore-utilize-cloudflare-against-spam/" lazy></script>
+        <hr class="rainbow">
+    </div>
+</div>
+
+
+<div class="row justify-content-center">
+    <div class="col-xl-6 col-lg-8 col-md-11">
+        <div class="row">
+            <div class="col-md-6">
+                
+                
+                <div class="card">
+                    <img loading="lazy" src="https://blog.gerbenjacobs.nl/img/airballoon_b.jpg" class="card-img-top card-img-height"
+                         alt="Piwik, a free open-source analytics tool">
+                    <div class="card-body">
+                        <span class="card-title" title="Piwik, a free open-source analytics tool">
+                            Piwik, a free open-source...
+                        </span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://blog.gerbenjacobs.nl/piwik-a-free-open-source-analytics-tool/" class="btn btn-primary">&laquo; Next</a>
+                    </div>
+                </div>
+                
+                
+            </div>
+            <div class="col-md-6">
+                
+                
+                <div class="card">
+                    <img loading="lazy" src="https://blog.gerbenjacobs.nl/img/flickr-theonewithout-norway-laguna.png" class="card-img-top card-img-height"
+                         alt="Road trip to Scandinavia 2013 - Part III">
+                    <div class="card-body">
+                        <span class="card-title" title="Road trip to Scandinavia 2013 - Part III">
+                            Road trip to Scandinavia 2013...
+                        </span>
+                    </div>
+                    <div class="card-footer text-end">
+                        <a href="https://blog.gerbenjacobs.nl/road-trip-to-scandinavia-2013-part-iii/" class="btn btn-primary">Previous &raquo;</a>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                Find any post in the <a href="/posts/archive/">archive</a>.
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</main>
+<footer class="footer mt-4 py-3 bg-light rainbow" id="footer">
+    <p>
+        Copyright &copy; 2024 Gerben Jacobs
+    </p>
+
+    <a href="/posts/index.xml">
+        <span class="badge p-1 footer-social" style="border-color: rgb(255,165,0);">
+            <img src="/img/social/rss.svg" alt="RSS">
+        </span>
+    </a>
+
+    <a href="https://github.com/gerbenjacobs" rel="me">
+        <span class="badge p-1 footer-social" style="border-color: rgb(24,23,23);">
+            <img src="/img/social/github.svg" alt="GitHub">
+        </span>
+    </a>
+
+    <a href="https://todon.nl/@gerben" rel="me">
+        <span class="badge p-1 footer-social" style="border-color: rgb(99,100,255);">
+            <img src="/img/social/mastodon.svg" alt="Fediverse">
+        </span>
+    </a>
+
+    <a href="https://linkedin.com/in/gerbenjacobs" rel="me">
+        <span class="badge p-1 footer-social" style="border-color: rgb(10,102,194);">
+            <img src="/img/social/linkedin.svg" alt="LinkedIn">
+        </span>
+    </a>
+</footer>
+<button class="btn" id="btn-back-to-top">☝️</button>
+</body>
+</html>

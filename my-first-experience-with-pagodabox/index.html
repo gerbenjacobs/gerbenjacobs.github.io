@@ -1,23 +1,382 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=description content="For when you need the scaffolding of an empty PHP class object"><meta name=viewport content="width=device-width,initial-scale=1"><link href=https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65 crossorigin=anonymous><link rel=stylesheet type=text/css href=/css/style.css><link rel=stylesheet type=text/css href=/css/webmention.css><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Permanent+Marker&display=swap" rel=stylesheet><link rel=author href=/humans.txt><link rel=webmention href=https://webmention.io/gerben.dev/webmention><meta property="og:url" content="https://blog.gerbenjacobs.nl/my-first-experience-with-pagodabox/"><meta property="og:type" content="website"><meta property="og:title" content="My first experience with PagodaBox"><meta property="og:description" content="For when you need the scaffolding of an empty PHP class object"><meta property="og:image" content="https://blog.gerbenjacobs.nl/img/home-bg.jpg"><meta name=twitter:card content="summary_large_image"><meta property="twitter:domain" content="blog.gerbenjacobs.nl"><meta property="twitter:url" content="https://blog.gerbenjacobs.nl/my-first-experience-with-pagodabox/"><meta name=twitter:title content="My first experience with PagodaBox"><meta name=twitter:description content="For when you need the scaffolding of an empty PHP class object"><meta name=twitter:image content="https://blog.gerbenjacobs.nl/img/home-bg.jpg"><meta itemprop=name content="My first experience with PagodaBox"><meta itemprop=description content="For when you need the scaffolding of an empty PHP class object"><meta itemprop=datePublished content="2013-05-10T12:00:00+00:00"><meta itemprop=dateModified content="2022-11-29T00:22:35+01:00"><meta itemprop=wordCount content="597"><meta itemprop=keywords content="Tech"><script async src="https://www.googletagmanager.com/gtag/js?id=G-KKSLTF3X24"></script><script>var dnt,doNotTrack=!1;if(!1&&(dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes"),!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-KKSLTF3X24")}</script><link rel=alternate type=application/rss+xml href=https://blog.gerbenjacobs.nl/posts/index.xml title="Gerben Jacobs"><script>const prefersDarkScheme=window.matchMedia("(prefers-color-scheme: dark)");document.addEventListener("DOMContentLoaded",function(){toggleDarkMode()});function determineDarkMode(){let t=prefersDarkScheme.matches,e=localStorage.getItem("darkmode");return e==="true"||e!=="false"&&t}function toggleDarkMode(){let s=determineDarkMode(),e=document.querySelectorAll(".card"),t=document.querySelectorAll(".btn"),n=document.querySelectorAll(".list-group-item");if(s){document.body.classList.add("dark-theme");for(let t of e)t.classList.add("text-bg-dark");for(let e of t)e.classList.add("btn-secondary"),e.classList.remove("btn-primary");for(let e of n)e.classList.add("list-group-item-dark")}else{document.body.classList.remove("dark-theme");for(let t of e)t.classList.remove("text-bg-dark");for(let e of t)e.classList.remove("btn-secondary"),e.classList.add("btn-primary");for(let e of n)e.classList.remove("list-group-item-dark")}}</script><script defer src=/js/main.js></script><title>My first experience with PagodaBox | Gerben Jacobs</title></head><body class="d-flex flex-column"><nav id=nav class="navbar navbar-expand-lg navbar-dark bg-dark"><div class=container-fluid><a class=navbar-brand href=https://blog.gerbenjacobs.nl/>Gerben Jacobs</a><ul class="navbar-nav d-flex mb-2 mb-lg-0"><li class=nav-item><a id=darkmode class="btn btn-primary" title="Toggle dark mode">🌓</a></li></ul></div></nav><main id=content class=container><div class="row justify-content-center"><div class="col-xl-6 col-lg-8 col-md-11"><article class=h-entry><header><h1 class=p-name>My first experience with PagodaBox</h1></header>📅
-<time class=dt-published datetime="2013-05-10 12:00:00 +0000 UTC">May 10, 2013</time> &mdash;
+<!doctype html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="description" content="For when you need the scaffolding of an empty PHP class object">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+          crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/webmention.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="author" href="/humans.txt" />
+    <link rel="webmention" href="https://webmention.io/gerben.dev/webmention" />
+
+    
+    <meta property="og:url" content="https://blog.gerbenjacobs.nl/my-first-experience-with-pagodabox/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="My first experience with PagodaBox">
+    <meta property="og:description" content="For when you need the scaffolding of an empty PHP class object"><meta property="og:image" content="https://blog.gerbenjacobs.nl/img/home-bg.jpg">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="blog.gerbenjacobs.nl">
+    <meta property="twitter:url" content="https://blog.gerbenjacobs.nl/my-first-experience-with-pagodabox/">
+    <meta name="twitter:title" content="My first experience with PagodaBox">
+    <meta name="twitter:description" content="For when you need the scaffolding of an empty PHP class object"><meta name="twitter:image" content="https://blog.gerbenjacobs.nl/img/home-bg.jpg">
+
+    
+  <meta itemprop="name" content="My first experience with PagodaBox">
+  <meta itemprop="description" content="For when you need the scaffolding of an empty PHP class object">
+  <meta itemprop="datePublished" content="2013-05-10T12:00:00+00:00">
+  <meta itemprop="dateModified" content="2022-11-29T00:22:35+01:00">
+  <meta itemprop="wordCount" content="597">
+  <meta itemprop="keywords" content="Tech">
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-KKSLTF3X24"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-KKSLTF3X24');
+        }
+      </script>
+    
+    <link rel="alternate" type="application/rss+xml" href="https://blog.gerbenjacobs.nl/posts/index.xml" title="Gerben Jacobs" />
+
+    <script>
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+    
+    document.addEventListener("DOMContentLoaded", function () {
+        toggleDarkMode()
+    })
+
+    function determineDarkMode() {
+        
+        let darknessSystem = prefersDarkScheme.matches;
+        let darknessStored = localStorage.getItem("darkmode");
+
+        
+        if (darknessStored === "true") {
+            return true;
+        } else if (darknessStored === "false") {
+            return false;
+        } else {
+            return darknessSystem;
+        }
+    }
+
+    
+    function toggleDarkMode() {
+        let on = determineDarkMode();
+        let cards = document.querySelectorAll('.card');
+        let buttons = document.querySelectorAll('.btn');
+        let listgroups = document.querySelectorAll('.list-group-item');
+
+        if (on) {
+            document.body.classList.add("dark-theme");
+            for (let card of cards) {
+                card.classList.add("text-bg-dark");
+            }
+            for (let button of buttons) {
+                button.classList.add("btn-secondary");
+                button.classList.remove("btn-primary");
+            }
+            for (let listgroup of listgroups) {
+                listgroup.classList.add("list-group-item-dark");
+            }
+        } else {
+            document.body.classList.remove("dark-theme");
+            for (let card of cards) {
+                card.classList.remove("text-bg-dark");
+            }
+            for (let button of buttons) {
+                button.classList.remove("btn-secondary");
+                button.classList.add("btn-primary");
+            }
+            for (let listgroup of listgroups) {
+                listgroup.classList.remove("list-group-item-dark");
+            }
+        }
+    }
+    </script>
+    <script defer src="/js/main.js"></script>
+
+    
+    
+    <title>My first experience with PagodaBox | Gerben Jacobs</title>
+</head><body class="d-flex flex-column">
+<nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="https://blog.gerbenjacobs.nl/">Gerben Jacobs</a>
+        <ul class="navbar-nav d-flex mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a id="darkmode" class="btn btn-primary" title="Toggle dark mode">🌓</a>
+            </li>
+        </ul>
+        
+        
+        
+        
+        
+        
+        
+        
+    </div>
+</nav>
+<main id="content" class="container">
+
+<div class="row justify-content-center">
+    <div class="col-xl-6 col-lg-8 col-md-11">
+        <article class="h-entry">
+            <header>
+                <h1 class="p-name">My first experience with PagodaBox</h1>
+            </header>
+            
+    📅
+    <time class="dt-published" datetime="2013-05-10 12:00:00 &#43;0000 UTC">May 10, 2013</time> &mdash;
 🧮 597 words
 &mdash; 🏷️
-<a class=p-category href=https://blog.gerbenjacobs.nl/tags/tech rel=tag><span class="badge bg-secondary">tech</span></a><br>🔗 <a href=https://blog.gerbenjacobs.nl/my-first-experience-with-pagodabox/ class="u-url post-link">Permalink</a>
-<img loading=lazy src=https://blog.gerbenjacobs.nl/img/home-bg.jpg class="img-fluid u-featured u-photo" alt="My first experience with PagodaBox" style=display:none><div class="p-author h-card" style=display:none><img loading=lazy src=/img/avatar.jpg alt="Avatar of Gerben Jacobs" class=u-photo>
-<a class="p-name u-url" href=https://gerben.dev>Gerben Jacobs</a></div><hr class=rainbow><div class=e-content><h2>What is PagodaBox</h2><div class="alert alert-primary" role=alert><small>This blog post is written about what would now be known as <em>Pagoda v1</em> and might not be representative.</small></div><figure class=figure><img loading=lazy class="figure-img img-fluid rounded" src=/img/blog/2013/pagoda.png alt="Pagoda Box"><figcaption class=figure-caption>Pagoda Box</figcaption></figure><p><a href=https://pagodabox.io>PagodaBox.com</a> is a Platform as a Service (PaaS) for PHP.<br>They have plans for Ruby and Python, but they're not here yet as of this writing.</p><p>At Pagoda you can launch components, such as; <strong>web</strong> (Apache + PHP), <strong>database</strong> (I know MySQL works for a fact),
-<strong>cache</strong> (Memcache or Redis), <strong>worker</strong> and <strong>cron job</strong> (beta).</p><p>My <i>app</i> uses the first two, but I'm actually trying to figure out Memcache as I type this.</p><p>The idea is that you can just launch new components to scale your app. This is so easy that
-<a href=https://techcrunch.com/2012/09/11/pagoda-box-is-easier-than-amazon-web-services-but-more-customizable-than-heroku/>a non-techy front office person can monitor the app and scale it when needed</a>,
-it is literally just one click of a button.</p><h2>Up, up and away (with Wordpress)</h2><p>I think I ended up at the site because I was looking at Heroku stuff. Anyway, a colleague of mine saw it and he knew it too.
-Said it was <abbr title="Platform as a Service">PaaS</abbr> for PHP, so in the end I decided to test it out.</p><p>First I ran a simple pre-configured WordPress app, this worked. But this is not what this service is for.</p><h2>My experience</h2><figure class=figure><img loading=lazy class="figure-img img-fluid rounded" src=/img/blog/2013/sad_database.png alt="Sad Database component"><figcaption class=figure-caption>Sad Database component</figcaption></figure><p>So my next attempt was making it all by myself. First a PHP web component, yep, worked and <code>phpinfo()</code> gave me a bunch of nice stats.<br>Then the database component, up and running within a few seconds.<br>But it showed me a sad smiley face. Apparently, without any tables and whatever, the MySQL component takes up 90% of the allocated 10MB.</p><p><strong>Git</strong><br>Then I started working on my app, staging files to my local git repo, committing them, pushing them.. and waiting. A long time.</p><p><strong>Redeploying from git commits.</strong><br><figure class=figure><img loading=lazy class="figure-img img-fluid rounded" src=/img/blog/2013/happy_web.png alt="Happy Web component"><figcaption class=figure-caption>Happy Web component</figcaption></figure><br>When you push your local changes to the PagodaBox git server <small>(you can also choose the not-recommended SFTP option when signing up)</small> they totally rebuild,
-redeploy and relocate your components. This last part is nice because when you add changes, your 'old' site still works until the new one is up and running
-after which some magic happens and your URL gets redirected to the new machine.</p><p>Only after I finished my app that evening, I noticed you can turn this feature off in your account settings. But then you have to deploy your site yourself based on a commit.
-Maybe it would be nice if you could send some kind of flag with your <code>git push</code> command; <code>--no-deploy</code>.</p><p><strong>Pagoda Tunneling</strong><br>Also there's no PHPMyAdmin, the beast we all came to love. To work on your database you have to use their
-<a title="Pagoda Tunnel system" href=https://pagodabox.io/docs/pagoda_cli#tunnel-into-a-data-service>Pagoda Tunnel</a> system.
-This requires you to install Ruby and download their Tunnel gem. After that you can tunnel into your app by opening the command line tool:
-<code>pagoda tunnel -a &lt;app_name> -c &lt;component_name></code></p><p>This will turn your terminal window into a little server/tunnel, and you can use a SQL tool (I used HeidiSQL) to connect to
-<code>localhost:45000</code> where you will find your Pagoda database.</p><p><strong>Learning</strong><br>So as you understand it's quite a big endeavour, and I personally don't require the need for scaling,
-so I can't really test any of that. But I can say it was quite a nice learning experience.</p><p>Also, I did manage to get Memcache running <small>(first time ever)</small> but I'm not noticing any difference,
-guess my queries and database aren't that big for it to be noticeable.<br>.. or the fact that all these servers are probably in the US and it takes 600ms anyway.</p></div></article><hr class=rainbow><div id=disqus_thread></div><script>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//gerbenjacobs.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a><div id=webmentions></div><script src=/js/webmention.js data-page-url=https://blog.gerbenjacobs.nl/my-first-experience-with-pagodabox/ lazy></script><hr class=rainbow></div></div><div class="row justify-content-center"><div class="col-xl-6 col-lg-8 col-md-11"><div class=row><div class=col-md-6><div class=card><img loading=lazy src=https://blog.gerbenjacobs.nl/img/flickr-theonewithout-scottish-highlander.jpeg class="card-img-top card-img-height" alt="The problem(s) with Open Data"><div class=card-body><span class=card-title title="The problem(s) with Open Data">The problem(s) with Open Data</span></div><div class=card-footer><a href=https://blog.gerbenjacobs.nl/the-problems-with-open-data/ class="btn btn-primary">&#171; Next</a></div></div></div><div class=col-md-6><div class=card><img loading=lazy src=https://blog.gerbenjacobs.nl/img/flickr-theonewithout-norway-shoes.png class="card-img-top card-img-height" alt="Quickly create an empty stdClass object in PHP"><div class=card-body><span class=card-title title="Quickly create an empty stdClass object in PHP">Quickly create an empty...</span></div><div class="card-footer text-end"><a href=https://blog.gerbenjacobs.nl/quickly-create-an-empty-stdclass-object-in-php/ class="btn btn-primary">Previous &#187;</a></div></div></div></div><div class=row><div class=col>Find any post in the <a href=/posts/archive/>archive</a>.</div></div></div></div></main><footer class="footer mt-4 py-3 bg-light rainbow" id=footer><p>Copyright &copy; 2024 Gerben Jacobs</p><a href=/posts/index.xml><span class="badge p-1 footer-social" style=border-color:orange><img src=/img/social/rss.svg alt=RSS>
-</span></a><a href=https://github.com/gerbenjacobs rel=me><span class="badge p-1 footer-social" style=border-color:#181717><img src=/img/social/github.svg alt=GitHub>
-</span></a><a href=https://todon.nl/@gerben rel=me><span class="badge p-1 footer-social" style=border-color:#6364ff><img src=/img/social/mastodon.svg alt=Fediverse>
-</span></a><a href=https://linkedin.com/in/gerbenjacobs rel=me><span class="badge p-1 footer-social" style=border-color:#0a66c2><img src=/img/social/linkedin.svg alt=LinkedIn></span></a></footer><button class=btn id=btn-back-to-top>☝️</button></body></html>
+    
+        
+        <a class="p-category" href="https://blog.gerbenjacobs.nl/tags/tech" rel="tag"><span class="badge bg-secondary">tech</span></a>
+    <br>🔗 <a href="https://blog.gerbenjacobs.nl/my-first-experience-with-pagodabox/" class="u-url post-link">Permalink</a>
+
+            <img loading="lazy" src="https://blog.gerbenjacobs.nl/img/home-bg.jpg" class="img-fluid u-featured u-photo" alt="My first experience with PagodaBox" style="display: none;">
+            <div class="p-author h-card" style="display: none;">
+                <img loading="lazy" src="/img/avatar.jpg" alt="Avatar of Gerben Jacobs" class="u-photo">
+                <a class="p-name u-url" href="https://gerben.dev">Gerben Jacobs</a>
+            </div>
+            
+            <hr class="rainbow">
+            <div class="e-content">
+            <h2>What is PagodaBox</h2>
+
+<div class="alert alert-primary" role="alert">
+    <small>This blog post is written about what would now be known as <em>Pagoda v1</em> and might not be representative.</small>
+</div>
+<figure class="figure ">
+    
+        <img loading="lazy" class="figure-img img-fluid rounded" src=/img/blog/2013/pagoda.png alt=Pagoda&#32;Box>
+    
+
+    <figcaption class="figure-caption">Pagoda Box</figcaption>
+</figure>
+<p>
+    <a href="https://pagodabox.io">PagodaBox.com</a> is a Platform as a Service (PaaS) for PHP.
+    <br>They have plans for Ruby and Python, but they're not here yet as of this writing.
+</p>
+
+<p>
+    At Pagoda you can launch components, such as; <strong>web</strong> (Apache + PHP), <strong>database</strong> (I know MySQL works for a fact),
+    <strong>cache</strong> (Memcache or Redis), <strong>worker</strong> and <strong>cron job</strong> (beta).
+</p>
+
+<p>
+    My <i>app</i> uses the first two, but I'm actually trying to figure out Memcache as I type this.
+</p>
+
+<p>
+    The idea is that you can just launch new components to scale your app. This is so easy that
+    <a href="https://techcrunch.com/2012/09/11/pagoda-box-is-easier-than-amazon-web-services-but-more-customizable-than-heroku/" >a non-techy front office person can monitor the app and scale it when needed</a>,
+    it is literally just one click of a button.
+</p>
+
+<h2>Up, up and away (with Wordpress)</h2>
+
+<p>
+    I think I ended up at the site because I was looking at Heroku stuff. Anyway, a colleague of mine saw it and he knew it too.
+    Said it was <abbr title="Platform as a Service">PaaS</abbr> for PHP, so in the end I decided to test it out.
+</p>
+
+<p>
+    First I ran a simple pre-configured WordPress app, this worked. But this is not what this service is for.
+</p>
+
+<h2>My experience</h2>
+<figure class="figure ">
+    
+        <img loading="lazy" class="figure-img img-fluid rounded" src=/img/blog/2013/sad_database.png alt=Sad&#32;Database&#32;component>
+    
+
+    <figcaption class="figure-caption">Sad Database component</figcaption>
+</figure>
+
+<p>
+    So my next attempt was making it all by myself. First a PHP web component, yep, worked and <code>phpinfo()</code> gave me a bunch of nice stats.
+    <br>Then the database component, up and running within a few seconds.
+    <br>But it showed me a sad smiley face. Apparently, without any tables and whatever, the MySQL component takes up 90% of the allocated 10MB.
+</p>
+
+<p>
+    <strong>Git</strong><br>
+    Then I started working on my app, staging files to my local git repo, committing them, pushing them.. and waiting. A long time.
+</p>
+
+<p>
+    <strong>Redeploying from git commits.</strong><br>
+    <figure class="figure ">
+        
+            <img loading="lazy" class="figure-img img-fluid rounded" src=/img/blog/2013/happy_web.png alt=Happy&#32;Web&#32;component>
+        
+    
+        <figcaption class="figure-caption">Happy Web component</figcaption>
+    </figure><br>
+    When you push your local changes to the PagodaBox git server <small>(you can also choose the not-recommended SFTP option when signing up)</small> they totally rebuild,
+    redeploy and relocate your components. This last part is nice because when you add changes, your 'old' site still works until the new one is up and running
+    after which some magic happens and your URL gets redirected to the new machine.
+</p>
+
+<p>
+    Only after I finished my app that evening, I noticed you can turn this feature off in your account settings. But then you have to deploy your site yourself based on a commit.
+    Maybe it would be nice if you could send some kind of flag with your <code>git push</code> command; <code>--no-deploy</code>.
+</p>
+
+<p>
+    <strong>Pagoda Tunneling</strong><br>
+    Also there's no PHPMyAdmin, the beast we all came to love. To work on your database you have to use their
+    <a title="Pagoda Tunnel system" href="https://pagodabox.io/docs/pagoda_cli#tunnel-into-a-data-service" >Pagoda Tunnel</a> system.
+    This requires you to install Ruby and download their Tunnel gem. After that you can tunnel into your app by opening the command line tool:
+    <code>pagoda tunnel -a &lt;app_name&gt; -c &lt;component_name&gt;</code>
+</p>
+
+<p>
+    This will turn your terminal window into a little server/tunnel, and you can use a SQL tool (I used HeidiSQL) to connect to
+    <code>localhost:45000</code> where you will find your Pagoda database.
+</p>
+
+<p>
+    <strong>Learning</strong><br>
+    So as you understand it's quite a big endeavour, and I personally don't require the need for scaling,
+    so I can't really test any of that. But I can say it was quite a nice learning experience.
+</p>
+
+<p>
+    Also, I did manage to get Memcache running <small>(first time ever)</small> but I'm not noticing any difference,
+    guess my queries and database aren't that big for it to be noticeable.
+    <br>.. or the fact that all these servers are probably in the US and it takes 600ms anyway.
+</p>
+            </div>
+        </article>
+
+        
+        <hr class="rainbow">
+        <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "gerbenjacobs" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+        <div id="webmentions"></div>
+        <script src="/js/webmention.js" data-page-url="https://blog.gerbenjacobs.nl/my-first-experience-with-pagodabox/" lazy></script>
+        <hr class="rainbow">
+    </div>
+</div>
+
+
+<div class="row justify-content-center">
+    <div class="col-xl-6 col-lg-8 col-md-11">
+        <div class="row">
+            <div class="col-md-6">
+                
+                
+                <div class="card">
+                    <img loading="lazy" src="https://blog.gerbenjacobs.nl/img/flickr-theonewithout-scottish-highlander.jpeg" class="card-img-top card-img-height"
+                         alt="The problem(s) with Open Data">
+                    <div class="card-body">
+                        <span class="card-title" title="The problem(s) with Open Data">
+                            The problem(s) with Open Data
+                        </span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://blog.gerbenjacobs.nl/the-problems-with-open-data/" class="btn btn-primary">&laquo; Next</a>
+                    </div>
+                </div>
+                
+                
+            </div>
+            <div class="col-md-6">
+                
+                
+                <div class="card">
+                    <img loading="lazy" src="https://blog.gerbenjacobs.nl/img/flickr-theonewithout-norway-shoes.png" class="card-img-top card-img-height"
+                         alt="Quickly create an empty stdClass object in PHP">
+                    <div class="card-body">
+                        <span class="card-title" title="Quickly create an empty stdClass object in PHP">
+                            Quickly create an empty...
+                        </span>
+                    </div>
+                    <div class="card-footer text-end">
+                        <a href="https://blog.gerbenjacobs.nl/quickly-create-an-empty-stdclass-object-in-php/" class="btn btn-primary">Previous &raquo;</a>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                Find any post in the <a href="/posts/archive/">archive</a>.
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</main>
+<footer class="footer mt-4 py-3 bg-light rainbow" id="footer">
+    <p>
+        Copyright &copy; 2024 Gerben Jacobs
+    </p>
+
+    <a href="/posts/index.xml">
+        <span class="badge p-1 footer-social" style="border-color: rgb(255,165,0);">
+            <img src="/img/social/rss.svg" alt="RSS">
+        </span>
+    </a>
+
+    <a href="https://github.com/gerbenjacobs" rel="me">
+        <span class="badge p-1 footer-social" style="border-color: rgb(24,23,23);">
+            <img src="/img/social/github.svg" alt="GitHub">
+        </span>
+    </a>
+
+    <a href="https://todon.nl/@gerben" rel="me">
+        <span class="badge p-1 footer-social" style="border-color: rgb(99,100,255);">
+            <img src="/img/social/mastodon.svg" alt="Fediverse">
+        </span>
+    </a>
+
+    <a href="https://linkedin.com/in/gerbenjacobs" rel="me">
+        <span class="badge p-1 footer-social" style="border-color: rgb(10,102,194);">
+            <img src="/img/social/linkedin.svg" alt="LinkedIn">
+        </span>
+    </a>
+</footer>
+<button class="btn" id="btn-back-to-top">☝️</button>
+</body>
+</html>

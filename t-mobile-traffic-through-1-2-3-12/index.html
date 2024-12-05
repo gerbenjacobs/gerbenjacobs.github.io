@@ -1,24 +1,342 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=description content="T-Mobile Edge makes all your mobile connections go through a proxy with rather peculiar IP addresses such as 1.2.3.12. Find out why!"><meta name=viewport content="width=device-width,initial-scale=1"><link href=https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65 crossorigin=anonymous><link rel=stylesheet type=text/css href=/css/style.css><link rel=stylesheet type=text/css href=/css/webmention.css><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Permanent+Marker&display=swap" rel=stylesheet><link rel=author href=/humans.txt><link rel=webmention href=https://webmention.io/gerben.dev/webmention><meta property="og:url" content="https://blog.gerbenjacobs.nl/t-mobile-traffic-through-1-2-3-12/"><meta property="og:type" content="website"><meta property="og:title" content="T-Mobile traffic through http://1.2.3.12"><meta property="og:description" content="T-Mobile Edge makes all your mobile connections go through a proxy with rather peculiar IP addresses such as 1.2.3.12. Find out why!"><meta property="og:image" content="https://blog.gerbenjacobs.nl/img/post-bg-02.jpg"><meta name=twitter:card content="summary_large_image"><meta property="twitter:domain" content="blog.gerbenjacobs.nl"><meta property="twitter:url" content="https://blog.gerbenjacobs.nl/t-mobile-traffic-through-1-2-3-12/"><meta name=twitter:title content="T-Mobile traffic through http://1.2.3.12"><meta name=twitter:description content="T-Mobile Edge makes all your mobile connections go through a proxy with rather peculiar IP addresses such as 1.2.3.12. Find out why!"><meta name=twitter:image content="https://blog.gerbenjacobs.nl/img/post-bg-02.jpg"><meta itemprop=name content="T-Mobile traffic through http://1.2.3.12"><meta itemprop=description content="T-Mobile Edge makes all your mobile connections go through a proxy with rather peculiar IP addresses such as 1.2.3.12. Find out why!"><meta itemprop=datePublished content="2011-04-16T12:00:00+00:00"><meta itemprop=dateModified content="2022-11-29T00:22:35+01:00"><meta itemprop=wordCount content="524"><meta itemprop=keywords content="Tech"><script async src="https://www.googletagmanager.com/gtag/js?id=G-KKSLTF3X24"></script><script>var dnt,doNotTrack=!1;if(!1&&(dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes"),!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-KKSLTF3X24")}</script><link rel=alternate type=application/rss+xml href=https://blog.gerbenjacobs.nl/posts/index.xml title="Gerben Jacobs"><script>const prefersDarkScheme=window.matchMedia("(prefers-color-scheme: dark)");document.addEventListener("DOMContentLoaded",function(){toggleDarkMode()});function determineDarkMode(){let t=prefersDarkScheme.matches,e=localStorage.getItem("darkmode");return e==="true"||e!=="false"&&t}function toggleDarkMode(){let s=determineDarkMode(),e=document.querySelectorAll(".card"),t=document.querySelectorAll(".btn"),n=document.querySelectorAll(".list-group-item");if(s){document.body.classList.add("dark-theme");for(let t of e)t.classList.add("text-bg-dark");for(let e of t)e.classList.add("btn-secondary"),e.classList.remove("btn-primary");for(let e of n)e.classList.add("list-group-item-dark")}else{document.body.classList.remove("dark-theme");for(let t of e)t.classList.remove("text-bg-dark");for(let e of t)e.classList.remove("btn-secondary"),e.classList.add("btn-primary");for(let e of n)e.classList.remove("list-group-item-dark")}}</script><script defer src=/js/main.js></script><title>T-Mobile traffic through http://1.2.3.12 | Gerben Jacobs</title></head><body class="d-flex flex-column"><nav id=nav class="navbar navbar-expand-lg navbar-dark bg-dark"><div class=container-fluid><a class=navbar-brand href=https://blog.gerbenjacobs.nl/>Gerben Jacobs</a><ul class="navbar-nav d-flex mb-2 mb-lg-0"><li class=nav-item><a id=darkmode class="btn btn-primary" title="Toggle dark mode">🌓</a></li></ul></div></nav><main id=content class=container><div class="row justify-content-center"><div class="col-xl-6 col-lg-8 col-md-11"><article class=h-entry><header><h1 class=p-name>T-Mobile traffic through http://1.2.3.12</h1></header>📅
-<time class=dt-published datetime="2011-04-16 12:00:00 +0000 UTC">Apr 16, 2011</time> &mdash;
+<!doctype html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="description" content="T-Mobile Edge makes all your mobile connections go through a proxy with rather peculiar IP addresses such as 1.2.3.12. Find out why!">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+          crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/webmention.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="author" href="/humans.txt" />
+    <link rel="webmention" href="https://webmention.io/gerben.dev/webmention" />
+
+    
+    <meta property="og:url" content="https://blog.gerbenjacobs.nl/t-mobile-traffic-through-1-2-3-12/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="T-Mobile traffic through http://1.2.3.12">
+    <meta property="og:description" content="T-Mobile Edge makes all your mobile connections go through a proxy with rather peculiar IP addresses such as 1.2.3.12. Find out why!"><meta property="og:image" content="https://blog.gerbenjacobs.nl/img/post-bg-02.jpg">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="blog.gerbenjacobs.nl">
+    <meta property="twitter:url" content="https://blog.gerbenjacobs.nl/t-mobile-traffic-through-1-2-3-12/">
+    <meta name="twitter:title" content="T-Mobile traffic through http://1.2.3.12">
+    <meta name="twitter:description" content="T-Mobile Edge makes all your mobile connections go through a proxy with rather peculiar IP addresses such as 1.2.3.12. Find out why!"><meta name="twitter:image" content="https://blog.gerbenjacobs.nl/img/post-bg-02.jpg">
+
+    
+  <meta itemprop="name" content="T-Mobile traffic through http://1.2.3.12">
+  <meta itemprop="description" content="T-Mobile Edge makes all your mobile connections go through a proxy with rather peculiar IP addresses such as 1.2.3.12. Find out why!">
+  <meta itemprop="datePublished" content="2011-04-16T12:00:00+00:00">
+  <meta itemprop="dateModified" content="2022-11-29T00:22:35+01:00">
+  <meta itemprop="wordCount" content="524">
+  <meta itemprop="keywords" content="Tech">
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-KKSLTF3X24"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-KKSLTF3X24');
+        }
+      </script>
+    
+    <link rel="alternate" type="application/rss+xml" href="https://blog.gerbenjacobs.nl/posts/index.xml" title="Gerben Jacobs" />
+
+    <script>
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+    
+    document.addEventListener("DOMContentLoaded", function () {
+        toggleDarkMode()
+    })
+
+    function determineDarkMode() {
+        
+        let darknessSystem = prefersDarkScheme.matches;
+        let darknessStored = localStorage.getItem("darkmode");
+
+        
+        if (darknessStored === "true") {
+            return true;
+        } else if (darknessStored === "false") {
+            return false;
+        } else {
+            return darknessSystem;
+        }
+    }
+
+    
+    function toggleDarkMode() {
+        let on = determineDarkMode();
+        let cards = document.querySelectorAll('.card');
+        let buttons = document.querySelectorAll('.btn');
+        let listgroups = document.querySelectorAll('.list-group-item');
+
+        if (on) {
+            document.body.classList.add("dark-theme");
+            for (let card of cards) {
+                card.classList.add("text-bg-dark");
+            }
+            for (let button of buttons) {
+                button.classList.add("btn-secondary");
+                button.classList.remove("btn-primary");
+            }
+            for (let listgroup of listgroups) {
+                listgroup.classList.add("list-group-item-dark");
+            }
+        } else {
+            document.body.classList.remove("dark-theme");
+            for (let card of cards) {
+                card.classList.remove("text-bg-dark");
+            }
+            for (let button of buttons) {
+                button.classList.remove("btn-secondary");
+                button.classList.add("btn-primary");
+            }
+            for (let listgroup of listgroups) {
+                listgroup.classList.remove("list-group-item-dark");
+            }
+        }
+    }
+    </script>
+    <script defer src="/js/main.js"></script>
+
+    
+    
+    <title>T-Mobile traffic through http://1.2.3.12 | Gerben Jacobs</title>
+</head><body class="d-flex flex-column">
+<nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="https://blog.gerbenjacobs.nl/">Gerben Jacobs</a>
+        <ul class="navbar-nav d-flex mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a id="darkmode" class="btn btn-primary" title="Toggle dark mode">🌓</a>
+            </li>
+        </ul>
+        
+        
+        
+        
+        
+        
+        
+        
+    </div>
+</nav>
+<main id="content" class="container">
+
+<div class="row justify-content-center">
+    <div class="col-xl-6 col-lg-8 col-md-11">
+        <article class="h-entry">
+            <header>
+                <h1 class="p-name">T-Mobile traffic through http://1.2.3.12</h1>
+            </header>
+            
+    📅
+    <time class="dt-published" datetime="2011-04-16 12:00:00 &#43;0000 UTC">Apr 16, 2011</time> &mdash;
 🧮 524 words
 &mdash; 🏷️
-<a class=p-category href=https://blog.gerbenjacobs.nl/tags/tech rel=tag><span class="badge bg-secondary">tech</span></a><br>🔗 <a href=https://blog.gerbenjacobs.nl/t-mobile-traffic-through-1-2-3-12/ class="u-url post-link">Permalink</a>
-<img loading=lazy src=https://blog.gerbenjacobs.nl/img/post-bg-02.jpg class="img-fluid u-featured u-photo" alt="T-Mobile traffic through http://1.2.3.12" style=display:none><div class="p-author h-card" style=display:none><img loading=lazy src=/img/avatar.jpg alt="Avatar of Gerben Jacobs" class=u-photo>
-<a class="p-name u-url" href=https://gerben.dev>Gerben Jacobs</a></div><hr class=rainbow><div class=e-content><p>I'm at a place where there's no internet, so I hooked up my T-Mobile G1 (an HTC Dream) to my laptop through the
-<a title="PdaNet at the Android Market" href="https://market.android.com/details?id=com.pdanet">PdaNet app</a>.</p><p>When I was browsing a site, I noticed an image that wasn't working. So I opened it up in a new tab, where it seemed to work again, but I then noticed the URL.
-The http:// part of the original source was dropped and replaced by <code>http://1.2.3.12/bmi/</code>, i.e.:
-<code>http://1.2.3.9/bmi/www.gerbenjacobs.nl/wp-content/uploads/2011/01/cute-kitten-laughing-64x64.jpg</code></p><p>My first instinct was <a href=http://twitter.com/#!/gerbenjacobs/statuses/59245645202079744>to ask</a> customer support (god, am I that customer?) followed by Google.
-I then found this blogpost "<a title="Blogpost by Peter Steinberger" href=http://petersteinberger.com/2010/03/t-mobile-rewrites-image-urls/>T-Mobile rewrites image urls</a>"
-which is 13 months old, but I never noticed T-Mobile doing this. So they must have recently added this 'service' to T-Mobile Netherlands.</p><h2>T-Mobile Edge</h2><p>After more research, it turns out that T-Mobile calls this service 'EDGE' (Enhanced Data Rates for Global Evolution) and what it does is basically a giant loadbalancer and CDN in one.</p><p>When you inspect the <a title="Information about the IP" href=https://whois.domaintools.com/1.2.3.12>IP address</a> it shows up as an Australian server,
-which shocked me initially, but after some tests I didn't notice any speed loss. So it must be using some kind of geo-aware content delivery network.<br><small>(The weird thing is that I can't seem to trace the IP in Cmd.exe with the 'tracert' command, so I have no idea which
-server they appoint to my geolocation)</small></p><h2>Advantages</h2><p>So how is this <em>enhanced</em>, you may ask. Well, just look at the following image (click to enlarge):</p><figure class=figure><a href=/img/blog/2011/tmobile_edge.png><img loading=lazy class="figure-img img-fluid rounded" src=/img/blog/2011/tmobile_edge.png alt="Parallel downloads with T-Mobile Edge"></a><figcaption class=figure-caption>Parallel downloads with T-Mobile Edge</figcaption></figure><p>It's hard to see, because it's not the entire page load, but all the images (they were
-avatars on a forum) were loaded simultaneously. I was using Firefox 4 which can handle up to 5 (or was it 8?)
-parallel downloads at the same time. Then the 'loadbalancing' (for lack of a better word) comes to play, using the
-multiple servers 1.2.3.9 to 1.2.3.13 (great IP address by the way!) it loaded them all. So that's 5 x 5 (or 8),
-which is up to 25 (or 40) resources, or forum avatars, at once.</p><p>That's the only advantage I can spot of this so-called EDGE service, which came unannounced.</p><h2>Disadvantages</h2><p>Then there is the disadvantage, that applies to all proxies in general; single entry point and thus single entry point of failure.
-So in other words, when their servers get hacked, we have no idea what is being sent.</p><p>Applying to the single entry point, also means the possibility of tracking. But I doubt that this would be any worse than what Google does,
-they probably know everything about you already. And maybe the CIA is behind it.. or the New World Order..</p><p>However, without going off-topic too much, about 95% of T-Mobile customers wouldn't mind this (and probably wouldn't understand it either),
-but I do wonder why this hasn't been announced, or why there is so little information about it. I'm not really sure what my opinion on the issue is..<br>At the moment I'm in favour of it, because I like pages to load quickly, duh!<br>On the other hand I wish there was more transparency, because this is kind of <em>a big thing</em>.</p></div></article><hr class=rainbow><div id=disqus_thread></div><script>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//gerbenjacobs.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a><div id=webmentions></div><script src=/js/webmention.js data-page-url=https://blog.gerbenjacobs.nl/t-mobile-traffic-through-1-2-3-12/ lazy></script><hr class=rainbow></div></div><div class="row justify-content-center"><div class="col-xl-6 col-lg-8 col-md-11"><div class=row><div class=col-md-6><div class=card><img loading=lazy src=https://blog.gerbenjacobs.nl/img/post-bg-06.jpg class="card-img-top card-img-height" alt="array_push_insert: Push new value into array with PHP"><div class=card-body><span class=card-title title="array_push_insert: Push new value into array with PHP">array_push_insert: Push new...</span></div><div class=card-footer><a href=https://blog.gerbenjacobs.nl/array_push_insert-push-new-value-into-array-with-php/ class="btn btn-primary">&#171; Next</a></div></div></div><div class=col-md-6><div class=card><img loading=lazy src=https://blog.gerbenjacobs.nl/img/post-bg-06.jpg class="card-img-top card-img-height" alt="Posts archive"><div class=card-body><span class=card-title title="Posts archive">Posts archive</span></div><div class="card-footer text-end"><a href=https://blog.gerbenjacobs.nl/posts/archive/ class="btn btn-primary">Previous &#187;</a></div></div></div></div><div class=row><div class=col>Find any post in the <a href=/posts/archive/>archive</a>.</div></div></div></div></main><footer class="footer mt-4 py-3 bg-light rainbow" id=footer><p>Copyright &copy; 2024 Gerben Jacobs</p><a href=/posts/index.xml><span class="badge p-1 footer-social" style=border-color:orange><img src=/img/social/rss.svg alt=RSS>
-</span></a><a href=https://github.com/gerbenjacobs rel=me><span class="badge p-1 footer-social" style=border-color:#181717><img src=/img/social/github.svg alt=GitHub>
-</span></a><a href=https://todon.nl/@gerben rel=me><span class="badge p-1 footer-social" style=border-color:#6364ff><img src=/img/social/mastodon.svg alt=Fediverse>
-</span></a><a href=https://linkedin.com/in/gerbenjacobs rel=me><span class="badge p-1 footer-social" style=border-color:#0a66c2><img src=/img/social/linkedin.svg alt=LinkedIn></span></a></footer><button class=btn id=btn-back-to-top>☝️</button></body></html>
+    
+        
+        <a class="p-category" href="https://blog.gerbenjacobs.nl/tags/tech" rel="tag"><span class="badge bg-secondary">tech</span></a>
+    <br>🔗 <a href="https://blog.gerbenjacobs.nl/t-mobile-traffic-through-1-2-3-12/" class="u-url post-link">Permalink</a>
+
+            <img loading="lazy" src="https://blog.gerbenjacobs.nl/img/post-bg-02.jpg" class="img-fluid u-featured u-photo" alt="T-Mobile traffic through http://1.2.3.12" style="display: none;">
+            <div class="p-author h-card" style="display: none;">
+                <img loading="lazy" src="/img/avatar.jpg" alt="Avatar of Gerben Jacobs" class="u-photo">
+                <a class="p-name u-url" href="https://gerben.dev">Gerben Jacobs</a>
+            </div>
+            
+            <hr class="rainbow">
+            <div class="e-content">
+            <p>
+    I'm at a place where there's no internet, so I hooked up my T-Mobile G1 (an HTC Dream) to my laptop through the
+    <a title="PdaNet at the Android Market" href="https://market.android.com/details?id=com.pdanet">PdaNet app</a>.
+</p>
+
+<p>
+    When I was browsing a site, I noticed an image that wasn't working. So I opened it up in a new tab, where it seemed to work again, but I then noticed the URL.
+    The http:// part of the original source was dropped and replaced by <code>http://1.2.3.12/bmi/</code>, i.e.:
+    <code>http://1.2.3.9/bmi/www.gerbenjacobs.nl/wp-content/uploads/2011/01/cute-kitten-laughing-64x64.jpg</code>
+</p>
+
+<p>
+    My first instinct was <a href="http://twitter.com/#!/gerbenjacobs/statuses/59245645202079744">to ask</a> customer support (god, am I that customer?) followed by Google.
+    I then found this blogpost "<a title="Blogpost by Peter Steinberger" href="http://petersteinberger.com/2010/03/t-mobile-rewrites-image-urls/">T-Mobile rewrites image urls</a>"
+    which is 13 months old, but I never noticed T-Mobile doing this. So they must have recently added this 'service' to T-Mobile Netherlands.
+</p>
+
+<h2>T-Mobile Edge</h2>
+<p>After more research, it turns out that T-Mobile calls this service 'EDGE' (Enhanced Data Rates for Global Evolution) and what it does is basically a giant loadbalancer and CDN in one.</p>
+
+<p>
+    When you inspect the <a title="Information about the IP" href="https://whois.domaintools.com/1.2.3.12">IP address</a> it shows up as an Australian server,
+    which shocked me initially, but after some tests I didn't notice any speed loss. So it must be using some kind of geo-aware content delivery network.
+    <br><small>(The weird thing is that I can't seem to trace the IP in Cmd.exe with the 'tracert' command, so I have no idea which
+        server they appoint to my geolocation)</small>
+</p>
+
+<h2>Advantages</h2>
+<p>So how is this <em>enhanced</em>, you may ask. Well, just look at the following image (click to enlarge):</p>
+
+
+<figure class="figure ">
+    <a href=/img/blog/2011/tmobile_edge.png>
+        <img loading="lazy" class="figure-img img-fluid rounded" src=/img/blog/2011/tmobile_edge.png alt=Parallel&#32;downloads&#32;with&#32;T-Mobile&#32;Edge>
+    </a>
+
+    <figcaption class="figure-caption">Parallel downloads with T-Mobile Edge</figcaption>
+</figure>
+
+<p>
+    It's hard to see, because it's not the entire page load, but all the images (they were
+    avatars on a forum) were loaded simultaneously. I was using Firefox 4 which can handle up to 5 (or was it 8?)
+    parallel downloads at the same time. Then the 'loadbalancing' (for lack of a better word) comes to play, using the
+    multiple servers 1.2.3.9 to 1.2.3.13 (great IP address by the way!) it loaded them all. So that's 5 x 5 (or 8),
+    which is up to 25 (or 40) resources, or forum avatars, at once.
+</p>
+
+<p>
+    That's the only advantage I can spot of this so-called EDGE service, which came unannounced.
+</p>
+
+<h2>Disadvantages</h2>
+<p>
+    Then there is the disadvantage, that applies to all proxies in general; single entry point and thus single entry point of failure.
+    So in other words, when their servers get hacked, we have no idea what is being sent.
+</p>
+<p>
+    Applying to the single entry point, also means the possibility of tracking. But I doubt that this would be any worse than what Google does,
+    they probably know everything about you already. And maybe the CIA is behind it.. or the New World Order..
+</p>
+<p>
+    However, without going off-topic too much, about 95% of T-Mobile customers wouldn't mind this (and probably wouldn't understand it either),
+    but I do wonder why this hasn't been announced, or why there is so little information about it. I'm not really sure what my opinion on the issue is..
+    <br>At the moment I'm in favour of it, because I like pages to load quickly, duh!
+    <br>On the other hand I wish there was more transparency, because this is kind of <em>a big thing</em>.
+</p>
+            </div>
+        </article>
+
+        
+        <hr class="rainbow">
+        <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "gerbenjacobs" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+        <div id="webmentions"></div>
+        <script src="/js/webmention.js" data-page-url="https://blog.gerbenjacobs.nl/t-mobile-traffic-through-1-2-3-12/" lazy></script>
+        <hr class="rainbow">
+    </div>
+</div>
+
+
+<div class="row justify-content-center">
+    <div class="col-xl-6 col-lg-8 col-md-11">
+        <div class="row">
+            <div class="col-md-6">
+                
+                
+                <div class="card">
+                    <img loading="lazy" src="https://blog.gerbenjacobs.nl/img/post-bg-06.jpg" class="card-img-top card-img-height"
+                         alt="array_push_insert: Push new value into array with PHP">
+                    <div class="card-body">
+                        <span class="card-title" title="array_push_insert: Push new value into array with PHP">
+                            array_push_insert: Push new...
+                        </span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://blog.gerbenjacobs.nl/array_push_insert-push-new-value-into-array-with-php/" class="btn btn-primary">&laquo; Next</a>
+                    </div>
+                </div>
+                
+                
+            </div>
+            <div class="col-md-6">
+                
+                
+                <div class="card">
+                    <img loading="lazy" src="https://blog.gerbenjacobs.nl/img/post-bg-06.jpg" class="card-img-top card-img-height"
+                         alt="Posts archive">
+                    <div class="card-body">
+                        <span class="card-title" title="Posts archive">
+                            Posts archive
+                        </span>
+                    </div>
+                    <div class="card-footer text-end">
+                        <a href="https://blog.gerbenjacobs.nl/posts/archive/" class="btn btn-primary">Previous &raquo;</a>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                Find any post in the <a href="/posts/archive/">archive</a>.
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</main>
+<footer class="footer mt-4 py-3 bg-light rainbow" id="footer">
+    <p>
+        Copyright &copy; 2024 Gerben Jacobs
+    </p>
+
+    <a href="/posts/index.xml">
+        <span class="badge p-1 footer-social" style="border-color: rgb(255,165,0);">
+            <img src="/img/social/rss.svg" alt="RSS">
+        </span>
+    </a>
+
+    <a href="https://github.com/gerbenjacobs" rel="me">
+        <span class="badge p-1 footer-social" style="border-color: rgb(24,23,23);">
+            <img src="/img/social/github.svg" alt="GitHub">
+        </span>
+    </a>
+
+    <a href="https://todon.nl/@gerben" rel="me">
+        <span class="badge p-1 footer-social" style="border-color: rgb(99,100,255);">
+            <img src="/img/social/mastodon.svg" alt="Fediverse">
+        </span>
+    </a>
+
+    <a href="https://linkedin.com/in/gerbenjacobs" rel="me">
+        <span class="badge p-1 footer-social" style="border-color: rgb(10,102,194);">
+            <img src="/img/social/linkedin.svg" alt="LinkedIn">
+        </span>
+    </a>
+</footer>
+<button class="btn" id="btn-back-to-top">☝️</button>
+</body>
+</html>

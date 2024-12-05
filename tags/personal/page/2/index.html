@@ -1,88 +1,646 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=description content><meta name=viewport content="width=device-width,initial-scale=1"><link href=https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65 crossorigin=anonymous><link rel=stylesheet type=text/css href=/css/style.css><link rel=stylesheet type=text/css href=/css/webmention.css><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Permanent+Marker&display=swap" rel=stylesheet><link rel=author href=/humans.txt><link rel=webmention href=https://webmention.io/gerben.dev/webmention><meta property="og:url" content="https://blog.gerbenjacobs.nl/tags/personal/"><meta property="og:type" content="website"><meta property="og:title" content="Personal"><meta property="og:description" content="Personal blog of Gerben Jacobs. We talk about tech like Go, PHP, Docker, devops, open source. And we take things personal: holidays, events, learnings, growth and love!"><meta property="og:image" content="https://blog.gerbenjacobs.nl/img/home-bg.jpg"><meta name=twitter:card content="summary_large_image"><meta property="twitter:domain" content="blog.gerbenjacobs.nl"><meta property="twitter:url" content="https://blog.gerbenjacobs.nl/tags/personal/"><meta name=twitter:title content="Personal"><meta name=twitter:description content="Personal blog of Gerben Jacobs. We talk about tech like Go, PHP, Docker, devops, open source. And we take things personal: holidays, events, learnings, growth and love!"><meta property="twitter:image" content="https://blog.gerbenjacobs.nl/img/home-bg.jpg"><meta itemprop=name content="Personal"><meta itemprop=datePublished content="2024-11-18T19:00:07+01:00"><meta itemprop=dateModified content="2024-11-27T02:28:30+01:00"><script async src="https://www.googletagmanager.com/gtag/js?id=G-KKSLTF3X24"></script><script>var dnt,doNotTrack=!1;if(!1&&(dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes"),!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-KKSLTF3X24")}</script><link rel=alternate type=application/rss+xml href=https://blog.gerbenjacobs.nl/posts/index.xml title="Gerben Jacobs"><script>const prefersDarkScheme=window.matchMedia("(prefers-color-scheme: dark)");document.addEventListener("DOMContentLoaded",function(){toggleDarkMode()});function determineDarkMode(){let t=prefersDarkScheme.matches,e=localStorage.getItem("darkmode");return e==="true"||e!=="false"&&t}function toggleDarkMode(){let s=determineDarkMode(),e=document.querySelectorAll(".card"),t=document.querySelectorAll(".btn"),n=document.querySelectorAll(".list-group-item");if(s){document.body.classList.add("dark-theme");for(let t of e)t.classList.add("text-bg-dark");for(let e of t)e.classList.add("btn-secondary"),e.classList.remove("btn-primary");for(let e of n)e.classList.add("list-group-item-dark")}else{document.body.classList.remove("dark-theme");for(let t of e)t.classList.remove("text-bg-dark");for(let e of t)e.classList.remove("btn-secondary"),e.classList.add("btn-primary");for(let e of n)e.classList.remove("list-group-item-dark")}}</script><script defer src=/js/main.js></script><title>Personal | Gerben Jacobs</title></head><body class="d-flex flex-column"><nav id=nav class="navbar navbar-expand-lg navbar-dark bg-dark"><div class=container-fluid><a class=navbar-brand href=https://blog.gerbenjacobs.nl/>Gerben Jacobs</a><ul class="navbar-nav d-flex mb-2 mb-lg-0"><li class=nav-item><a id=darkmode class="btn btn-primary" title="Toggle dark mode">🌓</a></li></ul></div></nav><main id=content class=container><div class=row><div class="col-md-9 h-feed"><div class="card h-entry"><img loading=lazy src=https://blog.gerbenjacobs.nl/img/github-social.webp class="card-img-top card-img-height u-featured u-photo" alt="First month at GitHub"><div class="p-author h-card" style=display:none><img loading=lazy src=/img/avatar.jpg alt="Avatar of Gerben Jacobs" class=u-photo>
-<a class="p-name u-url" href=https://gerben.dev>Gerben Jacobs</a></div><div class=card-body><h2 class=card-title><a href=/first-month-at-github/ class="post-link p-name">First month at GitHub</a></h2><h6 class="card-subtitle my-2 text-muted">📅
-<time class=dt-published datetime="2022-03-12 00:00:00 +0000 UTC">Mar 12, 2022</time> &mdash;
+<!doctype html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+          crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/webmention.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="author" href="/humans.txt" />
+    <link rel="webmention" href="https://webmention.io/gerben.dev/webmention" />
+
+    
+    <meta property="og:url" content="https://blog.gerbenjacobs.nl/tags/personal/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Personal">
+    <meta property="og:description" content="Personal blog of Gerben Jacobs. We talk about tech like Go, PHP, Docker, devops, open source. And we take things personal: holidays, events, learnings, growth and love!"><meta property="og:image" content="https://blog.gerbenjacobs.nl/img/home-bg.jpg">
+    
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="blog.gerbenjacobs.nl">
+    <meta property="twitter:url" content="https://blog.gerbenjacobs.nl/tags/personal/">
+    <meta name="twitter:title" content="Personal">
+    <meta name="twitter:description" content="Personal blog of Gerben Jacobs. We talk about tech like Go, PHP, Docker, devops, open source. And we take things personal: holidays, events, learnings, growth and love!"><meta property="twitter:image" content="https://blog.gerbenjacobs.nl/img/home-bg.jpg">
+    
+
+    
+  <meta itemprop="name" content="Personal">
+  <meta itemprop="datePublished" content="2024-11-18T19:00:07+01:00">
+  <meta itemprop="dateModified" content="2024-11-27T02:28:30+01:00">
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-KKSLTF3X24"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-KKSLTF3X24');
+        }
+      </script>
+    
+    <link rel="alternate" type="application/rss+xml" href="https://blog.gerbenjacobs.nl/posts/index.xml" title="Gerben Jacobs" />
+
+    <script>
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+    
+    document.addEventListener("DOMContentLoaded", function () {
+        toggleDarkMode()
+    })
+
+    function determineDarkMode() {
+        
+        let darknessSystem = prefersDarkScheme.matches;
+        let darknessStored = localStorage.getItem("darkmode");
+
+        
+        if (darknessStored === "true") {
+            return true;
+        } else if (darknessStored === "false") {
+            return false;
+        } else {
+            return darknessSystem;
+        }
+    }
+
+    
+    function toggleDarkMode() {
+        let on = determineDarkMode();
+        let cards = document.querySelectorAll('.card');
+        let buttons = document.querySelectorAll('.btn');
+        let listgroups = document.querySelectorAll('.list-group-item');
+
+        if (on) {
+            document.body.classList.add("dark-theme");
+            for (let card of cards) {
+                card.classList.add("text-bg-dark");
+            }
+            for (let button of buttons) {
+                button.classList.add("btn-secondary");
+                button.classList.remove("btn-primary");
+            }
+            for (let listgroup of listgroups) {
+                listgroup.classList.add("list-group-item-dark");
+            }
+        } else {
+            document.body.classList.remove("dark-theme");
+            for (let card of cards) {
+                card.classList.remove("text-bg-dark");
+            }
+            for (let button of buttons) {
+                button.classList.remove("btn-secondary");
+                button.classList.add("btn-primary");
+            }
+            for (let listgroup of listgroups) {
+                listgroup.classList.remove("list-group-item-dark");
+            }
+        }
+    }
+    </script>
+    <script defer src="/js/main.js"></script>
+
+    
+    
+    <title>Personal | Gerben Jacobs</title>
+</head><body class="d-flex flex-column">
+<nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="https://blog.gerbenjacobs.nl/">Gerben Jacobs</a>
+        <ul class="navbar-nav d-flex mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a id="darkmode" class="btn btn-primary" title="Toggle dark mode">🌓</a>
+            </li>
+        </ul>
+        
+        
+        
+        
+        
+        
+        
+        
+    </div>
+</nav>
+<main id="content" class="container">
+<div class="row">
+    <div class="col-md-9 h-feed">
+        
+        
+            
+        
+
+        
+        <div class="card h-entry">
+            <img loading="lazy" src="https://blog.gerbenjacobs.nl/img/github-social.webp" class="card-img-top card-img-height u-featured u-photo" alt="First month at GitHub">
+            <div class="p-author h-card" style="display: none;">
+                <img loading="lazy" src="/img/avatar.jpg" alt="Avatar of Gerben Jacobs" class="u-photo">
+                <a class="p-name u-url" href="https://gerben.dev">Gerben Jacobs</a>
+            </div>
+            <div class="card-body">
+                <h2 class="card-title"><a href="/first-month-at-github/" class="post-link p-name">First month at GitHub</a></h2>
+                <h6 class="card-subtitle my-2 text-muted">
+    📅
+    <time class="dt-published" datetime="2022-03-12 00:00:00 &#43;0000 UTC">Mar 12, 2022</time> &mdash;
 🧮 710 words
 &mdash; 🏷️
-<a class=p-category href=https://blog.gerbenjacobs.nl/tags/tech rel=tag><span class="badge bg-secondary">tech</span></a>
-<a class=p-category href=https://blog.gerbenjacobs.nl/tags/personal rel=tag><span class="badge bg-secondary">personal</span></a><br>🔗 <a href=https://blog.gerbenjacobs.nl/first-month-at-github/ class="u-url post-link">Permalink</a></h6><span class="card-text p-summary"><p>It&rsquo;s been a month since I joined GitHub in February of 2022.
-I&rsquo;m enjoying myself a lot, but I&rsquo;m also not sure if the reality has set in completely.</p><p>In 2014 I started my first tech job and remember that I went to a conference and got GitHub stickers,
-they were awesome and all ended up on my MacBook. Eight years later I now work at that exact company. 🚀</p><h2 id=onboard-sessions>Onboard sessions</h2><p>The first two weeks are oriented towards onboard sessions, unfortunately they were in Pacific
+    
+        
+        <a class="p-category" href="https://blog.gerbenjacobs.nl/tags/tech" rel="tag"><span class="badge bg-secondary">tech</span></a>
+    
+        
+        <a class="p-category" href="https://blog.gerbenjacobs.nl/tags/personal" rel="tag"><span class="badge bg-secondary">personal</span></a>
+    <br>🔗 <a href="https://blog.gerbenjacobs.nl/first-month-at-github/" class="u-url post-link">Permalink</a>
+</h6>
+                <span class="card-text p-summary"><p>It&rsquo;s been a month since I joined GitHub in February of 2022.
+I&rsquo;m enjoying myself a lot, but I&rsquo;m also not sure if the reality has set in completely.</p>
+<p>In 2014 I started my first tech job and remember that I went to a conference and got GitHub stickers,
+they were awesome and all ended up on my MacBook. Eight years later I now work at that exact company. 🚀</p>
+<h2 id="onboard-sessions">Onboard sessions</h2>
+<p>The first two weeks are oriented towards onboard sessions, unfortunately they were in Pacific
 standard time, so that meant 8PM CET. The first thing that you&rsquo;ll notice is that a lot of the work
 you do is by using GitHub itself. There&rsquo;s an <code>onboarding</code> repository with a project for every
 person that joined during your cohort. Here you can find <strong>issues</strong> with tasks that you can complete
-during the first days.</p></span><a href=https://blog.gerbenjacobs.nl/first-month-at-github/ class="btn btn-primary read-more u-url">💬 Read more</a></div></div><div class="card h-entry"><img loading=lazy src=https://blog.gerbenjacobs.nl/img/blog/2014/doh/atnight.jpg class="card-img-top card-img-height u-featured u-photo" alt="Dutch Open Hackathon"><div class="p-author h-card" style=display:none><img loading=lazy src=/img/avatar.jpg alt="Avatar of Gerben Jacobs" class=u-photo>
-<a class="p-name u-url" href=https://gerben.dev>Gerben Jacobs</a></div><div class=card-body><h2 class=card-title><a href=/dutch-open-hackathon/ class="post-link p-name">Dutch Open Hackathon</a></h2><h6 class="card-subtitle my-2 text-muted">📅
-<time class=dt-published datetime="2014-09-25 12:00:00 +0000 UTC">Sep 25, 2014</time> &mdash;
+during the first days.</p></span>
+                
+                    <a href="https://blog.gerbenjacobs.nl/first-month-at-github/" class="btn btn-primary read-more u-url">💬 Read more</a>
+                
+            </div>
+        </div>
+        
+        <div class="card h-entry">
+            <img loading="lazy" src="https://blog.gerbenjacobs.nl/img/blog/2014/doh/atnight.jpg" class="card-img-top card-img-height u-featured u-photo" alt="Dutch Open Hackathon">
+            <div class="p-author h-card" style="display: none;">
+                <img loading="lazy" src="/img/avatar.jpg" alt="Avatar of Gerben Jacobs" class="u-photo">
+                <a class="p-name u-url" href="https://gerben.dev">Gerben Jacobs</a>
+            </div>
+            <div class="card-body">
+                <h2 class="card-title"><a href="/dutch-open-hackathon/" class="post-link p-name">Dutch Open Hackathon</a></h2>
+                <h6 class="card-subtitle my-2 text-muted">
+    📅
+    <time class="dt-published" datetime="2014-09-25 12:00:00 &#43;0000 UTC">Sep 25, 2014</time> &mdash;
 🧮 1176 words
 &mdash; 🏷️
-<a class=p-category href=https://blog.gerbenjacobs.nl/tags/tech rel=tag><span class="badge bg-secondary">tech</span></a>
-<a class=p-category href=https://blog.gerbenjacobs.nl/tags/personal rel=tag><span class="badge bg-secondary">personal</span></a><br>🔗 <a href=https://blog.gerbenjacobs.nl/dutch-open-hackathon/ class="u-url post-link">Permalink</a></h6><span class="card-text p-summary"><p>Last weekend I attended the <a title="Dutch Open Hackathon" href=https://www.dutchopenhackathon.com/>Dutch Open Hackathon</a>
-in the UP building (previously known as IJ-toren) in Amsterdam.<br>I went there as part of team 'Pi Ducks'. The team consisted of some colleagues from
-<a title=bol.com href=https://www.bol.com>bol.com</a> (where I started working in July) and a front-end designer we met through Twitter.
-We had a pretty broad range of skills in one team!</p><div class=row><div class=col-md-6><figure class=figure><img loading=lazy class="figure-img img-fluid rounded" src=/img/blog/2014/doh/amsterdam.jpg alt="Good morning Amsterdam!"><figcaption class=figure-caption>Good morning Amsterdam!</figcaption></figure></div><div class=col-md-6><figure class=figure><img loading=lazy class="figure-img img-fluid rounded" src=/img/blog/2014/doh/billie.jpg alt="Billie got hacked!"><figcaption class=figure-caption>Billie got hacked!</figcaption></figure></div></div><div class=row><div class=col-md-6><figure class=figure><img loading=lazy class="figure-img img-fluid rounded" src=/img/blog/2014/doh/flightchairs.jpg alt="Tired of coding? Take a &amp;#039;flight&amp;#039; to chillzone."><figcaption class=figure-caption>Tired of coding? Take a &amp;#039;flight&amp;#039; to chillzone.</figcaption></figure></div><div class=col-md-6><figure class=figure><img loading=lazy class="figure-img img-fluid rounded" src=/img/blog/2014/doh/atnight.jpg alt="A little bit of hacking, a little bit of fresh air on the roof"><figcaption class=figure-caption>A little bit of hacking, a little bit of fresh air on the roof</figcaption></figure></div></div><h2>Going on holiday</h2><p>Our working title was "Ik ga op vakantie en neem mee" which is a Dutch little memory game where everyone has to cite a list of
-items to bring on holiday, pick a new item and then the turn goes to the next person, who has to cite that entire thing again. N+1.</p></span><a href=https://blog.gerbenjacobs.nl/dutch-open-hackathon/ class="btn btn-primary read-more u-url">💬 Read more</a></div></div><div class="card h-entry"><img loading=lazy src=https://blog.gerbenjacobs.nl/img/flickr-theonewithout-norway-laguna.png class="card-img-top card-img-height u-featured u-photo" alt="Road trip to Scandinavia 2013 - Part III"><div class="p-author h-card" style=display:none><img loading=lazy src=/img/avatar.jpg alt="Avatar of Gerben Jacobs" class=u-photo>
-<a class="p-name u-url" href=https://gerben.dev>Gerben Jacobs</a></div><div class=card-body><h2 class=card-title><a href=/road-trip-to-scandinavia-2013-part-iii/ class="post-link p-name">Road trip to Scandinavia 2013 - Part III</a></h2><h6 class="card-subtitle my-2 text-muted">📅
-<time class=dt-published datetime="2013-11-28 12:00:00 +0000 UTC">Nov 28, 2013</time> &mdash;
+    
+        
+        <a class="p-category" href="https://blog.gerbenjacobs.nl/tags/tech" rel="tag"><span class="badge bg-secondary">tech</span></a>
+    
+        
+        <a class="p-category" href="https://blog.gerbenjacobs.nl/tags/personal" rel="tag"><span class="badge bg-secondary">personal</span></a>
+    <br>🔗 <a href="https://blog.gerbenjacobs.nl/dutch-open-hackathon/" class="u-url post-link">Permalink</a>
+</h6>
+                <span class="card-text p-summary"><p>
+    Last weekend I attended the <a title="Dutch Open Hackathon" href="https://www.dutchopenhackathon.com/">Dutch Open Hackathon</a>
+    in the UP building (previously known as IJ-toren) in Amsterdam.
+    <br>I went there as part of team 'Pi Ducks'. The team consisted of some colleagues from
+    <a title="bol.com" href="https://www.bol.com" >bol.com</a> (where I started working in July) and a front-end designer we met through Twitter.
+    We had a pretty broad range of skills in one team!
+</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <figure class="figure ">
+            
+                <img loading="lazy" class="figure-img img-fluid rounded" src=/img/blog/2014/doh/amsterdam.jpg alt=Good&#32;morning&#32;Amsterdam!>
+            
+        
+            <figcaption class="figure-caption">Good morning Amsterdam!</figcaption>
+        </figure>
+    </div>
+    <div class="col-md-6">
+        <figure class="figure ">
+            
+                <img loading="lazy" class="figure-img img-fluid rounded" src=/img/blog/2014/doh/billie.jpg alt=Billie&#32;got&#32;hacked!>
+            
+        
+            <figcaption class="figure-caption">Billie got hacked!</figcaption>
+        </figure>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <figure class="figure ">
+            
+                <img loading="lazy" class="figure-img img-fluid rounded" src=/img/blog/2014/doh/flightchairs.jpg alt=Tired&#32;of&#32;coding?&#32;Take&#32;a&#32;&amp;#039;flight&amp;#039;&#32;to&#32;chillzone.>
+            
+        
+            <figcaption class="figure-caption">Tired of coding? Take a &amp;#039;flight&amp;#039; to chillzone.</figcaption>
+        </figure>
+    </div>
+    <div class="col-md-6">
+        <figure class="figure ">
+            
+                <img loading="lazy" class="figure-img img-fluid rounded" src=/img/blog/2014/doh/atnight.jpg alt=A&#32;little&#32;bit&#32;of&#32;hacking,&#32;a&#32;little&#32;bit&#32;of&#32;fresh&#32;air&#32;on&#32;the&#32;roof>
+            
+        
+            <figcaption class="figure-caption">A little bit of hacking, a little bit of fresh air on the roof</figcaption>
+        </figure>
+    </div>
+</div>
+
+<h2>Going on holiday</h2>
+
+<p>
+    Our working title was "Ik ga op vakantie en neem mee" which is a Dutch little memory game where everyone has to cite a list of
+    items to bring on holiday, pick a new item and then the turn goes to the next person, who has to cite that entire thing again. N+1.
+</p></span>
+                
+                    <a href="https://blog.gerbenjacobs.nl/dutch-open-hackathon/" class="btn btn-primary read-more u-url">💬 Read more</a>
+                
+            </div>
+        </div>
+        
+        <div class="card h-entry">
+            <img loading="lazy" src="https://blog.gerbenjacobs.nl/img/flickr-theonewithout-norway-laguna.png" class="card-img-top card-img-height u-featured u-photo" alt="Road trip to Scandinavia 2013 - Part III">
+            <div class="p-author h-card" style="display: none;">
+                <img loading="lazy" src="/img/avatar.jpg" alt="Avatar of Gerben Jacobs" class="u-photo">
+                <a class="p-name u-url" href="https://gerben.dev">Gerben Jacobs</a>
+            </div>
+            <div class="card-body">
+                <h2 class="card-title"><a href="/road-trip-to-scandinavia-2013-part-iii/" class="post-link p-name">Road trip to Scandinavia 2013 - Part III</a></h2>
+                <h6 class="card-subtitle my-2 text-muted">
+    📅
+    <time class="dt-published" datetime="2013-11-28 12:00:00 &#43;0000 UTC">Nov 28, 2013</time> &mdash;
 🧮 1426 words
 &mdash; 🏷️
-<a class=p-category href=https://blog.gerbenjacobs.nl/tags/personal rel=tag><span class="badge bg-secondary">personal</span></a>
-<a class=p-category href=https://blog.gerbenjacobs.nl/tags/scandinavia-2013 rel=tag><span class="badge bg-secondary">scandinavia-2013</span></a><br>🔗 <a href=https://blog.gerbenjacobs.nl/road-trip-to-scandinavia-2013-part-iii/ class="u-url post-link">Permalink</a></h6><span class="card-text p-summary"><h2 id=day6>Day 6: Preikestolen</h2><p>Preikestolen is one of Norway's famous tourist<s>traps</s>locations, it's a hiking trail that ends at the Preikestolen (Pulpit/Preacher's Chair),
-a slab of rock hanging over the Lysefjord fjord. There's also the Trolltunga (Devil's Tongue) east of Bergen, which is similar just a lot smaller.
-But we didn't go there.</p><figure class=figure><a href=https://www.flickr.com/photos/theonewithout/9389967701/><img loading=lazy class="figure-img img-fluid rounded" src=https://farm3.staticflickr.com/2879/9389967701_37f445fe71_b.jpg alt=Preikestolen></a><figcaption class=figure-caption>Preikestolen</figcaption></figure><p>We had planned the entire day for our trip to the Preikestolen. It had been advertised as a serious achievement, and we weren't that familiar with such hikes.
-With a mix of GPS navigation and following the signs, we took the "backdoor road" Fv316 (instead of the main road Rv13).
-This led us through windy hills, small roads and sheep on either side. A far better idea than the highway.
-Both roads end up in the village of Lauvvik were we took the ferry to Oanes, a 10-minute trip.
-After the ferry ramp you make a sharp turn and go through a tunnel to the other side of the mountain.
-After a short while you leave the main road again and take a smaller "mountain road".
-Here we ended up in a tiny traffic jam; this meant it was the right location.</p></span><a href=https://blog.gerbenjacobs.nl/road-trip-to-scandinavia-2013-part-iii/ class="btn btn-primary read-more u-url">💬 Read more</a></div></div><div class="card h-entry"><img loading=lazy src=https://blog.gerbenjacobs.nl/img/flickr-theonewithout-norway-bench.png class="card-img-top card-img-height u-featured u-photo" alt="Road trip to Scandinavia 2013 - Part II"><div class="p-author h-card" style=display:none><img loading=lazy src=/img/avatar.jpg alt="Avatar of Gerben Jacobs" class=u-photo>
-<a class="p-name u-url" href=https://gerben.dev>Gerben Jacobs</a></div><div class=card-body><h2 class=card-title><a href=/road-trip-to-scandinavia-2013-part-ii/ class="post-link p-name">Road trip to Scandinavia 2013 - Part II</a></h2><h6 class="card-subtitle my-2 text-muted">📅
-<time class=dt-published datetime="2013-11-27 12:00:00 +0000 UTC">Nov 27, 2013</time> &mdash;
+    
+        
+        <a class="p-category" href="https://blog.gerbenjacobs.nl/tags/personal" rel="tag"><span class="badge bg-secondary">personal</span></a>
+    
+        
+        <a class="p-category" href="https://blog.gerbenjacobs.nl/tags/scandinavia-2013" rel="tag"><span class="badge bg-secondary">scandinavia-2013</span></a>
+    <br>🔗 <a href="https://blog.gerbenjacobs.nl/road-trip-to-scandinavia-2013-part-iii/" class="u-url post-link">Permalink</a>
+</h6>
+                <span class="card-text p-summary"><h2 id="day6">Day 6: Preikestolen</h2>
+
+<p>
+    Preikestolen is one of Norway's famous tourist<s>traps</s>locations, it's a hiking trail that ends at the Preikestolen (Pulpit/Preacher's Chair),
+    a slab of rock hanging over the Lysefjord fjord. There's also the Trolltunga (Devil's Tongue) east of Bergen, which is similar just a lot smaller.
+    But we didn't go there.
+</p>
+
+<figure class="figure ">
+    <a href=https://www.flickr.com/photos/theonewithout/9389967701/>
+        <img loading="lazy" class="figure-img img-fluid rounded" src=https://farm3.staticflickr.com/2879/9389967701_37f445fe71_b.jpg alt=Preikestolen>
+    </a>
+
+    <figcaption class="figure-caption">Preikestolen</figcaption>
+</figure>
+
+<p>
+    We had planned the entire day for our trip to the Preikestolen. It had been advertised as a serious achievement, and we weren't that familiar with such hikes.
+    With a mix of GPS navigation and following the signs, we took the "backdoor road" Fv316 (instead of the main road Rv13).
+    This led us through windy hills, small roads and sheep on either side. A far better idea than the highway.
+    Both roads end up in the village of Lauvvik were we took the ferry to Oanes, a 10-minute trip.
+    After the ferry ramp you make a sharp turn and go through a tunnel to the other side of the mountain.
+    After a short while you leave the main road again and take a smaller "mountain road".
+    Here we ended up in a tiny traffic jam; this meant it was the right location.
+</p></span>
+                
+                    <a href="https://blog.gerbenjacobs.nl/road-trip-to-scandinavia-2013-part-iii/" class="btn btn-primary read-more u-url">💬 Read more</a>
+                
+            </div>
+        </div>
+        
+        <div class="card h-entry">
+            <img loading="lazy" src="https://blog.gerbenjacobs.nl/img/flickr-theonewithout-norway-bench.png" class="card-img-top card-img-height u-featured u-photo" alt="Road trip to Scandinavia 2013 - Part II">
+            <div class="p-author h-card" style="display: none;">
+                <img loading="lazy" src="/img/avatar.jpg" alt="Avatar of Gerben Jacobs" class="u-photo">
+                <a class="p-name u-url" href="https://gerben.dev">Gerben Jacobs</a>
+            </div>
+            <div class="card-body">
+                <h2 class="card-title"><a href="/road-trip-to-scandinavia-2013-part-ii/" class="post-link p-name">Road trip to Scandinavia 2013 - Part II</a></h2>
+                <h6 class="card-subtitle my-2 text-muted">
+    📅
+    <time class="dt-published" datetime="2013-11-27 12:00:00 &#43;0000 UTC">Nov 27, 2013</time> &mdash;
 🧮 1372 words
 &mdash; 🏷️
-<a class=p-category href=https://blog.gerbenjacobs.nl/tags/personal rel=tag><span class="badge bg-secondary">personal</span></a>
-<a class=p-category href=https://blog.gerbenjacobs.nl/tags/scandinavia-2013 rel=tag><span class="badge bg-secondary">scandinavia-2013</span></a><br>🔗 <a href=https://blog.gerbenjacobs.nl/road-trip-to-scandinavia-2013-part-ii/ class="u-url post-link">Permalink</a></h6><span class="card-text p-summary"><h2 id=day3>Day 3: Løkken and Hjørring</h2><p>The next day we drove to the seaside town of Løkken, famous for its candy store and beaches.
-We arrived early in the afternoon and parked at a big parking lot, for beachgoers. First up; the beach of course.</p><div class=row><div class=col-md-6><figure class=figure><img loading=lazy class="figure-img img-fluid rounded" src=https://farm4.staticflickr.com/3802/9389685050_d3c4365e68_z.jpg alt="Walked to the beach through the dunes"><figcaption class=figure-caption>Walked to the beach through the dunes</figcaption></figure></div><div class=col-md-6><figure class=figure><img loading=lazy class="figure-img img-fluid rounded" src=https://farm4.staticflickr.com/3758/9386912369_27fb48a794_z.jpg alt="Lovely composition of colours"><figcaption class=figure-caption>Lovely composition of colours</figcaption></figure></div></div><p>This beach is also famous for its World War II bunkers part of the
-<a title="Wikipedia page for Atlantic Wall" href=http://en.wikipedia.org/wiki/Atlantic_Wall>Atlantic Wall</a> and we
-could see them in the distance. But first a little walk on the beach and visiting the pier, where the water was frantically splashing over.
-Something I wanted to get on camera &mdash; would have been better if I had cleaned the salt seawater afterwards.</p></span><a href=https://blog.gerbenjacobs.nl/road-trip-to-scandinavia-2013-part-ii/ class="btn btn-primary read-more u-url">💬 Read more</a></div></div><div class="card h-entry"><img loading=lazy src=https://blog.gerbenjacobs.nl/img/flickr-theonewithout-norway-road.png class="card-img-top card-img-height u-featured u-photo" alt="Road trip to Scandinavia 2013 - Part I"><div class="p-author h-card" style=display:none><img loading=lazy src=/img/avatar.jpg alt="Avatar of Gerben Jacobs" class=u-photo>
-<a class="p-name u-url" href=https://gerben.dev>Gerben Jacobs</a></div><div class=card-body><h2 class=card-title><a href=/road-trip-to-scandinavia-2013-part-i/ class="post-link p-name">Road trip to Scandinavia 2013 - Part I</a></h2><h6 class="card-subtitle my-2 text-muted">📅
-<time class=dt-published datetime="2013-11-26 12:00:00 +0000 UTC">Nov 26, 2013</time> &mdash;
+    
+        
+        <a class="p-category" href="https://blog.gerbenjacobs.nl/tags/personal" rel="tag"><span class="badge bg-secondary">personal</span></a>
+    
+        
+        <a class="p-category" href="https://blog.gerbenjacobs.nl/tags/scandinavia-2013" rel="tag"><span class="badge bg-secondary">scandinavia-2013</span></a>
+    <br>🔗 <a href="https://blog.gerbenjacobs.nl/road-trip-to-scandinavia-2013-part-ii/" class="u-url post-link">Permalink</a>
+</h6>
+                <span class="card-text p-summary"><h2 id="day3">Day 3: Løkken and Hjørring</h2>
+
+<p>
+    The next day we drove to the seaside town of Løkken, famous for its candy store and beaches.
+    We arrived early in the afternoon and parked at a big parking lot, for beachgoers. First up; the beach of course.
+</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <figure class="figure ">
+            
+                <img loading="lazy" class="figure-img img-fluid rounded" src=https://farm4.staticflickr.com/3802/9389685050_d3c4365e68_z.jpg alt=Walked&#32;to&#32;the&#32;beach&#32;through&#32;the&#32;dunes>
+            
+        
+            <figcaption class="figure-caption">Walked to the beach through the dunes</figcaption>
+        </figure>
+    </div>
+    <div class="col-md-6">
+        <figure class="figure ">
+            
+                <img loading="lazy" class="figure-img img-fluid rounded" src=https://farm4.staticflickr.com/3758/9386912369_27fb48a794_z.jpg alt=Lovely&#32;composition&#32;of&#32;colours>
+            
+        
+            <figcaption class="figure-caption">Lovely composition of colours</figcaption>
+        </figure>
+    </div>
+</div>
+
+<p>
+    This beach is also famous for its World War II bunkers part of the
+    <a title="Wikipedia page for Atlantic Wall" href="http://en.wikipedia.org/wiki/Atlantic_Wall" >Atlantic Wall</a> and we
+    could see them in the distance. But first a little walk on the beach and visiting the pier, where the water was frantically splashing over.
+    Something I wanted to get on camera &mdash; would have been better if I had cleaned the salt seawater afterwards.
+</p></span>
+                
+                    <a href="https://blog.gerbenjacobs.nl/road-trip-to-scandinavia-2013-part-ii/" class="btn btn-primary read-more u-url">💬 Read more</a>
+                
+            </div>
+        </div>
+        
+        <div class="card h-entry">
+            <img loading="lazy" src="https://blog.gerbenjacobs.nl/img/flickr-theonewithout-norway-road.png" class="card-img-top card-img-height u-featured u-photo" alt="Road trip to Scandinavia 2013 - Part I">
+            <div class="p-author h-card" style="display: none;">
+                <img loading="lazy" src="/img/avatar.jpg" alt="Avatar of Gerben Jacobs" class="u-photo">
+                <a class="p-name u-url" href="https://gerben.dev">Gerben Jacobs</a>
+            </div>
+            <div class="card-body">
+                <h2 class="card-title"><a href="/road-trip-to-scandinavia-2013-part-i/" class="post-link p-name">Road trip to Scandinavia 2013 - Part I</a></h2>
+                <h6 class="card-subtitle my-2 text-muted">
+    📅
+    <time class="dt-published" datetime="2013-11-26 12:00:00 &#43;0000 UTC">Nov 26, 2013</time> &mdash;
 🧮 1183 words
 &mdash; 🏷️
-<a class=p-category href=https://blog.gerbenjacobs.nl/tags/personal rel=tag><span class="badge bg-secondary">personal</span></a>
-<a class=p-category href=https://blog.gerbenjacobs.nl/tags/scandinavia-2013 rel=tag><span class="badge bg-secondary">scandinavia-2013</span></a><br>🔗 <a href=https://blog.gerbenjacobs.nl/road-trip-to-scandinavia-2013-part-i/ class="u-url post-link">Permalink</a></h6><span class="card-text p-summary"><h1>Our road trip to Scandinavia</h1><p>I've been wanting to visit Scandinavia for quite a while, I've been to many European countries
-(Great-Britain, Germany, Belgium, France, Spain, Austria) but never to one of the nordic ones.</p><p>At a previous internship 2 co-workers of mine have been there and they were absolutely loving it, especially Norway.
-If you asked me in february where I'd go, I would have probably said the Garda lake in Italy. But since June all plans had changed to Norway.</p></span><a href=https://blog.gerbenjacobs.nl/road-trip-to-scandinavia-2013-part-i/ class="btn btn-primary read-more u-url">💬 Read more</a></div></div><div class="card h-entry"><img loading=lazy src=https://blog.gerbenjacobs.nl/img/post-bg-01.jpg class="card-img-top card-img-height u-featured u-photo" alt="SocialSpace at ESTEC in Noordwijk"><div class="p-author h-card" style=display:none><img loading=lazy src=/img/avatar.jpg alt="Avatar of Gerben Jacobs" class=u-photo>
-<a class="p-name u-url" href=https://gerben.dev>Gerben Jacobs</a></div><div class=card-body><h2 class=card-title><a href=/socialspace-at-estec-in-noordwijk/ class="post-link p-name">SocialSpace at ESTEC in Noordwijk</a></h2><h6 class="card-subtitle my-2 text-muted">📅
-<time class=dt-published datetime="2013-10-08 12:00:00 +0000 UTC">Oct 8, 2013</time> &mdash;
+    
+        
+        <a class="p-category" href="https://blog.gerbenjacobs.nl/tags/personal" rel="tag"><span class="badge bg-secondary">personal</span></a>
+    
+        
+        <a class="p-category" href="https://blog.gerbenjacobs.nl/tags/scandinavia-2013" rel="tag"><span class="badge bg-secondary">scandinavia-2013</span></a>
+    <br>🔗 <a href="https://blog.gerbenjacobs.nl/road-trip-to-scandinavia-2013-part-i/" class="u-url post-link">Permalink</a>
+</h6>
+                <span class="card-text p-summary"><h1>Our road trip to Scandinavia</h1>
+<p>
+    I've been wanting to visit Scandinavia for quite a while, I've been to many European countries
+    (Great-Britain, Germany, Belgium, France, Spain, Austria) but never to one of the nordic ones.
+</p>
+<p>
+    At a previous internship 2 co-workers of mine have been there and they were absolutely loving it, especially Norway.
+    If you asked me in february where I'd go, I would have probably said the Garda lake in Italy. But since June all plans had changed to Norway.
+</p></span>
+                
+                    <a href="https://blog.gerbenjacobs.nl/road-trip-to-scandinavia-2013-part-i/" class="btn btn-primary read-more u-url">💬 Read more</a>
+                
+            </div>
+        </div>
+        
+        <div class="card h-entry">
+            <img loading="lazy" src="https://blog.gerbenjacobs.nl/img/post-bg-01.jpg" class="card-img-top card-img-height u-featured u-photo" alt="SocialSpace at ESTEC in Noordwijk">
+            <div class="p-author h-card" style="display: none;">
+                <img loading="lazy" src="/img/avatar.jpg" alt="Avatar of Gerben Jacobs" class="u-photo">
+                <a class="p-name u-url" href="https://gerben.dev">Gerben Jacobs</a>
+            </div>
+            <div class="card-body">
+                <h2 class="card-title"><a href="/socialspace-at-estec-in-noordwijk/" class="post-link p-name">SocialSpace at ESTEC in Noordwijk</a></h2>
+                <h6 class="card-subtitle my-2 text-muted">
+    📅
+    <time class="dt-published" datetime="2013-10-08 12:00:00 &#43;0000 UTC">Oct 8, 2013</time> &mdash;
 🧮 1190 words
 &mdash; 🏷️
-<a class=p-category href=https://blog.gerbenjacobs.nl/tags/personal rel=tag><span class="badge bg-secondary">personal</span></a><br>🔗 <a href=https://blog.gerbenjacobs.nl/socialspace-at-estec-in-noordwijk/ class="u-url post-link">Permalink</a></h6><span class="card-text p-summary"><figure class=figure><img loading=lazy class="figure-img img-fluid rounded" src=/img/blog/2013/estec_swag.jpg alt="A day worth's of swag!"><figcaption class=figure-caption>A day worth's of swag!</figcaption></figure><p>Yesterday I went to the open day at ESTEC (European Space Research and Technology Centre) in Noordwijk, the Netherlands.
-This is the ESA (European Space Agency) facility that houses most of the technology research and project development.
-I'm not even sure what it was anymore, but they have some rooms and utilties over there that even make NASA jealous!</p><p>However.. I wasn't just at the open day, I was actually invited for the
-<a title="#SocialSpace on Twitter" href="https://twitter.com/search?f=tweets&vertical=default&q=%23socialspace&src=typd">#SocialSpace</a> event hosted by
-<a title="@social4space on Twitter" href=https://twitter.com/social4space>@social4space</a> together with
-<a title="SocialSpace tweeps from ESTEC" href=https://twitter.com/social4space/socialspace-estec-2/members>these tweeps</a>.
-Mostly Dutch people, but also some from Belgium, Germany, France and even Spain.</p></span><a href=https://blog.gerbenjacobs.nl/socialspace-at-estec-in-noordwijk/ class="btn btn-primary read-more u-url">💬 Read more</a></div></div><div class="d-flex justify-content-center"><ul class="pagination pagination-default"><li class=page-item><a href=/tags/personal/ aria-label=First class=page-link role=button><span aria-hidden=true>&#171;&#171;</span></a></li><li class=page-item><a href=/tags/personal/ aria-label=Previous class=page-link role=button><span aria-hidden=true>&#171;</span></a></li><li class=page-item><a href=/tags/personal/ aria-label="Page 1" class=page-link role=button>1</a></li><li class="page-item active"><a aria-current=page aria-label="Page 2" class=page-link role=button>2</a></li><li class="page-item disabled"><a aria-disabled=true aria-label=Next class=page-link role=button tabindex=-1><span aria-hidden=true>&#187;</span></a></li><li class="page-item disabled"><a aria-disabled=true aria-label=Last class=page-link role=button tabindex=-1><span aria-hidden=true>&#187;&#187;</span></a></li></ul></div></div><div class=col-md-3><div class=h-card><figure class="figure float-end"><img class="figure-img img-fluid rounded u-photo" src=/img/avatar.jpg alt="Black and white picture of Gerben Jacobs" width=150></figure><strong>Hi!</strong><p class=p-note><i class=p-name>Gerben Jacobs</i> is a 36-year-old <span class=p-role>software engineer</span>
-from <span class=p-country-name>The Netherlands</span>.
-My interests lie with (web)development, databases, design patterns, social media, communities, APIs and open data.</p><p>Check out my project-based site at <a href=https://gerben.dev rel="me author" class=u-url>gerben.dev</a></p><p>I don't have an <strong>About</strong> page, but I do have a <a href=/now/>Now page</a>.</p></div><h3 class=mt-4>Tags</h3><a href=/tags/agile/ class="btn btn-primary m-1">agile <span class="badge text-bg-light">1</span>
-</a><a href=/tags/go/ class="btn btn-primary m-1">go <span class="badge text-bg-light">3</span>
-</a><a href=/tags/indieweb/ class="btn btn-primary m-1">indieweb <span class="badge text-bg-light">1</span>
-</a><a href=/tags/open-source/ class="btn btn-primary m-1">open-source <span class="badge text-bg-light">4</span>
-</a><a href=/tags/personal/ class="btn btn-primary m-1">personal <span class="badge text-bg-light">12</span>
-</a><a href=/tags/php/ class="btn btn-primary m-1">php <span class="badge text-bg-light">5</span>
-</a><a href=/tags/roi-stock-portfolio/ class="btn btn-primary m-1">roi-stock-portfolio <span class="badge text-bg-light">3</span>
-</a><a href=/tags/scandinavia-2013/ class="btn btn-primary m-1">scandinavia-2013 <span class="badge text-bg-light">3</span>
-</a><a href=/tags/stocks/ class="btn btn-primary m-1">stocks <span class="badge text-bg-light">3</span>
-</a><a href=/tags/tech/ class="btn btn-primary m-1">tech <span class="badge text-bg-light">19</span>
-</a><a href=/tags/tutorial/ class="btn btn-primary m-1">tutorial <span class="badge text-bg-light">1</span>
-</a><a href=/tags/unix/ class="btn btn-primary m-1">unix <span class="badge text-bg-light">1</span>
-</a><a href=/tags/web/ class="btn btn-primary m-1">web <span class="badge text-bg-light">1</span>
-</a><a href=/tags/youtube/ class="btn btn-primary m-1">youtube <span class="badge text-bg-light">1</span></a><h3 class=mt-4>Socials</h3><div class=list-group><a href=https://github.com/gerbenjacobs class="list-group-item list-group-item-action" rel=me style=color:#181717><img src=/img/social/github.svg alt=GitHub style=width:1rem> <b>GitHub</b>
-</a><a href=https://todon.nl/@gerben class="list-group-item list-group-item-action" rel=me style=color:#6364ff><img src=/img/social/mastodon.svg alt=Fediverse style=width:1rem> <b>Fediverse</b>
-</a><a href=https://linkedin.com/in/gerbenjacobs class="list-group-item list-group-item-action" rel=me style=color:#0a66c2><img src=/img/social/linkedin.svg alt=LinkedIn style=width:1rem> <b>LinkedIn</b></a></div><h3 class=mt-4>Meta</h3><div class=list-group><a href=/posts/index.xml class="list-group-item list-group-item-action" style=color:orange><img src=/img/social/rss.svg alt=RSS style=width:1rem> <b>RSS</b>
-</a><a href=/sitemap.xml class="list-group-item list-group-item-action" style=color:#07075d><img src=/img/social/sitemap.png alt=Sitemap style=width:1rem> <b>Sitemap</b>
-</a><a href=/posts/archive/ class="list-group-item list-group-item-action" style=color:#fc466b><img src=/img/social/archive.png alt="Posts archive" style=width:1rem> <b>Posts archive</b></a></div></div></div></main><footer class="footer mt-4 py-3 bg-light rainbow" id=footer><p>Copyright &copy; 2024 Gerben Jacobs</p><a href=/posts/index.xml><span class="badge p-1 footer-social" style=border-color:orange><img src=/img/social/rss.svg alt=RSS>
-</span></a><a href=https://github.com/gerbenjacobs rel=me><span class="badge p-1 footer-social" style=border-color:#181717><img src=/img/social/github.svg alt=GitHub>
-</span></a><a href=https://todon.nl/@gerben rel=me><span class="badge p-1 footer-social" style=border-color:#6364ff><img src=/img/social/mastodon.svg alt=Fediverse>
-</span></a><a href=https://linkedin.com/in/gerbenjacobs rel=me><span class="badge p-1 footer-social" style=border-color:#0a66c2><img src=/img/social/linkedin.svg alt=LinkedIn></span></a></footer><button class=btn id=btn-back-to-top>☝️</button></body></html>
+    
+        
+        <a class="p-category" href="https://blog.gerbenjacobs.nl/tags/personal" rel="tag"><span class="badge bg-secondary">personal</span></a>
+    <br>🔗 <a href="https://blog.gerbenjacobs.nl/socialspace-at-estec-in-noordwijk/" class="u-url post-link">Permalink</a>
+</h6>
+                <span class="card-text p-summary"><figure class="figure ">
+    
+        <img loading="lazy" class="figure-img img-fluid rounded" src=/img/blog/2013/estec_swag.jpg alt=A&#32;day&#32;worth&#39;s&#32;of&#32;swag!>
+    
+
+    <figcaption class="figure-caption">A day worth&#39;s of swag!</figcaption>
+</figure>
+
+<p>
+    Yesterday I went to the open day at ESTEC (European Space Research and Technology Centre) in Noordwijk, the Netherlands.
+    This is the ESA (European Space Agency) facility that houses most of the technology research and project development.
+    I'm not even sure what it was anymore, but they have some rooms and utilties over there that even make NASA jealous!
+</p>
+
+<p>
+    However.. I wasn't just at the open day, I was actually invited for the
+    <a title="#SocialSpace on Twitter" href="https://twitter.com/search?f=tweets&vertical=default&q=%23socialspace&src=typd" >#SocialSpace</a> event hosted by
+    <a title="@social4space on Twitter" href="https://twitter.com/social4space" >@social4space</a> together with
+    <a title="SocialSpace tweeps from ESTEC" href="https://twitter.com/social4space/socialspace-estec-2/members" >these tweeps</a>.
+    Mostly Dutch people, but also some from Belgium, Germany, France and even Spain.
+</p></span>
+                
+                    <a href="https://blog.gerbenjacobs.nl/socialspace-at-estec-in-noordwijk/" class="btn btn-primary read-more u-url">💬 Read more</a>
+                
+            </div>
+        </div>
+        
+        <div class="d-flex justify-content-center">
+            
+    <ul class="pagination pagination-default">
+      <li class="page-item">
+        <a href="/tags/personal/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/tags/personal/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/tags/personal/" aria-label="Page 1" class="page-link" role="button">1</a>
+      </li>
+      <li class="page-item active">
+        <a aria-current="page" aria-label="Page 2" class="page-link" role="button">2</a>
+      </li>
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="Next" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="Last" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      </li>
+    </ul>
+        </div>
+    </div>
+    <div class="col-md-3"><div class="h-card">
+    <figure class="figure float-end">
+        <img class="figure-img img-fluid rounded u-photo" src="/img/avatar.jpg" alt="Black and white picture of Gerben Jacobs" width="150">
+    </figure>
+    <strong>Hi!</strong>
+    <p class="p-note">
+        <i class="p-name">Gerben Jacobs</i> is a 36-year-old <span class="p-role">software engineer</span> 
+        from <span class="p-country-name">The Netherlands</span>. 
+        My interests lie with (web)development, databases, design patterns, social media, communities, APIs and open data.
+    </p>
+
+    <p>
+        Check out my project-based site at <a href="https://gerben.dev" rel="me author" class="u-url">gerben.dev</a>
+    </p>
+
+    <p>
+        I don't have an <strong>About</strong> page, but I do have a <a href="/now/">Now page</a>.
+    </p>
+</div>
+<h3 class="mt-4">Tags</h3>
+ 
+    
+    <a href=/tags/agile/ class="btn btn-primary m-1">
+        agile <span class="badge text-bg-light">1</span>
+    </a>
+    
+ 
+    
+    <a href=/tags/go/ class="btn btn-primary m-1">
+        go <span class="badge text-bg-light">3</span>
+    </a>
+    
+ 
+    
+    <a href=/tags/indieweb/ class="btn btn-primary m-1">
+        indieweb <span class="badge text-bg-light">1</span>
+    </a>
+    
+ 
+    
+    <a href=/tags/open-source/ class="btn btn-primary m-1">
+        open-source <span class="badge text-bg-light">4</span>
+    </a>
+    
+ 
+    
+    <a href=/tags/personal/ class="btn btn-primary m-1">
+        personal <span class="badge text-bg-light">12</span>
+    </a>
+    
+ 
+    
+    <a href=/tags/php/ class="btn btn-primary m-1">
+        php <span class="badge text-bg-light">5</span>
+    </a>
+    
+ 
+    
+    <a href=/tags/roi-stock-portfolio/ class="btn btn-primary m-1">
+        roi-stock-portfolio <span class="badge text-bg-light">3</span>
+    </a>
+    
+ 
+    
+    <a href=/tags/scandinavia-2013/ class="btn btn-primary m-1">
+        scandinavia-2013 <span class="badge text-bg-light">3</span>
+    </a>
+    
+ 
+    
+    <a href=/tags/stocks/ class="btn btn-primary m-1">
+        stocks <span class="badge text-bg-light">3</span>
+    </a>
+    
+ 
+    
+    <a href=/tags/tech/ class="btn btn-primary m-1">
+        tech <span class="badge text-bg-light">19</span>
+    </a>
+    
+ 
+    
+    <a href=/tags/tutorial/ class="btn btn-primary m-1">
+        tutorial <span class="badge text-bg-light">1</span>
+    </a>
+    
+ 
+    
+    <a href=/tags/unix/ class="btn btn-primary m-1">
+        unix <span class="badge text-bg-light">1</span>
+    </a>
+    
+ 
+    
+    <a href=/tags/web/ class="btn btn-primary m-1">
+        web <span class="badge text-bg-light">1</span>
+    </a>
+    
+ 
+    
+    <a href=/tags/youtube/ class="btn btn-primary m-1">
+        youtube <span class="badge text-bg-light">1</span>
+    </a>
+    
+
+
+<h3 class="mt-4">Socials</h3>
+<div class="list-group">
+    <a href="https://github.com/gerbenjacobs" class="list-group-item list-group-item-action" rel="me" style="color: #181717;">
+        <img src="/img/social/github.svg" alt="GitHub" style="width: 1rem;"> <b>GitHub</b>
+    </a>
+    <a href="https://todon.nl/@gerben" class="list-group-item list-group-item-action" rel="me" style="color: #6364FF;">
+        <img src="/img/social/mastodon.svg" alt="Fediverse" style="width: 1rem;"> <b>Fediverse</b>
+    </a>
+    <a href="https://linkedin.com/in/gerbenjacobs" class="list-group-item list-group-item-action" rel="me" style="color: #0A66C2;">
+        <img src="/img/social/linkedin.svg" alt="LinkedIn" style="width: 1rem;"> <b>LinkedIn</b>
+    </a>
+</div>
+
+<h3 class="mt-4">Meta</h3>
+<div class="list-group">
+    <a href="/posts/index.xml" class="list-group-item list-group-item-action" style="color: #FFA500;">
+        <img src="/img/social/rss.svg" alt="RSS" style="width: 1rem;"> <b>RSS</b>
+    </a>
+    <a href="/sitemap.xml" class="list-group-item list-group-item-action" style="color: #07075d;">
+        <img src="/img/social/sitemap.png" alt="Sitemap" style="width: 1rem;"> <b>Sitemap</b>
+    </a>
+    <a href="/posts/archive/" class="list-group-item list-group-item-action" style="color: #fc466b;">
+        <img src="/img/social/archive.png" alt="Posts archive" style="width: 1rem;"> <b>Posts archive</b>
+    </a>
+</div></div>
+</div>
+
+</main>
+<footer class="footer mt-4 py-3 bg-light rainbow" id="footer">
+    <p>
+        Copyright &copy; 2024 Gerben Jacobs
+    </p>
+
+    <a href="/posts/index.xml">
+        <span class="badge p-1 footer-social" style="border-color: rgb(255,165,0);">
+            <img src="/img/social/rss.svg" alt="RSS">
+        </span>
+    </a>
+
+    <a href="https://github.com/gerbenjacobs" rel="me">
+        <span class="badge p-1 footer-social" style="border-color: rgb(24,23,23);">
+            <img src="/img/social/github.svg" alt="GitHub">
+        </span>
+    </a>
+
+    <a href="https://todon.nl/@gerben" rel="me">
+        <span class="badge p-1 footer-social" style="border-color: rgb(99,100,255);">
+            <img src="/img/social/mastodon.svg" alt="Fediverse">
+        </span>
+    </a>
+
+    <a href="https://linkedin.com/in/gerbenjacobs" rel="me">
+        <span class="badge p-1 footer-social" style="border-color: rgb(10,102,194);">
+            <img src="/img/social/linkedin.svg" alt="LinkedIn">
+        </span>
+    </a>
+</footer>
+<button class="btn" id="btn-back-to-top">☝️</button>
+</body>
+</html>
