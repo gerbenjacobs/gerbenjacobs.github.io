@@ -1,30 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Gerben Jacobs</title>
-    <link>https://blog.gerbenjacobs.nl/posts/</link>
-    <description>Recent content in Posts on Gerben Jacobs</description>
-    <generator>Hugo + gerben.dev</generator>
+    <title>Meta on Gerben Jacobs</title>
+    <link>https://blog.gerbenjacobs.nl/tags/meta/</link>
+    <description>Recent content in Meta on Gerben Jacobs</description>
+    <generator>Hugo</generator>
     <language>nl-nl</language>
     <lastBuildDate>Thu, 24 Apr 2025 18:27:00 +0200</lastBuildDate>
-    <atom:link href="https://blog.gerbenjacobs.nl/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.gerbenjacobs.nl/tags/meta/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Het begin van een Nederlands blog</title>
       <link>https://blog.gerbenjacobs.nl/het-begin-van-een-nederlands-blog/</link>
       <pubDate>Thu, 24 Apr 2025 16:26:16 +0200</pubDate>
       <guid>https://blog.gerbenjacobs.nl/het-begin-van-een-nederlands-blog/</guid>
       <description>&lt;p&gt;Een Nederlands blog? Hoe zit dat?&lt;/p&gt;&#xA;&lt;p&gt;Een tijdje terug, naar aanleiding van het leren over &lt;a href=&#34;https://gerben.dev/posts/thoughts-on-indieweb&#34;&gt;IndieWeb&lt;/a&gt;,&#xA;was ik begonnen om mijn destijds portfolio website (gerben.dev) om te toveren naar een volwaardige site.&lt;/p&gt;&#xA;&lt;p&gt;Dit betekent ook blogposts, en aangezien ik hier heel veel technische posts had staan (en het &amp;lsquo;.dev&amp;rsquo; domain&#xA;voor &amp;lsquo;developer/development&amp;rsquo; staat), heb ik deze gemigreerd naar gerben.dev. Je kunt ze alle vinden&#xA;met &lt;a href=&#34;https://gerben.dev/tags/BlogMigration&#34;&gt;#BlogMigration&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Mijn halve leven is Engels-talig geweest, van vrienden tot werk.&#xA;Maar af en toe heb ik ideeën voor blogposts die daar eigenlijk niet passen.&lt;/p&gt;</description>
-      
-      <category>meta</category>
-      
-    </item>
-    <item>
-      <title>Blogpost archief</title>
-      <link>https://blog.gerbenjacobs.nl/posts/archief/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://blog.gerbenjacobs.nl/posts/archief/</guid>
-      <description></description>
-      
     </item>
   </channel>
 </rss>
