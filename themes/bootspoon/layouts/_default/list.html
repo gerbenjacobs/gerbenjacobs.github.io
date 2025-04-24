@@ -12,7 +12,7 @@
         <div class="card h-entry">
             <img loading="lazy" src="{{ absURL .Params.headerImage }}" class="card-img-top card-img-height u-featured u-photo" alt="{{ .Title }}">
             <div class="p-author h-card" style="display: none;">
-                <img loading="lazy" src="/img/avatar.jpg" alt="Avatar of Gerben Jacobs" class="u-photo">
+                <img loading="lazy" src="/img/avatar.jpg" alt="Avatar van Gerben Jacobs" class="u-photo">
                 <a class="p-name u-url" href="https://gerben.dev">Gerben Jacobs</a>
             </div>
             <div class="card-body">
@@ -20,7 +20,7 @@
                 <h6 class="card-subtitle my-2 text-muted">{{ partial "metadata.html" . }}</h6>
                 <span class="card-text p-summary">{{ .Summary }}</span>
                 {{ if .Truncated }}
-                    <a href="{{ .Permalink }}" class="btn btn-primary read-more u-url">💬 Read more</a>
+                    <a href="{{ .Permalink }}" class="btn btn-primary read-more u-url">💬 Lees meer</a>
                 {{ end }}
             </div>
         </div>

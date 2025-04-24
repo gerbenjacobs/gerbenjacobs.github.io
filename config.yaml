@@ -1,5 +1,5 @@
 baseURL: 'https://blog.gerbenjacobs.nl'
-languageCode: 'en-us'
+languageCode: 'nl-nl'
 title: Gerben Jacobs
 theme: bootspoon
 pagination:

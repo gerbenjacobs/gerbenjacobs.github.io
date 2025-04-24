@@ -5,7 +5,7 @@
     <time class="dt-published" datetime="{{ .PublishDate }}">{{ .PublishDate.Format $dateFormat }}</time> &mdash;
 {{ end }}
 {{- if .WordCount -}}
-🧮 {{ .WordCount }} words
+🧮 {{ .WordCount }} woorden
 {{- end -}}
 {{ with .Params.tags }}
 &mdash; 🏷️

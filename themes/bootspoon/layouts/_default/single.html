@@ -9,12 +9,12 @@
             {{ partial "metadata.html" . }}
             <img loading="lazy" src="{{ absURL .Params.headerImage }}" class="img-fluid u-featured u-photo" alt="{{ .Title }}" style="display: none;">
             <div class="p-author h-card" style="display: none;">
-                <img loading="lazy" src="/img/avatar.jpg" alt="Avatar of Gerben Jacobs" class="u-photo">
+                <img loading="lazy" src="/img/avatar.jpg" alt="Avatar van Gerben Jacobs" class="u-photo">
                 <a class="p-name u-url" href="https://gerben.dev">Gerben Jacobs</a>
             </div>
             {{ if and (gt .WordCount 400 ) (.Params.toc) }}
             <hr class="rainbow">
-            <strong>Table of contents</strong>
+            <strong>Inhoudsopgave</strong>
             {{ .TableOfContents }}
             {{ end }}
             <hr class="rainbow">
@@ -28,7 +28,7 @@
         {{ template "_internal/disqus.html" . }}
         {{ end }}
         <div id="webmentions"></div>
-        <script src="/js/webmention.js" data-page-url="https://blog.gerbenjacobs.nl{{ .RelPermalink }}" lazy></script>
+        <script src="/js/webmention.js" data-page-url="https://blog.gerbenjacobs.nl{{ .RelPermalink }}" defer></script>
         <hr class="rainbow">
     </div>
 </div>
@@ -49,7 +49,7 @@
                         </span>
                     </div>
                     <div class="card-footer">
-                        <a href="{{ .Permalink }}" class="btn btn-primary">&laquo; Next</a>
+                        <a href="{{ .Permalink }}" class="btn btn-primary">&laquo; Volgende</a>
                     </div>
                 </div>
                 {{end}}
@@ -67,7 +67,7 @@
                         </span>
                     </div>
                     <div class="card-footer text-end">
-                        <a href="{{ .Permalink }}" class="btn btn-primary">Previous &raquo;</a>
+                        <a href="{{ .Permalink }}" class="btn btn-primary">Vorige &raquo;</a>
                     </div>
                 </div>
                 {{ end }}
@@ -76,7 +76,7 @@
         </div>
         <div class="row">
             <div class="col">
-                Find any post in the <a href="/posts/archive/">archive</a>.
+                Vind elke post in het <a href="/posts/archief/">archief</a>.
             </div>
         </div>
     </div>
